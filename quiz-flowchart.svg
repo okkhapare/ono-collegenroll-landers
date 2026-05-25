@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2320" viewBox="0 0 1600 2320" role="img" aria-labelledby="title desc">
   <title id="title">Degree Match Quiz Visual Flowchart</title>
-  <desc id="desc">A visual flowchart showing the Degree Match quiz order, the filtering rules, and the work experience branch.</desc>
+  <desc id="desc">A visual flowchart showing the Degree Match quiz order, the filtering rules, the online program pool, and the work experience branch.</desc>
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L12,6 L0,12 Z" fill="#1f2937"/>
@@ -96,20 +96,20 @@
     <rect class="filterBox" x="460" y="1250" width="680" height="104" rx="18"/>
     <circle class="numCircle" cx="508" cy="1302" r="24"/>
     <text class="numText" x="508" y="1309" text-anchor="middle">7</text>
-    <text class="label" x="552" y="1294">Preferred Study Format</text>
-    <text class="detail" x="552" y="1323">Filtered by learner stage</text>
+    <text class="label" x="552" y="1294">Budget</text>
+    <text class="detail" x="552" y="1323">Scoring input only</text>
 
     <rect class="box" x="460" y="1400" width="680" height="104" rx="18"/>
     <circle class="numCircle" cx="508" cy="1452" r="24"/>
     <text class="numText" x="508" y="1459" text-anchor="middle">8</text>
-    <text class="label" x="552" y="1444">Budget</text>
-    <text class="detail" x="552" y="1473">Scoring input only</text>
+    <text class="label" x="552" y="1444">Online Program Pool</text>
+    <text class="detail" x="552" y="1473">All matched programs are online</text>
 
     <rect class="filterBox" x="460" y="1550" width="680" height="104" rx="18"/>
     <circle class="numCircle" cx="508" cy="1602" r="24"/>
-    <text class="numText" x="508" y="1609" text-anchor="middle">9</text>
-    <text class="label" x="552" y="1594">Location Preference</text>
-    <text class="detail" x="552" y="1623">Filtered by preferred study format</text>
+    <text class="numText" x="508" y="1609" text-anchor="middle">8</text>
+    <text class="label" x="552" y="1594">Student Check</text>
+    <text class="detail" x="552" y="1623">Students skip work experience</text>
 
     <path class="decision" d="M800 1715 L1035 1815 L800 1915 L565 1815 Z"/>
     <text class="label" x="800" y="1807" text-anchor="middle">Student learner stage?</text>
@@ -125,7 +125,7 @@
 
     <rect class="work" x="1168" y="1748" width="330" height="124" rx="18"/>
     <circle class="numCircle" cx="1213" cy="1810" r="23"/>
-    <text class="numText" x="1213" y="1817" text-anchor="middle">10</text>
+    <text class="numText" x="1213" y="1817" text-anchor="middle">8</text>
     <text class="label" x="1250" y="1802">Work Experience</text>
     <text class="detail" x="1250" y="1831">Only for non-students</text>
   </g>
@@ -155,8 +155,8 @@
     <text class="calloutTitle" x="98" y="367">Q1 filters later screens</text>
     <text class="calloutText" x="98" y="404">• Qualification choices</text>
     <text class="calloutText" x="98" y="434">• Main goal choices</text>
-    <text class="calloutText" x="98" y="464">• Study format choices</text>
-    <text class="calloutText" x="98" y="494">• Work experience visibility</text>
+    <text class="calloutText" x="98" y="464">• Work experience visibility</text>
+    <text class="calloutText" x="98" y="494">• Later answer reset</text>
     <path class="filterArrow" d="M400 413 C426 413 430 402 460 402"/>
 
     <rect class="cardBlue" x="1190" y="642" width="330" height="120" rx="18"/>
@@ -173,11 +173,10 @@
     <path class="filterArrow" d="M400 849 C426 849 430 852 460 852"/>
 
     <rect class="cardBlue" x="1190" y="1232" width="330" height="150" rx="18"/>
-    <text class="calloutTitle" x="1218" y="1271">Q7 filters Q9</text>
-    <text class="calloutStrong" x="1218" y="1308">Online</text>
-    <text class="calloutText" x="1280" y="1308">→ online / no pref</text>
-    <text class="calloutStrong" x="1218" y="1340">Hybrid / weekend</text>
-    <text class="calloutText" x="1370" y="1340">→ regions</text>
+    <text class="calloutTitle" x="1218" y="1271">All matches online</text>
+    <text class="calloutStrong" x="1218" y="1308">No format screen</text>
+    <text class="calloutText" x="1218" y="1340">No location screen</text>
+    <text class="calloutText" x="1218" y="1372">Results use online programs.</text>
     <path class="filterArrow" d="M1190 1302 C1164 1302 1162 1302 1140 1302"/>
 
     <rect class="card" x="70" y="1086" width="330" height="118" rx="18"/>
@@ -195,6 +194,6 @@
   <g transform="translate(90 2240)">
     <rect class="card" x="0" y="0" width="1420" height="60" rx="18"/>
     <text class="calloutTitle" x="28" y="38">Final scoring:</text>
-    <text class="calloutText" x="165" y="38">industry, goal, stage, credential, qualification, budget, mode, time, location, experience, placement, brand, accreditation.</text>
+    <text class="calloutText" x="165" y="38">industry, goal, stage, credential, qualification, budget, time, experience, placement, brand, accreditation.</text>
   </g>
 </svg>

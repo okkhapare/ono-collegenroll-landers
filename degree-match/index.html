@@ -1071,7 +1071,7 @@
         <div class="ce-container-wide degree-hero-grid">
           <div class="degree-hero-copy ce-stack">
             <h1 class="ce-heading-hero">Find the degree that fits your <span>career goals</span> in 60&nbsp;seconds</h1>
-            <p class="ce-copy ce-copy-hero">Find programs that fit how you study, what you can spend, and where you want to go next.</p>
+            <p class="ce-copy ce-copy-hero">Find online programs that fit what you want to study, what you can spend, and where you want to go next.</p>
           </div>
 
           <section class="quiz-card" id="degree-quiz" aria-live="polite">
@@ -1187,7 +1187,7 @@
           { label: "High school junior/senior", value: "high_school_junior_senior", detail: "Planning college after Grade 11 or 12" },
           { label: "Community college student", value: "community_college", detail: "In or considering an associate/transfer path" },
           { label: "Current undergraduate", value: "undergraduate_student", detail: "Already enrolled in a bachelor's program" },
-          { label: "Graduate student", value: "graduate_student", detail: "Considering a master's, MBA, or certificate" },
+          { label: "Graduate student", value: "graduate_student", detail: "Considering a master's, MBA, or advanced degree" },
           { label: "Early-career professional", value: "early_career", detail: "Working and building momentum" },
           { label: "Mid-career professional", value: "mid_career", detail: "Growing into higher responsibility" },
           { label: "Changing careers", value: "career_changer", detail: "Moving into a new field" },
@@ -1200,15 +1200,15 @@
         help: "Pick the direction that feels closest right now.",
         validation: "Choose a field of interest.",
         options: [
-          { label: "Business and management", value: "business", detail: "Leadership, operations, strategy, entrepreneurship" },
-          { label: "Technology and analytics", value: "technology", detail: "Software, data, AI, cloud, cybersecurity" },
-          { label: "Finance and commerce", value: "finance", detail: "Accounting, banking, investments, FinTech" },
-          { label: "Marketing and media", value: "marketing_media", detail: "Branding, content, PR, digital media" },
-          { label: "Healthcare", value: "healthcare", detail: "Hospitals, public health, wellness, counseling" },
-          { label: "Education", value: "education", detail: "Teaching, EdTech, curriculum, academic leadership" },
-          { label: "Law and public policy", value: "law_policy", detail: "Policy, governance, compliance, public administration" },
-          { label: "Design and creative", value: "design_creative", detail: "UX, product design, communication, writing" },
-          { label: "Not sure yet", value: "not_sure", detail: "Keep my options broad" }
+          { label: "Business & Management", value: "business_management", detail: "Leadership, operations, strategy, entrepreneurship" },
+          { label: "Computers & Information Technology", value: "computers_it", detail: "Software, data, AI, cloud, cybersecurity" },
+          { label: "Criminal Justice & Legal", value: "criminal_justice_legal", detail: "Law, policy, compliance, public safety" },
+          { label: "Education & Teaching", value: "education_teaching", detail: "Teaching, EdTech, curriculum, academic leadership" },
+          { label: "Healthcare & Medicine", value: "healthcare_medicine", detail: "Hospitals, public health, wellness, administration" },
+          { label: "Liberal Arts & Humanities", value: "liberal_arts_humanities", detail: "Communication, writing, media, human behavior" },
+          { label: "Nursing", value: "nursing", detail: "Patient care, clinical leadership, healthcare practice" },
+          { label: "Psychology, Counselling & Social Work", value: "psychology_counselling_social_work", detail: "Counselling, social services, mental health, community support" },
+          { label: "Religious Studies", value: "religious_studies", detail: "Theology, ministry, ethics, community leadership" }
         ]
       },
       {
@@ -1249,7 +1249,6 @@
           { label: "Bachelor's", value: "bachelors", detail: "Undergraduate degree completion" },
           { label: "Master's", value: "masters", detail: "Graduate degree or professional advancement" },
           { label: "MBA", value: "mba", detail: "Business leadership track" },
-          { label: "Certificate", value: "certificate", detail: "Shorter, career-focused credential" },
           { label: "Not sure", value: "not_sure", detail: "Let the match decide" }
         ]
       },
@@ -1266,18 +1265,6 @@
         ]
       },
       {
-        id: "preferredMode",
-        title: "What study format do you prefer?",
-        help: "Format affects schedule, campus access, and flexibility.",
-        validation: "Choose your preferred study format.",
-        options: [
-          { label: "Online", value: "online", detail: "Maximum flexibility" },
-          { label: "Hybrid", value: "hybrid", detail: "Online with some in-person learning" },
-          { label: "Evening or weekend", value: "weekend", detail: "Structured around work or school" },
-          { label: "Open to any", value: "any", detail: "Let the match decide" }
-        ]
-      },
-      {
         id: "budget",
         title: "What annual tuition range feels comfortable?",
         help: "The score considers tuition, affordability, and expected outcomes.",
@@ -1286,21 +1273,7 @@
           { label: "Under $10,000", value: "under_10000", detail: "Most cost-sensitive" },
           { label: "$10,000 to $25,000", value: "10000_25000", detail: "Balanced affordability" },
           { label: "$25,000 to $50,000", value: "25000_50000", detail: "Open to premium options" },
-          { label: "$50,000+", value: "above_50000", detail: "Outcome fit matters more than tuition" }
-        ]
-      },
-      {
-        id: "location",
-        title: "Do you have a location preference?",
-        help: "Online programs can still benefit from regional advising, transfer pathways, and campus access.",
-        validation: "Choose a location preference.",
-        options: [
-          { label: "No preference", value: "any", detail: "Show the best fit anywhere in North America" },
-          { label: "Fully online", value: "online", detail: "No campus requirement" },
-          { label: "U.S. northeast", value: "us_northeast", detail: "Northeast or nearby" },
-          { label: "U.S. south", value: "us_south", detail: "South or southeast" },
-          { label: "U.S. midwest", value: "us_midwest", detail: "Midwest or central U.S." },
-          { label: "U.S. west", value: "us_west", detail: "West Coast or mountain states" }
+          { label: "Don't want to say", value: "dont_say", detail: "Skip tuition preference for now" }
         ]
       },
       {
@@ -1339,23 +1312,11 @@
       },
       degreeLevel: {
         high_school_in_progress: ["associate", "bachelors", "not_sure"],
-        high_school: ["associate", "bachelors", "certificate", "not_sure"],
-        some_college: ["associate", "bachelors", "certificate", "not_sure"],
-        associate: ["bachelors", "certificate", "not_sure"],
-        bachelors: ["masters", "mba", "certificate", "not_sure"],
-        masters: ["masters", "mba", "certificate", "not_sure"]
-      },
-      preferredMode: {
-        high_school_junior_senior: ["online", "hybrid", "any"],
-        community_college: ["online", "hybrid", "weekend", "any"],
-        undergraduate_student: ["online", "hybrid", "weekend", "any"],
-        graduate_student: ["online", "hybrid", "weekend", "any"]
-      },
-      location: {
-        online: ["online", "any"],
-        hybrid: ["any", "us_northeast", "us_south", "us_midwest", "us_west"],
-        weekend: ["any", "us_northeast", "us_south", "us_midwest", "us_west"],
-        any: ["any", "online", "us_northeast", "us_south", "us_midwest", "us_west"]
+        high_school: ["associate", "bachelors", "not_sure"],
+        some_college: ["associate", "bachelors", "not_sure"],
+        associate: ["bachelors", "not_sure"],
+        bachelors: ["masters", "mba", "not_sure"],
+        masters: ["masters", "mba", "not_sure"]
       }
     };
 
@@ -1379,7 +1340,7 @@
       under_10000: 10000,
       "10000_25000": 25000,
       "25000_50000": 50000,
-      above_50000: 99999999
+      dont_say: null
     };
 
     const MOTIVATION_TAG = {
@@ -1391,15 +1352,28 @@
       mandatory: "mandatory_credential"
     };
 
+    const INDUSTRY_ALIASES = {
+      business_management: ["business", "finance", "commerce", "operations", "human_resources", "marketing"],
+      computers_it: ["technology", "analytics", "software", "data", "cybersecurity"],
+      criminal_justice_legal: ["law_policy", "legal", "public_policy", "compliance", "criminal_justice"],
+      education_teaching: ["education", "teaching", "curriculum"],
+      healthcare_medicine: ["healthcare", "medicine", "public_health", "health_administration"],
+      liberal_arts_humanities: ["humanities", "communication", "journalism", "media", "design_creative", "marketing_media"],
+      nursing: ["nursing", "healthcare", "medicine"],
+      psychology_counselling_social_work: ["psychology", "counselling", "counseling", "social_work", "healthcare", "humanities"],
+      religious_studies: ["religious_studies", "theology", "ministry", "humanities"]
+    };
+
     const INDUSTRY_ADJACENT = {
-      business: ["finance", "marketing_media", "operations", "human_resources", "commerce"],
-      technology: ["analytics", "finance", "design_creative", "law_policy"],
-      finance: ["business", "commerce", "technology", "analytics"],
-      marketing_media: ["business", "design_creative", "human_resources"],
-      healthcare: ["education", "law_policy", "humanities"],
-      education: ["healthcare", "law_policy", "humanities"],
-      law_policy: ["business", "healthcare", "technology", "education"],
-      design_creative: ["marketing_media", "technology", "business"]
+      business_management: ["computers_it", "healthcare_medicine", "education_teaching"],
+      computers_it: ["business_management", "criminal_justice_legal"],
+      criminal_justice_legal: ["business_management", "computers_it", "liberal_arts_humanities"],
+      education_teaching: ["psychology_counselling_social_work", "liberal_arts_humanities", "healthcare_medicine"],
+      healthcare_medicine: ["nursing", "psychology_counselling_social_work", "business_management"],
+      liberal_arts_humanities: ["education_teaching", "psychology_counselling_social_work", "religious_studies"],
+      nursing: ["healthcare_medicine", "psychology_counselling_social_work"],
+      psychology_counselling_social_work: ["healthcare_medicine", "education_teaching", "liberal_arts_humanities"],
+      religious_studies: ["liberal_arts_humanities", "psychology_counselling_social_work"]
     };
 
     const INDUSTRY_LABELS = new Map(
@@ -1407,18 +1381,14 @@
     );
 
     const MODE_LABELS = {
-      online: "Online",
-      hybrid: "Hybrid",
-      weekend: "Weekend",
-      any: "Any"
+      online: "Online"
     };
 
     const DEGREE_LEVEL_PATTERNS = {
       associate: /\bassociate\b/i,
       bachelors: /\b(ba|bs|bba|bachelor)\b/i,
       masters: /\b(ma|ms|m\.s|m\.a|master)\b/i,
-      mba: /\bmba\b/i,
-      certificate: /\b(certificate|cert|diploma)\b/i
+      mba: /\bmba\b/i
     };
 
     const state = {
@@ -1431,7 +1401,7 @@
       isTransitioning: false
     };
 
-    const BUTTON_PROGRESS_CURVE = [0, 30, 50, 64, 75, 83, 90, 95, 98, 100];
+    const BUTTON_PROGRESS_CURVE = [0, 24, 40, 56, 70, 84, 94, 100];
 
     const els = {
       quizView: document.getElementById("quizView"),
@@ -1631,10 +1601,6 @@
         if (state.answers.motivation === "transfer") {
           allowedValues = intersectAllowedValues(allowedValues, ["associate", "bachelors", "not_sure"]);
         }
-      } else if (question.id === "preferredMode") {
-        allowedValues = OPTION_FILTERS.preferredMode[state.answers.learnerStage] || null;
-      } else if (question.id === "location") {
-        allowedValues = OPTION_FILTERS.location[state.answers.preferredMode] || null;
       }
 
       if (!allowedValues) {
@@ -1815,7 +1781,9 @@
       }
 
       const programs = state.universities.flatMap((university) => {
-        return (university.programs || []).map((program) => ({ university, program }));
+        return (university.programs || [])
+          .filter((program) => programIsOfferedOnline(program))
+          .map((program) => ({ university, program }));
       });
 
       const scoredPrograms = programs
@@ -1823,7 +1791,7 @@
         .sort((a, b) => b.rawScore - a.rawScore);
 
       state.matches = scoredPrograms
-        .filter((match) => programMatchesPreferredMode(match.program, state.answers))
+        .filter((match) => programIsOfferedOnline(match.program))
         .slice(0, 3);
 
       els.quizView.classList.add("is-hidden");
@@ -1853,17 +1821,14 @@
       let rawScore = 0;
       const reasons = [];
       const tags = new Set(program.best_for_tags || []);
-      const industries = new Set(program.industries || inferIndustries(program));
+      const industries = getProgramIndustries(program);
       const programFee = getProgramFee(program);
       const programSalary = getProgramSalary(program);
 
-      if (answers.industry === "not_sure") {
-        rawScore += 10;
-        reasons.push("Keeps your options broad while still matching practical constraints.");
-      } else if (industries.has(answers.industry)) {
+      if (industryMatches(industries, answers.industry)) {
         rawScore += 22;
-        reasons.push(`Strong alignment with ${INDUSTRY_LABELS.get(answers.industry)}.`);
-      } else if ((INDUSTRY_ADJACENT[answers.industry] || []).some((industry) => industries.has(industry))) {
+        reasons.push(`Strong alignment with ${getIndustryLabel(answers.industry)}.`);
+      } else if (industryAdjacentMatches(industries, answers.industry)) {
         rawScore += 10;
         reasons.push("Adjacent industry fit with transferable skills.");
       }
@@ -1905,28 +1870,22 @@
         reasons.push("Eligibility may need a bridge step before admission.");
       }
 
-      const budgetLimit = BUDGET_MAX[answers.budget] || 0;
-      if (programFee <= budgetLimit) {
+      const budgetLimit = BUDGET_MAX[answers.budget];
+      if (answers.budget === "dont_say") {
+        rawScore += 4;
+      } else if (programFee <= budgetLimit) {
         rawScore += 14;
         reasons.push("Tuition fits your selected budget range.");
       } else if (program.emi_available && programFee <= budgetLimit * 1.35) {
         rawScore += 8;
         reasons.push("Slightly above budget, but payment options improve affordability.");
-      } else if (answers.budget === "above_50000") {
-        rawScore += 12;
       } else {
         rawScore -= 6;
       }
 
-      if (answers.preferredMode === "any") {
-        rawScore += 10;
-      } else if (program.mode === answers.preferredMode) {
-        rawScore += 14;
-        reasons.push(`${MODE_LABELS[program.mode]} format matches your preferred mode.`);
-      } else if (answers.preferredMode === "weekend" && program.mode === "hybrid") {
-        rawScore += 7;
-      } else if (answers.preferredMode === "online" && program.mode === "hybrid") {
-        rawScore += 5;
+      if (program.mode === "online") {
+        rawScore += 12;
+        reasons.push("Online format matches CollegEnroll's available program delivery.");
       }
 
       const availableHours = TIME_HOURS[answers.timeAvailability] || 0;
@@ -1939,17 +1898,6 @@
         reasons.push("Online flexibility helps offset a tighter weekly schedule.");
       } else {
         rawScore -= 5;
-      }
-
-      if (answers.location === "any") {
-        rawScore += 5;
-      } else if (locationMatches(university.locations || [], answers.location)) {
-        rawScore += 7;
-        reasons.push("Regional preference aligns with university support coverage.");
-      } else if (program.mode === "online") {
-        rawScore += 4;
-      } else {
-        rawScore -= 2;
       }
 
       const years = Number(answers.experienceYears || 0);
@@ -1968,7 +1916,7 @@
         rawScore += 5;
       }
 
-      const fitScore = Math.max(38, Math.min(99, Math.round((rawScore / 135) * 100)));
+      const fitScore = Math.max(38, Math.min(99, Math.round((rawScore / 125) * 100)));
       const displayReasons = buildResultReasons(university, program, answers, {
         budgetLimit,
         industries,
@@ -1988,33 +1936,26 @@
       };
     }
 
-    function programMatchesPreferredMode(program, answers) {
-      return !answers.preferredMode || answers.preferredMode === "any" || program.mode === answers.preferredMode;
+    function programIsOfferedOnline(program) {
+      return program?.mode === "online";
     }
 
     function buildResultReasons(university, program, answers, metrics) {
       const reasons = [];
-      const industries = metrics.industries || new Set(program.industries || inferIndustries(program));
-      const primaryIndustry = [...industries][0] || "business";
-      const selectedIndustryLabel = getAnswerLabel("industry", answers.industry).toLowerCase();
-      const programIndustryLabel = getAnswerLabel("industry", primaryIndustry).toLowerCase();
+      const industries = metrics.industries || getProgramIndustries(program);
+      const primaryIndustry = [...industries][0] || "business_management";
+      const selectedIndustryLabel = getIndustryLabel(answers.industry).toLowerCase();
+      const programIndustryLabel = getIndustryLabel(primaryIndustry).toLowerCase();
       const focus = toSentenceFragment((program.specializations || [])[0] || program.name);
 
-      if (answers.industry === "not_sure") {
-        reasons.push(`${toSentenceCase(program.name)} keeps your options open while focusing on ${focus}.`);
-      } else if (industries.has(answers.industry)) {
+      if (industryMatches(industries, answers.industry)) {
         reasons.push(`${toSentenceCase(program.name)} connects directly to your ${selectedIndustryLabel} interest.`);
       } else {
         reasons.push(`${capitalizeSentence(focus)} gives you a bridge from ${selectedIndustryLabel} into ${programIndustryLabel}.`);
       }
 
       reasons.push(getProgramMotivationReason(program, answers, metrics, primaryIndustry));
-
-      if (answers.preferredMode === "any") {
-        reasons.push(`${getModeLabel(program.mode)} delivery keeps the format flexible.`);
-      } else {
-        reasons.push(`${getModeLabel(program.mode)} delivery matches the study format you selected.`);
-      }
+      reasons.push(`${getModeLabel(program.mode)} delivery keeps the program fully remote.`);
 
       const budgetReason = getBudgetReason(program, answers, metrics);
       if (budgetReason) {
@@ -2031,16 +1972,12 @@
         reasons.push(qualificationReason);
       }
 
-      if (answers.location && answers.location !== "any" && locationMatches(university.locations || [], answers.location)) {
-        reasons.push(`${university.name} supports your ${getAnswerLabel("location", answers.location).toLowerCase()} preference.`);
-      }
-
       return uniqueReasons(reasons.filter(Boolean)).slice(0, 4);
     }
 
     function getProgramMotivationReason(program, answers, metrics, primaryIndustry) {
       const focus = toSentenceFragment((program.specializations || [])[1] || (program.specializations || [])[0] || program.name);
-      const industryLabel = getAnswerLabel("industry", primaryIndustry).toLowerCase();
+      const industryLabel = getIndustryLabel(primaryIndustry).toLowerCase();
 
       switch (answers.motivation) {
         case "start_college":
@@ -2064,6 +2001,7 @@
 
     function getBudgetReason(program, answers, metrics) {
       if (!answers.budget) return "";
+      if (answers.budget === "dont_say") return "";
       if (metrics.programFee <= metrics.budgetLimit) {
         return `${formatCurrency(metrics.programFee)} tuition fits the budget range you selected.`;
       }
@@ -2263,6 +2201,28 @@
       return option ? option.label : String(value || "");
     }
 
+    function getIndustryLabel(value) {
+      return INDUSTRY_LABELS.get(value) || toSentenceCase(String(value || "").replace(/_/g, " "));
+    }
+
+    function getIndustryAliases(value) {
+      return new Set([value, ...(INDUSTRY_ALIASES[value] || [])]);
+    }
+
+    function getProgramIndustries(program) {
+      return new Set([...(program.industries || []), ...inferIndustries(program)]);
+    }
+
+    function industryMatches(industries, selectedIndustry) {
+      if (!selectedIndustry) return false;
+      const selectedAliases = getIndustryAliases(selectedIndustry);
+      return [...selectedAliases].some((industry) => industries.has(industry));
+    }
+
+    function industryAdjacentMatches(industries, selectedIndustry) {
+      return (INDUSTRY_ADJACENT[selectedIndustry] || []).some((industry) => industryMatches(industries, industry));
+    }
+
     function getModeLabel(mode) {
       return toSentenceCase(MODE_LABELS[mode] || mode || "");
     }
@@ -2344,15 +2304,16 @@
     function inferIndustries(program) {
       const text = `${program.name} ${(program.specializations || []).join(" ")}`.toLowerCase();
       const industries = [];
-      if (/mba|management|business|leadership|entrepreneur/.test(text)) industries.push("business");
-      if (/data|analytics|ai|machine|cloud|software|cyber|computer|mca|bca|tech/.test(text)) industries.push("technology");
-      if (/finance|commerce|accounting|bank|tax|fintech/.test(text)) industries.push("finance");
-      if (/marketing|media|journalism|content|communication|pr/.test(text)) industries.push("marketing_media");
-      if (/health|hospital|psychology|counsel/.test(text)) industries.push("healthcare");
-      if (/education|curriculum|teaching/.test(text)) industries.push("education");
-      if (/law|policy|public|governance|compliance/.test(text)) industries.push("law_policy");
-      if (/design|ux|creative|writing/.test(text)) industries.push("design_creative");
-      return industries.length ? industries : ["business"];
+      if (/mba|management|business|leadership|entrepreneur|operations|human resources|supply chain/.test(text)) industries.push("business_management", "business");
+      if (/data|analytics|ai|machine|cloud|software|cyber|computer|mca|bca|tech|fintech/.test(text)) industries.push("computers_it", "technology");
+      if (/criminal|justice|law|legal|policy|public|governance|compliance/.test(text)) industries.push("criminal_justice_legal", "law_policy");
+      if (/education|curriculum|teaching|edtech|school/.test(text)) industries.push("education_teaching", "education");
+      if (/health|hospital|medicine|medical|public health/.test(text)) industries.push("healthcare_medicine", "healthcare");
+      if (/nursing|nurse|rn|bsn/.test(text)) industries.push("nursing");
+      if (/psychology|counsel|social work|mental health|human behavior/.test(text)) industries.push("psychology_counselling_social_work", "healthcare");
+      if (/humanities|journalism|communication|media|writing|ux|design|creative/.test(text)) industries.push("liberal_arts_humanities", "humanities");
+      if (/religion|religious|theology|ministry|divinity|ethics/.test(text)) industries.push("religious_studies");
+      return industries.length ? industries : ["business_management", "business"];
     }
 
     function inferQualificationRank(program) {
@@ -2360,27 +2321,16 @@
       if (/mba|ms |m\.s|ma |m\.a|master|graduate/.test(name)) {
         return QUALIFICATION_RANK.bachelors;
       }
-      if (/certificate|cert/.test(name)) {
-        return QUALIFICATION_RANK.some_college;
-      }
       return QUALIFICATION_RANK.high_school;
     }
 
     function inferWeeklyHours(program) {
       if (program.duration_years <= 1) return 10;
-      if (program.mode === "weekend") return 12;
-      if (program.mode === "hybrid") return 11;
       return 8;
     }
 
     function uniqueReasons(reasons) {
       return [...new Set(reasons)];
-    }
-
-    function locationMatches(locations, answer) {
-      if (locations.includes(answer)) return true;
-      if (answer === "online") return locations.includes("any") || locations.includes("online");
-      return false;
     }
 
     function isStudentStage(stage) {

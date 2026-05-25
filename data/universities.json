@@ -3,11 +3,6 @@
     "id": "uni_001",
     "name": "Southern New Hampshire University",
     "logo": "https://www.google.com/s2/favicons?domain=snhu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Online MBA",
@@ -67,11 +62,6 @@
     "id": "uni_002",
     "name": "Arizona State University",
     "logo": "https://www.google.com/s2/favicons?domain=asu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Online BBA in Business Analytics",
@@ -132,11 +122,6 @@
     "id": "uni_003",
     "name": "Northwestern University",
     "logo": "https://www.google.com/s2/favicons?domain=northwestern.edu&sz=128",
-    "locations": [
-      "any",
-      "us_south",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "Executive MBA",
@@ -146,7 +131,7 @@
           "Operations"
         ],
         "duration_years": 1.5,
-        "mode": "weekend",
+        "mode": "online",
         "fee_inr": 42000,
         "emi_available": true,
         "min_eligibility_percent": 50,
@@ -191,11 +176,6 @@
     "id": "uni_004",
     "name": "Georgia Institute of Technology",
     "logo": "https://www.google.com/s2/favicons?domain=gatech.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "Online MS in Computer Science",
@@ -253,11 +233,6 @@
     "id": "uni_005",
     "name": "Northeastern University",
     "logo": "https://www.google.com/s2/favicons?domain=northeastern.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "MS in Data Science and AI",
@@ -267,7 +242,7 @@
           "Applied AI"
         ],
         "duration_years": 2,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 36000,
         "emi_available": true,
         "min_eligibility_percent": 55,
@@ -316,11 +291,6 @@
     "id": "uni_006",
     "name": "University of Illinois Urbana-Champaign",
     "logo": "https://www.google.com/s2/favicons?domain=illinois.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "Online MS in Accounting",
@@ -379,11 +349,6 @@
     "id": "uni_007",
     "name": "Western Governors University",
     "logo": "https://www.google.com/s2/favicons?domain=wgu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Online BS in Cloud Computing",
@@ -441,11 +406,6 @@
     "id": "uni_008",
     "name": "University of Florida",
     "logo": "https://www.google.com/s2/favicons?domain=ufl.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_south"
-    ],
     "programs": [
       {
         "name": "Online BA in Psychology",
@@ -504,11 +464,6 @@
     "id": "uni_009",
     "name": "George Washington University",
     "logo": "https://www.google.com/s2/favicons?domain=gwu.edu&sz=128",
-    "locations": [
-      "any",
-      "hybrid",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "MBA in Healthcare Management",
@@ -518,7 +473,7 @@
           "Quality"
         ],
         "duration_years": 2,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 34000,
         "emi_available": true,
         "min_eligibility_percent": 50,
@@ -565,11 +520,6 @@
     "id": "uni_010",
     "name": "Purdue University",
     "logo": "https://www.google.com/s2/favicons?domain=purdue.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "MA in Education and Leadership",
@@ -623,137 +573,9 @@
     ]
   },
   {
-    "id": "uni_011",
-    "name": "Georgetown University",
-    "logo": "https://www.google.com/s2/favicons?domain=georgetown.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
-    "programs": [
-      {
-        "name": "Certificate in Cyber Law and Privacy",
-        "specializations": [
-          "Digital Policy",
-          "Privacy",
-          "Compliance"
-        ],
-        "duration_years": 1,
-        "mode": "online",
-        "fee_inr": 9000,
-        "emi_available": true,
-        "min_eligibility_percent": 50,
-        "work_ex_required": false,
-        "brand_tier": 2,
-        "placement_strength": "medium",
-        "accreditations": [
-          "Regional Accreditation",
-          "IAPP-aligned"
-        ],
-        "best_for_tags": [
-          "career_switcher",
-          "mandatory_credential",
-          "salary_growth",
-          "student_pathway",
-          "promotion_seeker"
-        ],
-        "avg_salary_post_inr": 82000,
-        "industries": [
-          "law_policy",
-          "technology"
-        ],
-        "career_stage_fit": [
-          "undergraduate_student",
-          "early_career",
-          "mid_career",
-          "career_changer"
-        ],
-        "weekly_commitment_hours": 6,
-        "start_timeline": [
-          "next_term",
-          "1_3_months",
-          "3_6_months"
-        ],
-        "min_qualification": "some_college",
-        "min_work_ex_years": 0,
-        "fee_usd": 9000,
-        "avg_salary_post_usd": 82000
-      }
-    ],
-    "country_focus": [
-      "United States"
-    ]
-  },
-  {
-    "id": "uni_012",
-    "name": "University of Colorado Boulder",
-    "logo": "https://www.google.com/s2/favicons?domain=colorado.edu&sz=128",
-    "locations": [
-      "any",
-      "weekend",
-      "us_west"
-    ],
-    "programs": [
-      {
-        "name": "Graduate Certificate in Cybersecurity",
-        "specializations": [
-          "Security Operations",
-          "Risk",
-          "Cloud Security"
-        ],
-        "duration_years": 1,
-        "mode": "weekend",
-        "fee_inr": 12000,
-        "emi_available": true,
-        "min_eligibility_percent": 50,
-        "work_ex_required": false,
-        "brand_tier": 1,
-        "placement_strength": "high",
-        "accreditations": [
-          "Regional Accreditation",
-          "NSA CAE-aligned"
-        ],
-        "best_for_tags": [
-          "salary_growth",
-          "career_switcher",
-          "mandatory_credential",
-          "promotion_seeker"
-        ],
-        "avg_salary_post_inr": 101000,
-        "industries": [
-          "technology"
-        ],
-        "career_stage_fit": [
-          "early_career",
-          "mid_career",
-          "career_changer"
-        ],
-        "weekly_commitment_hours": 10,
-        "start_timeline": [
-          "next_term",
-          "1_3_months",
-          "3_6_months"
-        ],
-        "min_qualification": "bachelors",
-        "min_work_ex_years": 0,
-        "fee_usd": 12000,
-        "avg_salary_post_usd": 101000
-      }
-    ],
-    "country_focus": [
-      "United States"
-    ]
-  },
-  {
     "id": "uni_013",
     "name": "Rutgers University",
     "logo": "https://www.google.com/s2/favicons?domain=rutgers.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_south"
-    ],
     "programs": [
       {
         "name": "Online MBA in Human Resources",
@@ -811,11 +633,6 @@
     "id": "uni_014",
     "name": "Florida International University",
     "logo": "https://www.google.com/s2/favicons?domain=fiu.edu&sz=128",
-    "locations": [
-      "any",
-      "hybrid",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "MBA in International Business",
@@ -825,7 +642,7 @@
           "Marketing"
         ],
         "duration_years": 2,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 39000,
         "emi_available": true,
         "min_eligibility_percent": 50,
@@ -873,11 +690,6 @@
     "id": "uni_015",
     "name": "Savannah College of Art and Design",
     "logo": "https://www.google.com/s2/favicons?domain=scad.edu&sz=128",
-    "locations": [
-      "any",
-      "hybrid",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Bachelor of Design in UX",
@@ -887,7 +699,7 @@
           "Interaction"
         ],
         "duration_years": 3,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 32000,
         "emi_available": true,
         "min_eligibility_percent": 45,
@@ -936,11 +748,6 @@
     "id": "uni_016",
     "name": "Penn State World Campus",
     "logo": "https://www.google.com/s2/favicons?domain=psu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "BA in Digital Media and Journalism",
@@ -999,11 +806,6 @@
     "id": "uni_017",
     "name": "Indiana University",
     "logo": "https://www.google.com/s2/favicons?domain=iu.edu&sz=128",
-    "locations": [
-      "any",
-      "weekend",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "MBA in Finance",
@@ -1013,7 +815,7 @@
           "Risk Management"
         ],
         "duration_years": 2,
-        "mode": "weekend",
+        "mode": "online",
         "fee_inr": 33000,
         "emi_available": true,
         "min_eligibility_percent": 50,
@@ -1060,11 +862,6 @@
     "id": "uni_018",
     "name": "Syracuse University",
     "logo": "https://www.google.com/s2/favicons?domain=syracuse.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "BA in Public Administration",
@@ -1122,11 +919,6 @@
     "id": "uni_019",
     "name": "University of Maryland Global Campus",
     "logo": "https://www.google.com/s2/favicons?domain=umgc.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_south"
-    ],
     "programs": [
       {
         "name": "Online BBA in General Management",
@@ -1184,77 +976,9 @@
     ]
   },
   {
-    "id": "uni_020",
-    "name": "Carnegie Mellon University",
-    "logo": "https://www.google.com/s2/favicons?domain=cmu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
-    "programs": [
-      {
-        "name": "Graduate Certificate in Business Analytics",
-        "specializations": [
-          "BI Tools",
-          "Product Metrics",
-          "SQL"
-        ],
-        "duration_years": 1,
-        "mode": "online",
-        "fee_inr": 11500,
-        "emi_available": true,
-        "min_eligibility_percent": 50,
-        "work_ex_required": false,
-        "brand_tier": 1,
-        "placement_strength": "high",
-        "accreditations": [
-          "Regional Accreditation",
-          "STEM-designated"
-        ],
-        "best_for_tags": [
-          "salary_growth",
-          "career_switcher",
-          "promotion_seeker",
-          "student_pathway"
-        ],
-        "avg_salary_post_inr": 96000,
-        "industries": [
-          "technology",
-          "analytics",
-          "business"
-        ],
-        "career_stage_fit": [
-          "undergraduate_student",
-          "early_career",
-          "mid_career",
-          "career_changer"
-        ],
-        "weekly_commitment_hours": 9,
-        "start_timeline": [
-          "next_term",
-          "1_3_months",
-          "3_6_months"
-        ],
-        "min_qualification": "some_college",
-        "min_work_ex_years": 0,
-        "fee_usd": 11500,
-        "avg_salary_post_usd": 96000
-      }
-    ],
-    "country_focus": [
-      "United States"
-    ]
-  },
-  {
     "id": "uni_021",
     "name": "Michigan State University",
     "logo": "https://www.google.com/s2/favicons?domain=msu.edu&sz=128",
-    "locations": [
-      "any",
-      "hybrid",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "MBA in Supply Chain Management",
@@ -1264,7 +988,7 @@
           "Operations"
         ],
         "duration_years": 2,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 27000,
         "emi_available": true,
         "min_eligibility_percent": 50,
@@ -1310,11 +1034,6 @@
     "id": "uni_022",
     "name": "Pepperdine University",
     "logo": "https://www.google.com/s2/favicons?domain=pepperdine.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "MA in Psychology and Counseling",
@@ -1375,11 +1094,6 @@
     "id": "uni_023",
     "name": "Stanford University",
     "logo": "https://www.google.com/s2/favicons?domain=stanford.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Online MS in AI and Machine Learning",
@@ -1438,11 +1152,6 @@
     "id": "uni_024",
     "name": "Cornell University",
     "logo": "https://www.google.com/s2/favicons?domain=cornell.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_south"
-    ],
     "programs": [
       {
         "name": "BS in FinTech",
@@ -1502,11 +1211,6 @@
     "id": "uni_025",
     "name": "University of Southern California",
     "logo": "https://www.google.com/s2/favicons?domain=usc.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_midwest"
-    ],
     "programs": [
       {
         "name": "Master of Social Work",
@@ -1567,11 +1271,6 @@
     "id": "uni_026",
     "name": "Babson College",
     "logo": "https://www.google.com/s2/favicons?domain=babson.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "Online MBA in Entrepreneurship",
@@ -1629,11 +1328,6 @@
     "id": "uni_027",
     "name": "University of Nevada, Las Vegas",
     "logo": "https://www.google.com/s2/favicons?domain=unlv.edu&sz=128",
-    "locations": [
-      "any",
-      "hybrid",
-      "us_south"
-    ],
     "programs": [
       {
         "name": "BA in Hospitality and Tourism Management",
@@ -1643,7 +1337,7 @@
           "Travel Operations"
         ],
         "duration_years": 2,
-        "mode": "hybrid",
+        "mode": "online",
         "fee_inr": 22000,
         "emi_available": true,
         "min_eligibility_percent": 45,
@@ -1695,11 +1389,6 @@
     "id": "uni_028",
     "name": "Johns Hopkins University",
     "logo": "https://www.google.com/s2/favicons?domain=jhu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "Master of Public Health",
@@ -1759,11 +1448,6 @@
     "id": "uni_029",
     "name": "Arizona State University",
     "logo": "https://www.google.com/s2/favicons?domain=asu.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_west"
-    ],
     "programs": [
       {
         "name": "MBA in Sustainability Management",
@@ -1823,11 +1507,6 @@
     "id": "uni_030",
     "name": "American University",
     "logo": "https://www.google.com/s2/favicons?domain=american.edu&sz=128",
-    "locations": [
-      "any",
-      "online",
-      "us_northeast"
-    ],
     "programs": [
       {
         "name": "BA in Digital Communication",
