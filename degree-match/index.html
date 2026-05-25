@@ -1,0 +1,2493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Degree match quiz | CollegEnroll</title>
+  <meta name="description" content="Find the degree that fits your career goals in 60 seconds with CollegEnroll's degree match quiz.">
+  <link rel="stylesheet" href="../assets/collegenroll-theme.css">
+  <style>
+    .degree-page {
+      background: var(--ce-color-white);
+    }
+
+    .degree-page .ce-eyebrow {
+      text-transform: none;
+    }
+
+    .homepage-wrapper .container,
+    .header .container,
+    footer .container {
+      width: min(100% - 40px, 1320px);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .justify-content-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 99999;
+      background: var(--ce-color-white);
+      box-shadow: var(--ce-shadow-nav);
+      padding: 17px 0;
+    }
+
+    .header .logo a {
+      display: block;
+    }
+
+    .header .logo img {
+      width: 179px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .header .logo .logo-white-img {
+      display: none;
+    }
+
+    .header .right-wrap {
+      gap: var(--ce-space-30);
+    }
+
+    .header .desktop-menu ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0 var(--ce-space-40);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .header .desktop-menu li a {
+      position: relative;
+      color: var(--ce-color-ink);
+      font-size: 1.4rem;
+      line-height: 2;
+    }
+
+    .header .desktop-menu li a::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--ce-color-orange);
+      transform: scale3d(0, 1, 1);
+      transform-origin: 100% 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .header .desktop-menu li:hover a::before,
+    .header .desktop-menu li a:focus-visible::before {
+      transform: scale3d(1, 1, 1);
+      transform-origin: 0 50%;
+    }
+
+    .header .mobile-menu {
+      display: none;
+    }
+
+    .header .mob_hamburger {
+      position: relative;
+      width: 20px;
+      height: 10px;
+      cursor: pointer;
+    }
+
+    .header .mob_hamburger .bar,
+    .header .mob_hamburger .bar::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--ce-color-ink);
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    .header .mob_hamburger .bar {
+      width: 20px;
+    }
+
+    .header .mob_hamburger .bar::after {
+      width: 16px;
+      margin-top: 5px;
+    }
+
+    .header .mob-menu-list {
+      position: fixed;
+      inset: 0 0 0 auto;
+      z-index: 99999;
+      width: 100%;
+      overflow: hidden;
+      background: var(--ce-color-white);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+    }
+
+    .header .mob-menu-list.active {
+      transform: translateX(0);
+    }
+
+    .header .mob-menu-list .close-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e1e1e1;
+      background: #f8f8f8;
+      padding: 27px 20px 10px 28px;
+    }
+
+    .header .mob-menu-list .close-icon {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .header .mob-menu-list ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .header .mob-menu-list li a {
+      display: block;
+      position: relative;
+      border-bottom: 1px solid #e1e1e1;
+      color: var(--ce-color-ink);
+      font-size: 1.6rem;
+      line-height: 1.5;
+      padding: 17px 50px 17px 28px;
+    }
+
+    .header .mob-menu-list li a::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid var(--ce-color-orange);
+      border-right: 2px solid var(--ce-color-orange);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .degree-logo {
+      width: 188px;
+      height: auto;
+    }
+
+    .ce-footer .degree-logo {
+      border-radius: var(--ce-radius-card);
+      background: var(--ce-color-white);
+      padding: 8px;
+    }
+
+    .degree-nav-cta {
+      min-height: 42px;
+      padding: 12px 20px;
+      font-size: 1.5rem;
+    }
+
+    .degree-hero {
+      min-height: 880px;
+      padding-block: 96px 96px;
+    }
+
+    .degree-hero .ce-hero-media {
+      background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=82");
+    }
+
+    .degree-hero .ce-hero-media::before {
+      background: linear-gradient(90deg, rgba(27, 52, 89, 0.97) 0%, rgba(27, 52, 89, 0.86) 44%, rgba(27, 52, 89, 0.18) 100%);
+    }
+
+    .degree-hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(500px, 620px);
+      gap: var(--ce-space-50);
+      align-items: center;
+    }
+
+    .degree-hero-copy {
+      max-width: 640px;
+    }
+
+    .degree-hero.is-results-mode {
+      min-height: 500px;
+      padding-block: 120px 88px;
+    }
+
+    .degree-hero.is-results-mode .degree-hero-grid {
+      grid-template-columns: minmax(0, 860px);
+      justify-content: center;
+      text-align: center;
+    }
+
+    .degree-hero.is-results-mode .degree-hero-copy {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .degree-hero.is-results-mode .ce-copy-hero {
+      max-width: 720px;
+      margin-inline: auto;
+    }
+
+    .quiz-section {
+      position: relative;
+      padding-block: var(--ce-space-80);
+    }
+
+    .quiz-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--ce-space-30);
+      align-items: start;
+    }
+
+    .quiz-card {
+      display: grid;
+      height: 780px;
+      min-height: 780px;
+      overflow: hidden;
+      border: 1px solid var(--ce-color-light-surface);
+      border-radius: var(--ce-radius-panel);
+      background: var(--ce-color-white);
+      box-shadow: var(--ce-shadow-raised);
+      padding: var(--ce-space-30);
+    }
+
+    #quizView,
+    .lead-gate-view {
+      min-height: 0;
+      height: 100%;
+    }
+
+    #quizView {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quiz-deck {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-x: hidden;
+      overflow-y: visible;
+    }
+
+    .quiz-question {
+      display: grid;
+      height: 100%;
+      min-height: 0;
+      align-content: start;
+      grid-template-rows: auto auto auto;
+      gap: var(--ce-space-20);
+      will-change: transform, opacity;
+    }
+
+    .quiz-question-copy {
+      max-width: 760px;
+    }
+
+    .quiz-question-copy .ce-heading-category {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+    }
+
+    .question-help {
+      display: none;
+    }
+
+    .quiz-help {
+      margin: 12px 0 0;
+      color: var(--ce-color-body-blue);
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    #answerArea {
+      min-height: 0;
+      overflow: visible;
+      overscroll-behavior: contain;
+    }
+
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--ce-space-15);
+    }
+
+    .answer-option {
+      display: flex;
+      min-height: 88px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--ce-space-15);
+      border: 1px solid var(--ce-color-input-border);
+      border-radius: var(--ce-radius-input);
+      background: var(--ce-color-white);
+      color: var(--ce-color-brand-navy);
+      padding: 16px 18px;
+      text-align: left;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .answer-option:hover,
+    .answer-option:focus-visible {
+      border-color: var(--ce-color-orange);
+      background: var(--ce-color-orange-pale);
+      outline: none;
+    }
+
+    .answer-option[aria-pressed="true"] {
+      border-color: var(--ce-color-orange);
+      background: var(--ce-color-orange);
+      color: var(--ce-color-white);
+    }
+
+    .answer-option-label {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .answer-title {
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .answer-detail {
+      color: var(--ce-color-body-blue);
+      font-size: 1.4rem;
+      line-height: 2rem;
+      overflow-wrap: anywhere;
+    }
+
+    .answer-option[aria-pressed="true"] .answer-detail {
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .answer-check {
+      display: inline-flex;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      color: currentColor;
+      margin-top: 3px;
+    }
+
+    .answer-check::before {
+      content: "";
+      width: 8px;
+      height: 13px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      opacity: 0;
+      transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    .answer-option[aria-pressed="true"] .answer-check::before {
+      opacity: 1;
+    }
+
+    .number-answer {
+      max-width: 360px;
+    }
+
+    .quiz-error {
+      min-height: 24px;
+      color: #b42318;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+
+    .quiz-actions {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 0 auto;
+      justify-content: space-between;
+      gap: var(--ce-space-15);
+      margin-top: var(--ce-space-20);
+      padding-top: var(--ce-space-20);
+      border-top: 1px solid var(--ce-color-border);
+    }
+
+    .quiz-actions-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--ce-space-15);
+    }
+
+    .quiz-progress-button {
+      --quiz-button-progress: 0%;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: #ffad4d;
+      box-shadow: var(--ce-shadow-xs);
+    }
+
+    .quiz-progress-button::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      z-index: 0;
+      width: var(--quiz-button-progress);
+      background: var(--ce-color-orange);
+      transition: width 0.42s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .quiz-progress-button:hover,
+    .quiz-progress-button:focus-visible {
+      background: #ffad4d;
+    }
+
+    .quiz-progress-button-label,
+    .quiz-progress-button::after {
+      position: relative;
+      z-index: 1;
+    }
+
+    .quiz-progress-button:disabled {
+      opacity: 0.7;
+    }
+
+    .lead-gate-view {
+      display: grid;
+      align-content: start;
+      gap: var(--ce-space-25);
+    }
+
+    .lead-gate-form {
+      display: grid;
+      gap: var(--ce-space-20);
+    }
+
+    .lead-gate-form .ce-btn {
+      width: 100%;
+    }
+
+    .lead-gate-form .ce-btn:disabled {
+      opacity: 0.55;
+    }
+
+    .lead-consent {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: var(--ce-space-10);
+      align-items: start;
+      color: var(--ce-color-body-blue);
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+
+    .lead-consent input {
+      width: 18px;
+      height: 18px;
+      margin: 1px 0 0;
+      accent-color: var(--ce-color-orange);
+    }
+
+    .lead-consent span {
+      margin: 0;
+    }
+
+    .results-view {
+      display: grid;
+      gap: var(--ce-space-50);
+    }
+
+    .results-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: var(--ce-space-25);
+      align-items: end;
+    }
+
+    .results-header .ce-heading-section {
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--ce-space-20);
+      margin-top: var(--ce-space-40);
+    }
+
+    .result-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ce-space-20);
+      border: 1px solid var(--ce-color-border);
+      border-radius: var(--ce-radius-card);
+      background: var(--ce-color-card-soft);
+      padding: 22px;
+    }
+
+    .result-card:first-child {
+      background: var(--ce-color-white);
+      box-shadow: var(--ce-shadow-card);
+    }
+
+    .result-card-top {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: var(--ce-space-15);
+      align-items: center;
+    }
+
+    .result-logo {
+      position: relative;
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 14px;
+      background: var(--ce-color-orange-pale);
+      color: var(--ce-color-brand-navy);
+      font-weight: 700;
+    }
+
+    .result-logo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      object-fit: contain;
+      padding: 7px;
+      background: var(--ce-color-white);
+    }
+
+    .result-rank {
+      color: var(--ce-color-orange);
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .result-university {
+      margin: 3px 0 0;
+      color: var(--ce-color-brand-navy);
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+    }
+
+    .result-program {
+      margin: 0;
+      color: var(--ce-color-ink);
+      font-family: var(--ce-font-heading);
+      font-size: 2.7rem;
+      font-weight: 600;
+      line-height: 3.2rem;
+    }
+
+    .fit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ce-space-15);
+      border-top: 1px solid var(--ce-color-border);
+      border-bottom: 1px solid var(--ce-color-border);
+      padding-block: var(--ce-space-15);
+    }
+
+    .fit-score {
+      display: inline-flex;
+      width: 76px;
+      height: 76px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid var(--ce-color-orange);
+      border-radius: 50%;
+      color: var(--ce-color-ink);
+      font-family: var(--ce-font-heading);
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .result-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--ce-space-12);
+      margin: 0;
+    }
+
+    .result-meta div {
+      display: grid;
+      gap: 2px;
+    }
+
+    .result-meta dt {
+      color: var(--ce-color-muted);
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+
+    .result-meta dd {
+      margin: 0;
+      color: var(--ce-color-brand-navy);
+      font-weight: 700;
+      line-height: 2.2rem;
+    }
+
+    .reason-list {
+      display: grid;
+      gap: var(--ce-space-8);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .reason-list li {
+      position: relative;
+      color: var(--ce-color-body-blue);
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      padding-left: 18px;
+    }
+
+    .reason-list li::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ce-color-orange);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--ce-space-8);
+    }
+
+    .result-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--ce-color-border);
+      border-radius: var(--ce-radius-pill);
+      background: var(--ce-color-white);
+      color: var(--ce-color-form-text);
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 7px 10px;
+    }
+
+    .result-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--ce-space-10);
+      margin-top: auto;
+    }
+
+    .result-actions .ce-btn {
+      width: 100%;
+      min-height: 48px;
+      padding: 14px 18px;
+      font-size: 1.5rem;
+    }
+
+    .lead-message {
+      min-height: 24px;
+      color: var(--ce-color-brand-navy);
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+
+    .result-feedback {
+      min-height: 24px;
+      margin: var(--ce-space-20) 0 0;
+      color: var(--ce-color-brand-navy);
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+
+    .result-feedback:empty {
+      display: none;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      background: var(--ce-color-brand-navy);
+      padding: 58px 0 54px;
+    }
+
+    footer .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--ce-space-30);
+    }
+
+    footer .footer-left-wrap,
+    footer .footer-right-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer .footer-right-wrap {
+      max-width: 655px;
+    }
+
+    footer .menu-mainsite-footermenu-container {
+      width: 100%;
+    }
+
+    footer .logo {
+      display: inline-block;
+      margin: 0 0 16px;
+    }
+
+    footer .logo img {
+      width: 181px;
+      height: auto;
+    }
+
+    footer .copyright,
+    .flow-discl-txt {
+      color: var(--ce-color-muted);
+      font-size: 1.3rem;
+    }
+
+    footer .copyright {
+      line-height: 1.35;
+      margin: 0 0 24px;
+    }
+
+    footer .icons-wrap {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    footer .icons-wrap.mob {
+      display: none;
+    }
+
+    footer .icons-wrap a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 var(--ce-space-30);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    footer li:has(> #dnslink[style*="display:none"]) {
+      display: none;
+    }
+
+    footer li a {
+      display: inline-block;
+      position: relative;
+      color: var(--ce-color-white);
+      font-size: 1.3rem;
+      line-height: 2;
+    }
+
+    footer li a::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--ce-color-orange);
+      transform: scale3d(0, 1, 1);
+      transform-origin: 100% 50%;
+      transition: transform 0.3s ease;
+    }
+
+    footer li:hover a::before,
+    footer li a:focus-visible::before {
+      transform: scale3d(1, 1, 1);
+      transform-origin: 0 50%;
+    }
+
+    .flow-discl-txt {
+      line-height: 1.5;
+      opacity: 0.8;
+      margin: 24px 0 0;
+    }
+
+    .flow-discl-txt strong {
+      font-weight: 700;
+    }
+
+    .flow-discl-txt a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 1120px) {
+      .degree-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .header {
+        background: var(--ce-color-mobile-navy);
+        padding: 20px 0;
+      }
+
+      .header .desktop-menu {
+        display: none;
+      }
+
+      .header .mobile-menu {
+        display: block;
+      }
+
+      .header .mob_hamburger .bar,
+      .header .mob_hamburger .bar::after {
+        background: var(--ce-color-white);
+      }
+
+      .header .logo .logo-black-img {
+        display: none;
+      }
+
+      .header .logo .logo-white-img {
+        display: block;
+      }
+
+      .header .mob-menu-list .logo .logo-black-img {
+        display: block;
+      }
+
+      .header .mob-menu-list .logo .logo-white-img {
+        display: none;
+      }
+
+      .degree-logo {
+        width: 156px;
+      }
+
+      .degree-hero {
+        min-height: auto;
+        padding-block: 64px 54px;
+      }
+
+      .quiz-section {
+        padding-block: var(--ce-space-40);
+      }
+
+      .quiz-card {
+        padding: 24px 20px;
+      }
+
+      .quiz-card {
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+      }
+
+      #quizView,
+      .lead-gate-view {
+        height: auto;
+      }
+
+      .quiz-deck {
+        overflow: visible;
+      }
+
+      .option-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-actions,
+      .quiz-actions-right,
+      .quiz-actions .ce-btn {
+        width: 100%;
+      }
+
+      .quiz-actions {
+        flex-direction: column-reverse;
+      }
+
+      .results-header {
+        grid-template-columns: 1fr;
+      }
+
+      .results-header .ce-heading-section {
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+      }
+
+      footer {
+        padding: 40px 0;
+      }
+
+      footer .footer-wrap {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .footer-right-wrap {
+        align-items: center;
+      }
+
+      footer .icons-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 0;
+      }
+
+      footer .icons-wrap.mob {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      footer ul {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      footer li {
+        min-height: 38px;
+        line-height: 38px;
+      }
+
+      footer li a::before {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="homepage-wrapper ce-page degree-page">
+    <header class="header sticky">
+      <div class="container d-flex justify-content-between align-center">
+        <div class="logo">
+          <a href="../CollegEnroll-index.html" aria-label="CollegEnroll">
+            <img class="logo-black-img" src="../assets/logo.svg" alt="CollegEnroll">
+            <img class="logo-white-img" src="../assets/logo-white.svg" alt="CollegEnroll">
+          </a>
+        </div>
+        <div class="right-wrap d-flex justify-content-between align-center">
+          <nav class="desktop-menu" aria-label="Primary navigation">
+            <div class="menu-mainsite-headermenu-container">
+              <ul id="menu-mainsite-headermenu" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/degree-programs">Degree programs</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/bootcamps-courses/">Bootcamps</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/the-classroom/">Blog</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/about-us/">About us</a></li>
+              </ul>
+            </div>
+          </nav>
+          <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu" aria-controls="mobileMenuList" aria-expanded="false">
+            <span class="mob_hamburger_wrap">
+              <span class="mob_hamburger">
+                <span class="bar"></span>
+              </span>
+            </span>
+          </button>
+          <div class="mob-menu-list" id="mobileMenuList">
+            <div class="close-icon-wrap">
+              <div class="logo">
+                <a href="../CollegEnroll-index.html" aria-label="CollegEnroll">
+                  <img class="logo-black-img" src="../assets/logo.svg" alt="CollegEnroll">
+                  <img class="logo-white-img" src="../assets/logo-white.svg" alt="CollegEnroll">
+                </a>
+              </div>
+              <button class="close-icon" type="button" id="mobileMenuClose" aria-label="Close menu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.22349 7.99941L15.7787 1.31592C15.9219 1.16881 16.0011 0.971372 15.9989 0.766528C15.9968 0.561684 15.9135 0.365923 15.7672 0.221818C15.695 0.150566 15.6092 0.0943168 15.515 0.0562401C15.4207 0.0181633 15.3198 -0.000929463 15.218 3.47822e-05C15.1163 0.000999028 15.0158 0.0220165 14.9223 0.0618732C14.8288 0.10173 14.7441 0.159589 14.6732 0.232198L8.12946 6.90537L1.3148 0.221818C1.24249 0.150629 1.15675 0.0944041 1.06249 0.0563667C0.968237 0.0183292 0.867343 -0.000739394 0.765638 0.000224665C0.663933 0.00118872 0.563408 0.0221826 0.469896 0.0619998C0.376385 0.101817 0.291736 0.159651 0.2208 0.232198C0.0774259 0.379172 -0.00191569 0.576559 3.51413e-05 0.781402C0.00198597 0.986245 0.08505 1.182 0.231198 1.32624L7.03597 7.99941L0.231198 14.6726C0.08505 14.8168 0.00198597 15.0126 3.51413e-05 15.2175C-0.00191569 15.4223 0.0774259 15.6197 0.2208 15.7667C0.291664 15.8394 0.376281 15.8973 0.469801 15.9372C0.563321 15.9771 0.663894 15.9981 0.765638 15.9991C0.867383 16.0001 0.96829 15.981 1.06256 15.9428C1.15682 15.9047 1.24256 15.8483 1.3148 15.777L8.12946 9.09352L14.6732 15.7667C14.745 15.8405 14.831 15.8992 14.926 15.9393C15.0211 15.9794 15.1232 16 15.2265 16C15.3271 16.0004 15.4269 15.9809 15.5199 15.9426C15.6129 15.9043 15.6973 15.848 15.7683 15.777C15.9146 15.6329 15.9978 15.4372 16 15.2324C16.0021 15.0275 15.923 14.8301 15.7797 14.683L9.22349 7.99941Z" fill="#081B37"></path></svg>
+              </button>
+            </div>
+            <nav class="nav-list" aria-label="Mobile navigation">
+              <div class="menu-mainsite-headermenu-container">
+                <ul class="menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/degree-programs">Degree programs</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/bootcamps-courses/">Bootcamps</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/the-classroom/">Blog</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/about-us/">About us</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="ce-hero degree-hero" id="degreeHero">
+        <div class="ce-hero-media" aria-hidden="true"></div>
+        <div class="ce-container-wide degree-hero-grid">
+          <div class="degree-hero-copy ce-stack">
+            <h1 class="ce-heading-hero">Find the degree that fits your <span>career goals</span> in 60&nbsp;seconds</h1>
+            <p class="ce-copy ce-copy-hero">Find programs that fit how you study, what you can spend, and where you want to go next.</p>
+          </div>
+
+          <section class="quiz-card" id="degree-quiz" aria-live="polite">
+            <div id="quizView">
+              <div class="quiz-deck" id="quizDeck">
+                <div class="quiz-question" id="questionCard">
+                  <div class="quiz-question-copy">
+                    <h2 class="ce-heading-category" id="questionTitle"></h2>
+                    <p class="quiz-help question-help" id="questionHelp"></p>
+                  </div>
+                  <div id="answerArea"></div>
+                  <div class="quiz-error" id="quizError" role="alert"></div>
+                </div>
+              </div>
+
+              <div class="quiz-actions">
+                <button class="ce-btn ce-btn-outline" type="button" id="backButton">Back</button>
+                <div class="quiz-actions-right">
+                  <button class="ce-btn ce-btn-primary ce-btn-arrow quiz-progress-button" type="button" id="nextButton" style="--quiz-button-progress: 0%;">
+                    <span class="quiz-progress-button-label" id="nextButtonLabel">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lead-gate-view is-hidden" id="leadGateView">
+              <div>
+                <h2 class="ce-heading-category">We can help you better</h2>
+              </div>
+              <form class="lead-gate-form" id="leadGateForm" novalidate>
+                <div class="ce-field">
+                  <label class="ce-floating-label" for="leadName">Name</label>
+                  <input class="ce-input" id="leadName" name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
+                </div>
+                <div class="ce-field">
+                  <label class="ce-floating-label" for="leadEmail">Email</label>
+                  <input class="ce-input" id="leadEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+                <div class="ce-field">
+                  <label class="ce-floating-label" for="leadPhone">Phone</label>
+                  <input class="ce-input" id="leadPhone" name="phone" type="tel" placeholder="Optional U.S. number" autocomplete="tel">
+                </div>
+                <label class="lead-consent" for="leadMarketingConsent">
+                  <input id="leadMarketingConsent" name="marketingConsent" type="checkbox" checked required>
+                  <span>I understand my email may be used to send marketing or promotional content.</span>
+                </label>
+                <div class="lead-message" id="leadMessage" role="alert"></div>
+                <button class="ce-btn ce-btn-primary ce-btn-arrow" type="submit" id="leadSubmitButton">Unlock my matches</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="ce-section ce-section-soft results-view is-hidden" id="resultsView">
+        <div class="ce-container-wide">
+          <div class="results-header">
+            <div>
+              <h2 class="ce-heading-section">Top 3 programs for your profile</h2>
+            </div>
+            <button class="ce-btn ce-btn-outline" type="button" id="restartButton">Refine answers</button>
+          </div>
+          <div class="result-grid" id="resultGrid"></div>
+          <p class="result-feedback" id="resultFeedback" role="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-left-wrap d-flex">
+            <a href="../CollegEnroll-index.html" class="logo" aria-label="CollegEnroll">
+              <img src="../assets/logo-white.svg" alt="CollegEnroll">
+            </a>
+            <div class="copyright">Copyright 2026 | Collegenroll</div>
+            <div class="icons-wrap">
+              <a href="https://www.facebook.com/collegenroll?mibextid=ZbWKwL" aria-label="CollegEnroll Facebook" target="_blank" rel="noreferrer">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.9993 11.3858C22.9993 5.27327 18.0742 0.318115 11.9987 0.318115C5.9232 0.318115 0.998047 5.27327 0.998047 11.3858C0.998047 16.91 5.02082 21.4887 10.2798 22.319V14.585H7.48671V11.3858H10.2798V8.94743C10.2798 6.1736 11.9222 4.64142 14.4349 4.64142C15.6385 4.64142 16.8974 4.85758 16.8974 4.85758V7.58127H15.5103C14.1437 7.58127 13.7175 8.43441 13.7175 9.30966V11.3858H16.7685L16.2808 14.585H13.7175V22.319C18.9766 21.4887 22.9993 16.91 22.9993 11.3858Z" fill="white"></path></svg>
+              </a>
+              <a href="https://instagram.com/collegenroll?igshid=MzRlODBiNWFlZA==" aria-label="CollegEnroll Instagram" target="_blank" rel="noreferrer">
+                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.001 0.318115C8.01358 0.318115 7.63866 0.331178 6.46532 0.384574C5.29426 0.4382 4.49492 0.623598 3.7955 0.895621C3.07201 1.17658 2.4583 1.55242 1.84687 2.16407C1.23499 2.7755 0.859155 3.38921 0.577277 4.11247C0.304565 4.81212 0.118939 5.61169 0.0662298 6.78229C0.01375 7.95563 0 8.33078 0 11.3182C0 14.3057 0.013292 14.6795 0.0664592 15.8528C0.120314 17.0239 0.305712 17.8232 0.577506 18.5226C0.858697 19.2461 1.23453 19.8598 1.84619 20.4712C2.45738 21.0831 3.07109 21.4599 3.79412 21.7408C4.49401 22.0129 5.29358 22.1983 6.4644 22.2519C7.63775 22.3053 8.01244 22.3183 10.9997 22.3183C13.9873 22.3183 14.3611 22.3053 15.5345 22.2519C16.7055 22.1983 17.5058 22.0129 18.2056 21.7408C18.9289 21.4599 19.5417 21.0831 20.1529 20.4712C20.7648 19.8598 21.1406 19.2461 21.4225 18.5228C21.6929 17.8232 21.8785 17.0236 21.9335 15.853C21.9862 14.6797 22 14.3057 22 11.3182C22 8.33078 21.9862 7.95586 21.9335 6.78252C21.8785 5.61146 21.6929 4.81212 21.4225 4.1127C21.1406 3.38921 20.7648 2.7755 20.1529 2.16407C19.541 1.55219 18.9291 1.17635 18.205 0.895621C17.5037 0.623598 16.7039 0.4382 15.5328 0.384574C14.3595 0.331178 13.986 0.318115 10.9976 0.318115H11.001ZM10.0142 2.30043C10.3071 2.29997 10.6339 2.30043 11.001 2.30043C13.9381 2.30043 14.2862 2.31097 15.446 2.36368C16.5185 2.41272 17.1006 2.59193 17.4883 2.74249C18.0017 2.94187 18.3677 3.18021 18.7524 3.56521C19.1374 3.95022 19.3758 4.31689 19.5756 4.83022C19.7262 5.21752 19.9056 5.79961 19.9544 6.87212C20.0071 8.03172 20.0186 8.38005 20.0186 11.3157C20.0186 14.2514 20.0071 14.5997 19.9544 15.7593C19.9054 16.8318 19.7262 17.4139 19.5756 17.8012C19.3762 18.3145 19.1374 18.6801 18.7524 19.0648C18.3674 19.4498 18.0019 19.6882 17.4883 19.8875C17.1011 20.0388 16.5185 20.2176 15.446 20.2666C14.2864 20.3193 13.9381 20.3308 11.001 20.3308C8.06377 20.3308 7.71566 20.3193 6.55607 20.2666C5.48356 20.2171 4.90147 20.0379 4.51348 19.8873C4.00015 19.6879 3.63348 19.4496 3.24847 19.0646C2.86347 18.6796 2.62513 18.3138 2.4253 17.8003C2.27473 17.413 2.09529 16.8309 2.04648 15.7584C1.99377 14.5988 1.98323 14.2504 1.98323 11.313C1.98323 8.37547 1.99377 8.02897 2.04648 6.86937C2.09552 5.79686 2.27473 5.21477 2.4253 4.82702C2.62467 4.31368 2.86347 3.94701 3.24847 3.562C3.63348 3.177 4.00015 2.93866 4.51348 2.73883C4.90124 2.58758 5.48356 2.40882 6.55607 2.35955C7.57083 2.31372 7.96408 2.29997 10.0142 2.29768V2.30043ZM16.8728 4.1269C16.144 4.1269 15.5528 4.71747 15.5528 5.44646C15.5528 6.17522 16.144 6.76647 16.8728 6.76647C17.6016 6.76647 18.1928 6.17522 18.1928 5.44646C18.1928 4.7177 17.6016 4.12645 16.8728 4.12645V4.1269ZM11.001 5.66921C7.88135 5.66921 5.35201 8.19855 5.35201 11.3182C5.35201 14.4379 7.88135 16.9661 11.001 16.9661C14.1207 16.9661 16.6491 14.4379 16.6491 11.3182C16.6491 8.19855 14.1205 5.66921 11.0008 5.66921H11.001ZM11.001 7.65153C13.026 7.65153 14.6677 9.29306 14.6677 11.3182C14.6677 13.3432 13.026 14.9849 11.001 14.9849C8.97586 14.9849 7.33433 13.3432 7.33433 11.3182C7.33433 9.29306 8.97586 7.65153 11.001 7.65153Z" fill="white"></path></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-right-wrap d-flex justify-content-between">
+            <div class="menu-mainsite-footermenu-container">
+              <ul id="menu-mainsite-footermenu" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom reset-css"><a id="dnslink" style="display:none" href="#">Do not sell or share my personal information</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/preferences/">Preferences</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/about-us/">About us</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/cookie-policy/">Cookie policy</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/privacy-policy/">Privacy policy</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://collegenroll.com/contact-us/">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="flow-discl-txt"><strong>Disclosure:</strong> We will collect your contact information to respond to your requests and provide you with educational matching services. As a result, you may be matched to one or more sponsored schools from which we receive compensation. Compensation may impact where Sponsored Schools appear on our websites. We use cookies and other tracking technologies to collect your personal information in order to gauge online activity on our website. For more information, see our <a href="https://collegenroll.com/privacy-policy/">privacy policy.</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+  <script>
+    const QUESTIONS = [
+      {
+        id: "learnerStage",
+        title: "Which best describes you right now?",
+        help: "We match students and working adults differently, so start with your current path.",
+        validation: "Choose the option that best describes you.",
+        options: [
+          { label: "High school junior/senior", value: "high_school_junior_senior", detail: "Planning college after Grade 11 or 12" },
+          { label: "Community college student", value: "community_college", detail: "In or considering an associate/transfer path" },
+          { label: "Current undergraduate", value: "undergraduate_student", detail: "Already enrolled in a bachelor's program" },
+          { label: "Graduate student", value: "graduate_student", detail: "Considering a master's, MBA, or certificate" },
+          { label: "Early-career professional", value: "early_career", detail: "Working and building momentum" },
+          { label: "Mid-career professional", value: "mid_career", detail: "Growing into higher responsibility" },
+          { label: "Changing careers", value: "career_changer", detail: "Moving into a new field" },
+          { label: "Returning learner", value: "returning_learner", detail: "Coming back to school after time away" }
+        ]
+      },
+      {
+        id: "industry",
+        title: "Which field are you most interested in?",
+        help: "Pick the direction that feels closest right now.",
+        validation: "Choose a field of interest.",
+        options: [
+          { label: "Business and management", value: "business", detail: "Leadership, operations, strategy, entrepreneurship" },
+          { label: "Technology and analytics", value: "technology", detail: "Software, data, AI, cloud, cybersecurity" },
+          { label: "Finance and commerce", value: "finance", detail: "Accounting, banking, investments, FinTech" },
+          { label: "Marketing and media", value: "marketing_media", detail: "Branding, content, PR, digital media" },
+          { label: "Healthcare", value: "healthcare", detail: "Hospitals, public health, wellness, counseling" },
+          { label: "Education", value: "education", detail: "Teaching, EdTech, curriculum, academic leadership" },
+          { label: "Law and public policy", value: "law_policy", detail: "Policy, governance, compliance, public administration" },
+          { label: "Design and creative", value: "design_creative", detail: "UX, product design, communication, writing" },
+          { label: "Not sure yet", value: "not_sure", detail: "Keep my options broad" }
+        ]
+      },
+      {
+        id: "qualification",
+        title: "What is the highest level you have completed?",
+        help: "This keeps recommendations aligned with North America admissions requirements.",
+        validation: "Choose your highest completed education level.",
+        options: [
+          { label: "Grade 11 or 12", value: "high_school_in_progress", detail: "Currently in high school, junior year or later" },
+          { label: "High school diploma/GED", value: "high_school", detail: "Completed high school or equivalent" },
+          { label: "Some college", value: "some_college", detail: "College credits without a completed degree" },
+          { label: "Associate degree", value: "associate", detail: "Completed a 2-year credential" },
+          { label: "Bachelor's degree", value: "bachelors", detail: "Completed a 4-year undergraduate degree" },
+          { label: "Master's or higher", value: "masters", detail: "Completed graduate-level study" }
+        ]
+      },
+      {
+        id: "motivation",
+        title: "What is your main goal?",
+        help: "Your reason changes which program tradeoffs matter most.",
+        validation: "Choose your main reason.",
+        options: [
+          { label: "Start college", value: "start_college", detail: "Find the right first or transfer program" },
+          { label: "Transfer credits", value: "transfer", detail: "Move credits toward a bachelor's degree" },
+          { label: "Career change", value: "switch", detail: "Build credibility in a new field" },
+          { label: "Promotion", value: "promotion", detail: "Move into a better role or leadership track" },
+          { label: "Higher earning potential", value: "salary", detail: "Prioritize stronger outcomes" },
+          { label: "Required credential", value: "mandatory", detail: "Meet licensing, employer, or graduate-school requirements" }
+        ]
+      },
+      {
+        id: "degreeLevel",
+        title: "What type of credential are you considering?",
+        help: "Choose the level you are most open to exploring.",
+        validation: "Choose a credential level.",
+        options: [
+          { label: "Associate", value: "associate", detail: "2-year or transfer-friendly path" },
+          { label: "Bachelor's", value: "bachelors", detail: "Undergraduate degree completion" },
+          { label: "Master's", value: "masters", detail: "Graduate degree or professional advancement" },
+          { label: "MBA", value: "mba", detail: "Business leadership track" },
+          { label: "Certificate", value: "certificate", detail: "Shorter, career-focused credential" },
+          { label: "Not sure", value: "not_sure", detail: "Let the match decide" }
+        ]
+      },
+      {
+        id: "timeAvailability",
+        title: "How much time can you study each week?",
+        help: "A realistic schedule usually beats an overly ambitious one.",
+        validation: "Choose your weekly time availability.",
+        options: [
+          { label: "Up to 5 hours", value: "under_5", detail: "Light weekly load" },
+          { label: "6 to 10 hours", value: "six_10", detail: "Balanced with work, school, or family" },
+          { label: "11 to 15 hours", value: "eleven_15", detail: "Steady academic commitment" },
+          { label: "16+ hours", value: "sixteen_plus", detail: "Ready for an intensive pace" }
+        ]
+      },
+      {
+        id: "preferredMode",
+        title: "What study format do you prefer?",
+        help: "Format affects schedule, campus access, and flexibility.",
+        validation: "Choose your preferred study format.",
+        options: [
+          { label: "Online", value: "online", detail: "Maximum flexibility" },
+          { label: "Hybrid", value: "hybrid", detail: "Online with some in-person learning" },
+          { label: "Evening or weekend", value: "weekend", detail: "Structured around work or school" },
+          { label: "Open to any", value: "any", detail: "Let the match decide" }
+        ]
+      },
+      {
+        id: "budget",
+        title: "What annual tuition range feels comfortable?",
+        help: "The score considers tuition, affordability, and expected outcomes.",
+        validation: "Choose your budget range.",
+        options: [
+          { label: "Under $10,000", value: "under_10000", detail: "Most cost-sensitive" },
+          { label: "$10,000 to $25,000", value: "10000_25000", detail: "Balanced affordability" },
+          { label: "$25,000 to $50,000", value: "25000_50000", detail: "Open to premium options" },
+          { label: "$50,000+", value: "above_50000", detail: "Outcome fit matters more than tuition" }
+        ]
+      },
+      {
+        id: "location",
+        title: "Do you have a location preference?",
+        help: "Online programs can still benefit from regional advising, transfer pathways, and campus access.",
+        validation: "Choose a location preference.",
+        options: [
+          { label: "No preference", value: "any", detail: "Show the best fit anywhere in North America" },
+          { label: "Fully online", value: "online", detail: "No campus requirement" },
+          { label: "U.S. northeast", value: "us_northeast", detail: "Northeast or nearby" },
+          { label: "U.S. south", value: "us_south", detail: "South or southeast" },
+          { label: "U.S. midwest", value: "us_midwest", detail: "Midwest or central U.S." },
+          { label: "U.S. west", value: "us_west", detail: "West Coast or mountain states" }
+        ]
+      },
+      {
+        id: "experienceYears",
+        title: "How many years of relevant work experience do you have?",
+        help: "Enter 0 if you are a student or have not worked in the field yet.",
+        validation: "Enter a number from 0 to 40.",
+        type: "number",
+        min: 0,
+        max: 40
+      }
+    ];
+
+    const STUDENT_STAGES = ["high_school_junior_senior", "community_college", "undergraduate_student", "graduate_student"];
+
+    const OPTION_FILTERS = {
+      qualification: {
+        high_school_junior_senior: ["high_school_in_progress", "high_school"],
+        community_college: ["high_school", "some_college", "associate"],
+        undergraduate_student: ["some_college", "associate", "high_school"],
+        graduate_student: ["bachelors", "masters"],
+        early_career: ["high_school", "some_college", "associate", "bachelors"],
+        mid_career: ["some_college", "associate", "bachelors", "masters"],
+        career_changer: ["high_school", "some_college", "associate", "bachelors", "masters"],
+        returning_learner: ["high_school", "some_college", "associate", "bachelors", "masters"]
+      },
+      motivation: {
+        high_school_junior_senior: ["start_college", "salary", "mandatory"],
+        community_college: ["transfer", "start_college", "salary", "switch"],
+        undergraduate_student: ["transfer", "mandatory", "salary", "switch"],
+        graduate_student: ["promotion", "salary", "mandatory", "switch"],
+        early_career: ["promotion", "salary", "switch", "mandatory"],
+        mid_career: ["promotion", "salary", "mandatory", "switch"],
+        career_changer: ["switch", "salary", "mandatory"],
+        returning_learner: ["start_college", "switch", "promotion", "salary", "mandatory"]
+      },
+      degreeLevel: {
+        high_school_in_progress: ["associate", "bachelors", "not_sure"],
+        high_school: ["associate", "bachelors", "certificate", "not_sure"],
+        some_college: ["associate", "bachelors", "certificate", "not_sure"],
+        associate: ["bachelors", "certificate", "not_sure"],
+        bachelors: ["masters", "mba", "certificate", "not_sure"],
+        masters: ["masters", "mba", "certificate", "not_sure"]
+      },
+      preferredMode: {
+        high_school_junior_senior: ["online", "hybrid", "any"],
+        community_college: ["online", "hybrid", "weekend", "any"],
+        undergraduate_student: ["online", "hybrid", "weekend", "any"],
+        graduate_student: ["online", "hybrid", "weekend", "any"]
+      },
+      location: {
+        online: ["online", "any"],
+        hybrid: ["any", "us_northeast", "us_south", "us_midwest", "us_west"],
+        weekend: ["any", "us_northeast", "us_south", "us_midwest", "us_west"],
+        any: ["any", "online", "us_northeast", "us_south", "us_midwest", "us_west"]
+      }
+    };
+
+    const QUALIFICATION_RANK = {
+      high_school_in_progress: 0.75,
+      high_school: 1,
+      some_college: 1.35,
+      associate: 1.6,
+      bachelors: 2,
+      masters: 3
+    };
+
+    const TIME_HOURS = {
+      under_5: 5,
+      six_10: 10,
+      eleven_15: 15,
+      sixteen_plus: 24
+    };
+
+    const BUDGET_MAX = {
+      under_10000: 10000,
+      "10000_25000": 25000,
+      "25000_50000": 50000,
+      above_50000: 99999999
+    };
+
+    const MOTIVATION_TAG = {
+      start_college: "student_pathway",
+      transfer: "transfer_student",
+      promotion: "promotion_seeker",
+      switch: "career_switcher",
+      salary: "salary_growth",
+      mandatory: "mandatory_credential"
+    };
+
+    const INDUSTRY_ADJACENT = {
+      business: ["finance", "marketing_media", "operations", "human_resources", "commerce"],
+      technology: ["analytics", "finance", "design_creative", "law_policy"],
+      finance: ["business", "commerce", "technology", "analytics"],
+      marketing_media: ["business", "design_creative", "human_resources"],
+      healthcare: ["education", "law_policy", "humanities"],
+      education: ["healthcare", "law_policy", "humanities"],
+      law_policy: ["business", "healthcare", "technology", "education"],
+      design_creative: ["marketing_media", "technology", "business"]
+    };
+
+    const INDUSTRY_LABELS = new Map(
+      QUESTIONS.find((question) => question.id === "industry").options.map((option) => [option.value, option.label])
+    );
+
+    const MODE_LABELS = {
+      online: "Online",
+      hybrid: "Hybrid",
+      weekend: "Weekend",
+      any: "Any"
+    };
+
+    const DEGREE_LEVEL_PATTERNS = {
+      associate: /\bassociate\b/i,
+      bachelors: /\b(ba|bs|bba|bachelor)\b/i,
+      masters: /\b(ma|ms|m\.s|m\.a|master)\b/i,
+      mba: /\bmba\b/i,
+      certificate: /\b(certificate|cert|diploma)\b/i
+    };
+
+    const state = {
+      index: 0,
+      answers: {},
+      universities: [],
+      matches: [],
+      dataReady: false,
+      lead: null,
+      isTransitioning: false
+    };
+
+    const BUTTON_PROGRESS_CURVE = [0, 30, 50, 64, 75, 83, 90, 95, 98, 100];
+
+    const els = {
+      quizView: document.getElementById("quizView"),
+      degreeHero: document.getElementById("degreeHero"),
+      degreeQuiz: document.getElementById("degree-quiz"),
+      resultsView: document.getElementById("resultsView"),
+      questionCard: document.getElementById("questionCard"),
+      questionTitle: document.getElementById("questionTitle"),
+      questionHelp: document.getElementById("questionHelp"),
+      answerArea: document.getElementById("answerArea"),
+      quizError: document.getElementById("quizError"),
+      backButton: document.getElementById("backButton"),
+      nextButton: document.getElementById("nextButton"),
+      nextButtonLabel: document.getElementById("nextButtonLabel"),
+      leadGateView: document.getElementById("leadGateView"),
+      leadGateForm: document.getElementById("leadGateForm"),
+      leadName: document.getElementById("leadName"),
+      leadPhone: document.getElementById("leadPhone"),
+      leadMarketingConsent: document.getElementById("leadMarketingConsent"),
+      leadSubmitButton: document.getElementById("leadSubmitButton"),
+      restartButton: document.getElementById("restartButton"),
+      resultGrid: document.getElementById("resultGrid"),
+      resultFeedback: document.getElementById("resultFeedback"),
+      leadEmail: document.getElementById("leadEmail"),
+      leadMessage: document.getElementById("leadMessage")
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadUniversities();
+      renderQuestion();
+      bindEvents();
+    });
+
+    function bindEvents() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuList = document.getElementById("mobileMenuList");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const setMobileMenu = (isOpen) => {
+        mobileMenuList.classList.toggle("active", isOpen);
+        mobileMenu.setAttribute("aria-expanded", String(isOpen));
+      };
+
+      mobileMenu.addEventListener("click", () => setMobileMenu(true));
+      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+      mobileMenuList.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMobileMenu(false));
+      });
+
+      document.querySelectorAll("[data-scroll-target]").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const target = document.querySelector(trigger.dataset.scrollTarget);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      els.answerArea.addEventListener("click", (event) => {
+        const option = event.target.closest("[data-answer]");
+        if (!option || state.isTransitioning) return;
+        const currentQuestion = getCurrentQuestion();
+        const selectedValue = option.dataset.answer;
+        setAnswer(currentQuestion.id, selectedValue);
+        els.quizError.textContent = "";
+        updateSelectedOption(selectedValue);
+        updateQuizChrome();
+        advanceAfterSelection();
+      });
+
+      els.answerArea.addEventListener("input", (event) => {
+        const input = event.target.closest("[data-number-answer]");
+        if (!input) return;
+        const currentQuestion = getCurrentQuestion();
+        state.answers[currentQuestion.id] = input.value;
+        els.quizError.textContent = "";
+      });
+
+      els.backButton.addEventListener("click", () => {
+        if (state.index === 0 || state.isTransitioning) return;
+        goToQuestion(state.index - 1, -1);
+      });
+
+      els.nextButton.addEventListener("click", () => {
+        if (state.isTransitioning) return;
+        if (!validateCurrentQuestion(true)) return;
+        const visibleQuestions = getVisibleQuestions();
+        if (state.index === visibleQuestions.length - 1) {
+          prepareLeadGate();
+          return;
+        }
+        goToQuestion(state.index + 1, 1);
+      });
+
+      els.restartButton.addEventListener("click", () => {
+        els.resultsView.classList.add("is-hidden");
+        els.leadGateView.classList.add("is-hidden");
+        els.degreeHero.classList.remove("is-results-mode");
+        els.degreeQuiz.classList.remove("is-hidden");
+        els.quizView.classList.remove("is-hidden");
+        state.index = 0;
+        state.lead = null;
+        state.matches = [];
+        els.resultFeedback.textContent = "";
+        renderQuestion({ direction: -1 });
+        document.getElementById("degree-quiz").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      els.resultGrid.addEventListener("click", (event) => {
+        const action = event.target.closest("[data-result-action]");
+        if (!action) return;
+        const match = state.matches[Number(action.dataset.matchIndex)];
+        if (!match) return;
+        const leadEmail = state.lead ? state.lead.email : "your verified email";
+        els.resultFeedback.textContent = `${action.dataset.resultAction} noted for ${match.program.name} at ${match.university.name}. We'll use ${leadEmail} for follow-up.`;
+      });
+
+      els.leadMarketingConsent.addEventListener("change", syncLeadSubmitState);
+
+      els.leadGateForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!els.leadMarketingConsent.checked) {
+          syncLeadSubmitState();
+          els.leadMessage.textContent = "Check the consent box to unlock your matches.";
+          els.leadMarketingConsent.focus();
+          return;
+        }
+        const name = els.leadName.value.trim();
+        const email = normalizeEmail(els.leadEmail.value);
+        const phone = els.leadPhone.value.trim();
+        const emailError = validateEmail(email);
+        if (!isValidName(name)) {
+          els.leadMessage.textContent = "Enter your first and last name using letters, spaces, apostrophes, or hyphens.";
+          els.leadName.focus();
+          return;
+        }
+        if (emailError) {
+          els.leadMessage.textContent = emailError;
+          els.leadEmail.focus();
+          return;
+        }
+        if (phone && !isValidUsPhone(phone)) {
+          els.leadMessage.textContent = "Enter a valid U.S. phone number, or leave the phone field blank.";
+          els.leadPhone.focus();
+          return;
+        }
+        state.lead = { name, email, phone, marketingConsent: els.leadMarketingConsent.checked };
+        calculateAndRenderResults();
+      });
+      syncLeadSubmitState();
+    }
+
+    async function loadUniversities() {
+      try {
+        const response = await fetch("../data/universities.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`Data request failed: ${response.status}`);
+        }
+        state.universities = await response.json();
+        state.dataReady = true;
+      } catch (error) {
+        state.dataReady = false;
+      }
+    }
+
+    function getVisibleQuestions() {
+      return QUESTIONS.filter((question) => {
+        if (question.id === "experienceYears") {
+          return shouldAskExperience();
+        }
+        if (!question.options) {
+          return true;
+        }
+        return getFilteredOptions(question).length > 0;
+      });
+    }
+
+    function getCurrentQuestion() {
+      const visibleQuestions = getVisibleQuestions();
+      if (state.index > visibleQuestions.length - 1) {
+        state.index = Math.max(0, visibleQuestions.length - 1);
+      }
+      return visibleQuestions[state.index];
+    }
+
+    function getFilteredOptions(question) {
+      if (!question.options) {
+        return [];
+      }
+
+      let allowedValues = null;
+      if (question.id === "qualification") {
+        allowedValues = OPTION_FILTERS.qualification[state.answers.learnerStage] || null;
+      } else if (question.id === "motivation") {
+        allowedValues = OPTION_FILTERS.motivation[state.answers.learnerStage] || null;
+      } else if (question.id === "degreeLevel") {
+        allowedValues = OPTION_FILTERS.degreeLevel[state.answers.qualification] || null;
+        if (state.answers.motivation === "transfer") {
+          allowedValues = intersectAllowedValues(allowedValues, ["associate", "bachelors", "not_sure"]);
+        }
+      } else if (question.id === "preferredMode") {
+        allowedValues = OPTION_FILTERS.preferredMode[state.answers.learnerStage] || null;
+      } else if (question.id === "location") {
+        allowedValues = OPTION_FILTERS.location[state.answers.preferredMode] || null;
+      }
+
+      if (!allowedValues) {
+        return question.options;
+      }
+
+      const filteredOptions = question.options.filter((option) => allowedValues.includes(option.value));
+      return filteredOptions.length ? filteredOptions : question.options;
+    }
+
+    function intersectAllowedValues(currentValues, nextValues) {
+      if (!currentValues) {
+        return nextValues;
+      }
+      return currentValues.filter((value) => nextValues.includes(value));
+    }
+
+    function setAnswer(questionId, value) {
+      const hasChanged = state.answers[questionId] !== value;
+      state.answers[questionId] = value;
+      if (hasChanged) {
+        clearDownstreamAnswers(questionId);
+      }
+      const visibleQuestions = getVisibleQuestions();
+      state.index = Math.min(state.index, visibleQuestions.length - 1);
+    }
+
+    function clearDownstreamAnswers(questionId) {
+      const changedIndex = QUESTIONS.findIndex((question) => question.id === questionId);
+      QUESTIONS.slice(changedIndex + 1).forEach((question) => {
+        delete state.answers[question.id];
+      });
+    }
+
+    function shouldAskExperience() {
+      return Boolean(state.answers.learnerStage) && !isStudentStage(state.answers.learnerStage);
+    }
+
+    function syncLeadSubmitState() {
+      els.leadSubmitButton.disabled = !els.leadMarketingConsent.checked;
+    }
+
+    function updateQuizChrome(visibleQuestions = getVisibleQuestions()) {
+      if (state.index > visibleQuestions.length - 1) {
+        state.index = Math.max(0, visibleQuestions.length - 1);
+      }
+      const isLastQuestion = state.index === visibleQuestions.length - 1;
+      const progressIndex = Math.min(state.index, BUTTON_PROGRESS_CURVE.length - 1);
+      const progress = isLastQuestion ? 100 : BUTTON_PROGRESS_CURVE[progressIndex];
+      els.backButton.disabled = state.index === 0 || state.isTransitioning;
+      els.nextButton.disabled = state.isTransitioning;
+      els.nextButton.style.setProperty("--quiz-button-progress", `${progress}%`);
+      els.nextButtonLabel.textContent = isLastQuestion ? "Continue" : "Next";
+    }
+
+    function renderQuestion({ animate = true, direction = 1 } = {}) {
+      const visibleQuestions = getVisibleQuestions();
+      if (state.index > visibleQuestions.length - 1) {
+        state.index = Math.max(0, visibleQuestions.length - 1);
+      }
+      const question = visibleQuestions[state.index];
+      updateQuizChrome(visibleQuestions);
+      els.questionTitle.textContent = question.title;
+      els.questionHelp.textContent = "";
+      els.quizError.textContent = "";
+
+      if (question.type === "number") {
+        renderNumberQuestion(question);
+      } else {
+        renderOptions(question);
+      }
+      if (animate) {
+        animateDeckIn(direction);
+      }
+    }
+
+    function renderOptions(question) {
+      const currentValue = state.answers[question.id];
+      const options = getFilteredOptions(question);
+      els.answerArea.innerHTML = `
+        <div class="option-grid">
+          ${options.map((option) => `
+            <button class="answer-option" type="button" data-answer="${escapeHtml(option.value)}" aria-pressed="${currentValue === option.value ? "true" : "false"}">
+              <span class="answer-option-label">
+                <span class="answer-title">${escapeHtml(option.label)}</span>
+                <span class="answer-detail">${escapeHtml(option.detail)}</span>
+              </span>
+              <span class="answer-check" aria-hidden="true"></span>
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderNumberQuestion(question) {
+      const value = state.answers[question.id] ?? "";
+      els.answerArea.innerHTML = `
+        <div class="number-answer ce-field">
+          <label class="ce-floating-label" for="${escapeHtml(question.id)}">Years</label>
+          <input class="ce-input" id="${escapeHtml(question.id)}" type="number" min="${question.min}" max="${question.max}" value="${escapeHtml(value)}" data-number-answer inputmode="numeric" placeholder="0">
+        </div>
+      `;
+      const input = els.answerArea.querySelector("input");
+      input.focus();
+    }
+
+    function updateSelectedOption(selectedValue) {
+      els.answerArea.querySelectorAll("[data-answer]").forEach((option) => {
+        option.setAttribute("aria-pressed", String(option.dataset.answer === selectedValue));
+      });
+    }
+
+    function advanceAfterSelection() {
+      const visibleQuestions = getVisibleQuestions();
+      const isLastQuestion = state.index === visibleQuestions.length - 1;
+
+      if (isLastQuestion && (!state.dataReady || !state.universities.length)) {
+        els.quizError.textContent = "University data is still loading. Please try again in a moment.";
+        return;
+      }
+
+      state.isTransitioning = true;
+      updateQuizChrome(visibleQuestions);
+      animateDeckOut(1, () => {
+        if (isLastQuestion) {
+          state.isTransitioning = false;
+          prepareLeadGate();
+          return;
+        }
+
+        state.index += 1;
+        renderQuestion({ animate: false });
+        animateDeckIn(1, () => {
+          state.isTransitioning = false;
+          updateQuizChrome();
+        });
+      }, true);
+    }
+
+    function goToQuestion(nextIndex, direction) {
+      const visibleQuestions = getVisibleQuestions();
+      if (nextIndex < 0 || nextIndex > visibleQuestions.length - 1) return;
+
+      state.isTransitioning = true;
+      updateQuizChrome(visibleQuestions);
+
+      animateDeckOut(direction, () => {
+        state.index = nextIndex;
+        renderQuestion({ animate: false });
+        animateDeckIn(direction, () => {
+          state.isTransitioning = false;
+          updateQuizChrome();
+        });
+      });
+    }
+
+    function validateCurrentQuestion(showError) {
+      const question = getCurrentQuestion();
+      const value = state.answers[question.id];
+      let isValid = Boolean(value);
+
+      if (question.type === "number") {
+        const numericValue = Number(value);
+        isValid = value !== "" && Number.isFinite(numericValue) && numericValue >= question.min && numericValue <= question.max;
+      }
+
+      if (!isValid && showError) {
+        els.quizError.textContent = question.validation;
+      }
+
+      return isValid;
+    }
+
+    function prepareLeadGate() {
+      if (!state.dataReady || !state.universities.length) {
+        els.quizError.textContent = "University data is still loading. Please try again in a moment.";
+        return;
+      }
+
+      const programs = state.universities.flatMap((university) => {
+        return (university.programs || []).map((program) => ({ university, program }));
+      });
+
+      const scoredPrograms = programs
+        .map(({ university, program }) => scoreProgram(university, program, state.answers))
+        .sort((a, b) => b.rawScore - a.rawScore);
+
+      state.matches = scoredPrograms
+        .filter((match) => programMatchesPreferredMode(match.program, state.answers))
+        .slice(0, 3);
+
+      els.quizView.classList.add("is-hidden");
+      els.leadGateView.classList.remove("is-hidden");
+      els.leadMessage.textContent = "";
+      animatePanelIn(els.leadGateView);
+      els.leadEmail.focus();
+    }
+
+    function calculateAndRenderResults() {
+      if (!state.lead) {
+        els.leadMessage.textContent = "Enter a verified email before viewing results.";
+        return;
+      }
+
+      renderResults();
+      els.quizView.classList.add("is-hidden");
+      els.leadGateView.classList.add("is-hidden");
+      els.degreeHero.classList.add("is-results-mode");
+      els.degreeQuiz.classList.add("is-hidden");
+      els.resultsView.classList.remove("is-hidden");
+      animatePanelIn(els.resultsView);
+      els.resultsView.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function scoreProgram(university, program, answers) {
+      let rawScore = 0;
+      const reasons = [];
+      const tags = new Set(program.best_for_tags || []);
+      const industries = new Set(program.industries || inferIndustries(program));
+      const programFee = getProgramFee(program);
+      const programSalary = getProgramSalary(program);
+
+      if (answers.industry === "not_sure") {
+        rawScore += 10;
+        reasons.push("Keeps your options broad while still matching practical constraints.");
+      } else if (industries.has(answers.industry)) {
+        rawScore += 22;
+        reasons.push(`Strong alignment with ${INDUSTRY_LABELS.get(answers.industry)}.`);
+      } else if ((INDUSTRY_ADJACENT[answers.industry] || []).some((industry) => industries.has(industry))) {
+        rawScore += 10;
+        reasons.push("Adjacent industry fit with transferable skills.");
+      }
+
+      const motivationTag = MOTIVATION_TAG[answers.motivation];
+      if (tags.has(motivationTag)) {
+        rawScore += 16;
+        reasons.push(getMotivationReason(answers.motivation));
+      } else if (answers.motivation === "salary" && programSalary >= 80000) {
+        rawScore += 10;
+        reasons.push("Above-average post-degree salary potential.");
+      } else if (answers.motivation === "mandatory" && (program.accreditations || []).length) {
+        rawScore += 8;
+        reasons.push("Accreditation profile supports credential-led goals.");
+      }
+
+      if ((program.career_stage_fit || []).includes(answers.learnerStage)) {
+        rawScore += 14;
+        reasons.push(getLearnerStageReason(answers.learnerStage));
+      } else if (isStudentStage(answers.learnerStage) && !program.work_ex_required) {
+        rawScore += 8;
+        reasons.push("No mandatory work experience barrier.");
+      }
+
+      if (answers.degreeLevel === "not_sure") {
+        rawScore += 6;
+      } else if (degreeLevelMatches(program, answers.degreeLevel)) {
+        rawScore += 12;
+        reasons.push("Credential level matches what you want to study next.");
+      }
+
+      const userQualification = QUALIFICATION_RANK[answers.qualification] || 0;
+      const requiredQualification = QUALIFICATION_RANK[program.min_qualification] || inferQualificationRank(program);
+      if (userQualification >= requiredQualification) {
+        rawScore += 12;
+        reasons.push("Your current qualification meets the program baseline.");
+      } else {
+        rawScore -= 12;
+        reasons.push("Eligibility may need a bridge step before admission.");
+      }
+
+      const budgetLimit = BUDGET_MAX[answers.budget] || 0;
+      if (programFee <= budgetLimit) {
+        rawScore += 14;
+        reasons.push("Tuition fits your selected budget range.");
+      } else if (program.emi_available && programFee <= budgetLimit * 1.35) {
+        rawScore += 8;
+        reasons.push("Slightly above budget, but payment options improve affordability.");
+      } else if (answers.budget === "above_50000") {
+        rawScore += 12;
+      } else {
+        rawScore -= 6;
+      }
+
+      if (answers.preferredMode === "any") {
+        rawScore += 10;
+      } else if (program.mode === answers.preferredMode) {
+        rawScore += 14;
+        reasons.push(`${MODE_LABELS[program.mode]} format matches your preferred mode.`);
+      } else if (answers.preferredMode === "weekend" && program.mode === "hybrid") {
+        rawScore += 7;
+      } else if (answers.preferredMode === "online" && program.mode === "hybrid") {
+        rawScore += 5;
+      }
+
+      const availableHours = TIME_HOURS[answers.timeAvailability] || 0;
+      const requiredHours = Number(program.weekly_commitment_hours || inferWeeklyHours(program));
+      if (availableHours >= requiredHours) {
+        rawScore += 10;
+        reasons.push("Weekly workload fits your available study time.");
+      } else if (program.mode === "online" && requiredHours - availableHours <= 4) {
+        rawScore += 6;
+        reasons.push("Online flexibility helps offset a tighter weekly schedule.");
+      } else {
+        rawScore -= 5;
+      }
+
+      if (answers.location === "any") {
+        rawScore += 5;
+      } else if (locationMatches(university.locations || [], answers.location)) {
+        rawScore += 7;
+        reasons.push("Regional preference aligns with university support coverage.");
+      } else if (program.mode === "online") {
+        rawScore += 4;
+      } else {
+        rawScore -= 2;
+      }
+
+      const years = Number(answers.experienceYears || 0);
+      const minExperience = Number(program.min_work_ex_years || (program.work_ex_required ? 2 : 0));
+      if (years >= minExperience) {
+        rawScore += 8;
+      } else {
+        rawScore -= 10;
+        reasons.push(`This program usually expects ${minExperience}+ years of work experience.`);
+      }
+
+      rawScore += getPlacementScore(program.placement_strength);
+      rawScore += getBrandScore(program.brand_tier);
+
+      if (answers.motivation === "mandatory" && (program.accreditations || []).length >= 2) {
+        rawScore += 5;
+      }
+
+      const fitScore = Math.max(38, Math.min(99, Math.round((rawScore / 135) * 100)));
+      const displayReasons = buildResultReasons(university, program, answers, {
+        budgetLimit,
+        industries,
+        programFee,
+        programSalary,
+        requiredHours,
+        requiredQualification,
+        userQualification
+      });
+
+      return {
+        university,
+        program,
+        rawScore,
+        fitScore,
+        reasons: displayReasons
+      };
+    }
+
+    function programMatchesPreferredMode(program, answers) {
+      return !answers.preferredMode || answers.preferredMode === "any" || program.mode === answers.preferredMode;
+    }
+
+    function buildResultReasons(university, program, answers, metrics) {
+      const reasons = [];
+      const industries = metrics.industries || new Set(program.industries || inferIndustries(program));
+      const primaryIndustry = [...industries][0] || "business";
+      const selectedIndustryLabel = getAnswerLabel("industry", answers.industry).toLowerCase();
+      const programIndustryLabel = getAnswerLabel("industry", primaryIndustry).toLowerCase();
+      const focus = toSentenceFragment((program.specializations || [])[0] || program.name);
+
+      if (answers.industry === "not_sure") {
+        reasons.push(`${toSentenceCase(program.name)} keeps your options open while focusing on ${focus}.`);
+      } else if (industries.has(answers.industry)) {
+        reasons.push(`${toSentenceCase(program.name)} connects directly to your ${selectedIndustryLabel} interest.`);
+      } else {
+        reasons.push(`${capitalizeSentence(focus)} gives you a bridge from ${selectedIndustryLabel} into ${programIndustryLabel}.`);
+      }
+
+      reasons.push(getProgramMotivationReason(program, answers, metrics, primaryIndustry));
+
+      if (answers.preferredMode === "any") {
+        reasons.push(`${getModeLabel(program.mode)} delivery keeps the format flexible.`);
+      } else {
+        reasons.push(`${getModeLabel(program.mode)} delivery matches the study format you selected.`);
+      }
+
+      const budgetReason = getBudgetReason(program, answers, metrics);
+      if (budgetReason) {
+        reasons.push(budgetReason);
+      }
+
+      const timeReason = getTimeReason(program, answers, metrics);
+      if (timeReason) {
+        reasons.push(timeReason);
+      }
+
+      const qualificationReason = getQualificationReason(program, answers, metrics);
+      if (qualificationReason) {
+        reasons.push(qualificationReason);
+      }
+
+      if (answers.location && answers.location !== "any" && locationMatches(university.locations || [], answers.location)) {
+        reasons.push(`${university.name} supports your ${getAnswerLabel("location", answers.location).toLowerCase()} preference.`);
+      }
+
+      return uniqueReasons(reasons.filter(Boolean)).slice(0, 4);
+    }
+
+    function getProgramMotivationReason(program, answers, metrics, primaryIndustry) {
+      const focus = toSentenceFragment((program.specializations || [])[1] || (program.specializations || [])[0] || program.name);
+      const industryLabel = getAnswerLabel("industry", primaryIndustry).toLowerCase();
+
+      switch (answers.motivation) {
+        case "start_college":
+          return `${toSentenceCase(program.name)} gives you a structured first-step path.`;
+        case "transfer":
+          return `${capitalizeSentence(focus)} can help turn prior credits into a clearer ${industryLabel} direction.`;
+        case "promotion":
+          return `${capitalizeSentence(focus)} supports a promotion-focused move into higher responsibility.`;
+        case "switch":
+          return `${capitalizeSentence(focus)} helps build credibility for a career change.`;
+        case "salary":
+          return `${formatCurrency(metrics.programSalary)} average salary outcome supports your earning-potential goal.`;
+        case "mandatory":
+          return (program.accreditations || []).length
+            ? `${toSentenceCase((program.accreditations || [])[0])} supports your credential-focused goal.`
+            : `${toSentenceCase(program.name)} supports your credential-focused goal.`;
+        default:
+          return `${toSentenceCase(program.name)} matches your stated goal.`;
+      }
+    }
+
+    function getBudgetReason(program, answers, metrics) {
+      if (!answers.budget) return "";
+      if (metrics.programFee <= metrics.budgetLimit) {
+        return `${formatCurrency(metrics.programFee)} tuition fits the budget range you selected.`;
+      }
+      if (program.emi_available && metrics.programFee <= metrics.budgetLimit * 1.35) {
+        return `Payment options help stretch toward the ${formatCurrency(metrics.programFee)} tuition.`;
+      }
+      return `${formatCurrency(metrics.programFee)} tuition is above your range, so compare ROI carefully.`;
+    }
+
+    function getTimeReason(program, answers, metrics) {
+      const availableHours = TIME_HOURS[answers.timeAvailability] || 0;
+      if (!availableHours) return "";
+      const timeLabel = getAnswerLabel("timeAvailability", answers.timeAvailability).toLowerCase();
+      if (availableHours >= metrics.requiredHours) {
+        return `About ${metrics.requiredHours} hours per week fits your ${timeLabel} schedule.`;
+      }
+      return `The ${metrics.requiredHours}-hour weekly load may stretch your ${timeLabel} schedule.`;
+    }
+
+    function getQualificationReason(program, answers, metrics) {
+      if (!answers.qualification) return "";
+      const qualificationLabel = getAnswerLabel("qualification", answers.qualification).toLowerCase();
+      if (metrics.userQualification >= metrics.requiredQualification) {
+        return `Your ${qualificationLabel} meets this program's baseline.`;
+      }
+      return `You may need a bridge step before this program.`;
+    }
+
+    function getResultTags(program) {
+      const tags = (program.accreditations || [])
+        .slice(0, 3)
+        .map((item) => toSentenceCase(item));
+      tags.push(program.emi_available ? "Payment options" : "Tuition due by term");
+      return tags;
+    }
+
+    function renderResults() {
+      els.resultFeedback.textContent = "";
+      els.resultGrid.innerHTML = state.matches.map((match, index) => {
+        const { university, program, fitScore, reasons } = match;
+        const resultTags = getResultTags(program);
+        return `
+          <article class="result-card">
+            <div class="result-card-top">
+              <div class="result-logo">
+                <span>${escapeHtml(getInitials(university.name))}</span>
+                <img src="${escapeHtml(university.logo)}" alt="" loading="lazy">
+              </div>
+              <div>
+                <div class="result-rank">Match ${index + 1}</div>
+                <h3 class="result-university">${escapeHtml(university.name)}</h3>
+              </div>
+            </div>
+            <p class="result-program">${escapeHtml(toSentenceCase(program.name))}</p>
+            <div class="tag-row">
+              ${resultTags.map((item) => `<span class="result-tag">${escapeHtml(item)}</span>`).join("")}
+            </div>
+            <div class="fit-row">
+              <div>
+                <p class="ce-eyebrow" style="margin-bottom: 4px;">Fit score</p>
+                <p class="ce-copy">Based on your quiz answers</p>
+              </div>
+              <div class="fit-score" aria-label="${fitScore} percent fit">${fitScore}%</div>
+            </div>
+            <dl class="result-meta">
+              <div>
+                <dt>Tuition</dt>
+                <dd>${formatCurrency(getProgramFee(program))}</dd>
+              </div>
+              <div>
+                <dt>Duration</dt>
+                <dd>${formatDuration(program.duration_years)}</dd>
+              </div>
+              <div>
+                <dt>Mode</dt>
+                <dd>${escapeHtml(MODE_LABELS[program.mode] || program.mode)}</dd>
+              </div>
+              <div>
+                <dt>Avg. salary</dt>
+                <dd>${formatCurrency(getProgramSalary(program))}</dd>
+              </div>
+            </dl>
+            <ul class="reason-list">
+              ${reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}
+            </ul>
+            <div class="result-actions">
+              <button class="ce-btn ce-btn-primary ce-btn-arrow" type="button" data-result-action="Callback request" data-match-index="${index}">Request callback</button>
+              <button class="ce-btn ce-btn-outline" type="button" data-result-action="Comparison request" data-match-index="${index}">Compare program</button>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      els.resultGrid.querySelectorAll(".result-logo img").forEach((image) => {
+        image.addEventListener("error", () => image.classList.add("is-hidden"), { once: true });
+      });
+    }
+
+    function getMotionTools() {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReducedMotion || !window.anime || typeof window.anime.animate !== "function") {
+        return null;
+      }
+      return window.anime;
+    }
+
+    function animateDeckOut(direction, onComplete, isSwipe = false) {
+      const motion = getMotionTools();
+      if (!motion) {
+        onComplete();
+        return;
+      }
+
+      motion.animate(els.questionCard, {
+        opacity: { to: 0 },
+        x: { to: direction > 0 ? (isSwipe ? 620 : -88) : 88 },
+        y: { to: isSwipe ? -18 : 0 },
+        rotate: { to: isSwipe ? 8 : 0 },
+        scale: { to: isSwipe ? 0.96 : 0.985 },
+        duration: isSwipe ? 360 : 210,
+        ease: isSwipe ? "inBack" : "inQuad"
+      });
+
+      window.setTimeout(onComplete, isSwipe ? 370 : 220);
+    }
+
+    function animateDeckIn(direction, onComplete = () => {}) {
+      const motion = getMotionTools();
+      if (!motion) {
+        onComplete();
+        return;
+      }
+
+      motion.animate(els.questionCard, {
+        opacity: { from: 0, to: 1 },
+        x: { from: direction > 0 ? 84 : -84, to: 0 },
+        y: { from: 12, to: 0 },
+        rotate: { from: direction > 0 ? -2 : 2, to: 0 },
+        scale: { from: 0.985, to: 1 },
+        duration: 360,
+        ease: "outExpo"
+      });
+
+      const answerItems = els.answerArea.querySelectorAll(".answer-option, .number-answer");
+      motion.animate(answerItems, {
+        opacity: { from: 0, to: 1 },
+        x: { from: direction > 0 ? 18 : -18, to: 0 },
+        delay: typeof motion.stagger === "function" ? motion.stagger(28) : 0,
+        duration: 320,
+        ease: "outExpo"
+      });
+
+      window.setTimeout(onComplete, 370);
+    }
+
+    function animatePanelIn(panel) {
+      const motion = getMotionTools();
+      if (!motion || !panel) return;
+
+      motion.animate(panel, {
+        opacity: { from: 0, to: 1 },
+        y: { from: 14, to: 0 },
+        duration: 420,
+        ease: "outExpo"
+      });
+    }
+
+    function getMotivationReason(motivation) {
+      const reasons = {
+        start_college: "Built for a first college or transfer-ready path.",
+        transfer: "Friendly to students thinking about transfer credits.",
+        promotion: "Designed for promotion and leadership momentum.",
+        switch: "Useful for switching into a new career path.",
+        salary: "Prioritizes stronger salary outcomes.",
+        mandatory: "Supports credential-led progression."
+      };
+      return reasons[motivation] || "Matches your stated goal.";
+    }
+
+    function getLearnerStageReason(stage) {
+      const reasons = {
+        high_school_junior_senior: "Appropriate for a college-planning student.",
+        community_college: "Supports a community college or transfer pathway.",
+        undergraduate_student: "Fits an undergraduate learner profile.",
+        graduate_student: "Aligned with graduate-level study intent.",
+        early_career: "Appropriate for an early-career professional.",
+        mid_career: "Well suited to a mid-career growth path.",
+        career_changer: "Built for a credible career switch.",
+        returning_learner: "Flexible enough for returning to school."
+      };
+      return reasons[stage] || "Learner profile fit is strong.";
+    }
+
+    function getAnswerLabel(questionId, value) {
+      const question = QUESTIONS.find((item) => item.id === questionId);
+      const option = question?.options?.find((item) => item.value === value);
+      return option ? option.label : String(value || "");
+    }
+
+    function getModeLabel(mode) {
+      return toSentenceCase(MODE_LABELS[mode] || mode || "");
+    }
+
+    function toSentenceFragment(value) {
+      const text = toSentenceCase(value);
+      return text.charAt(0).toLowerCase() + text.slice(1);
+    }
+
+    function capitalizeSentence(value) {
+      const text = String(value || "").trim();
+      return text ? text.charAt(0).toUpperCase() + text.slice(1) : "";
+    }
+
+    function toSentenceCase(value) {
+      const text = String(value || "").trim();
+      if (!text) return "";
+      const protectedTerms = new Map([
+        ["aacsb", "AACSB"],
+        ["acbsp", "ACBSP"],
+        ["acejmc", "ACEJMC"],
+        ["aashe", "AASHE"],
+        ["abet", "ABET"],
+        ["acpha", "ACPHA"],
+        ["ai", "AI"],
+        ["ascm", "ASCM"],
+        ["ba", "BA"],
+        ["bba", "BBA"],
+        ["bs", "BS"],
+        ["caep", "CAEP"],
+        ["cae", "CAE"],
+        ["cahme", "CAHME"],
+        ["ceph", "CEPH"],
+        ["cfa", "CFA"],
+        ["cswe", "CSWE"],
+        ["deac", "DEAC"],
+        ["esg", "ESG"],
+        ["ged", "GED"],
+        ["iapp", "IAPP"],
+        ["ma", "MA"],
+        ["mba", "MBA"],
+        ["mpcac", "MPCAC"],
+        ["ms", "MS"],
+        ["nasad", "NASAD"],
+        ["nsa", "NSA"],
+        ["pr", "PR"],
+        ["shrm", "SHRM"],
+        ["stem", "STEM"],
+        ["u.s.", "U.S."],
+        ["ux", "UX"]
+      ]);
+      let sentence = text.toLowerCase();
+      protectedTerms.forEach((replacement, term) => {
+        const pattern = term.includes(".")
+          ? new RegExp(escapeRegExp(term), "gi")
+          : new RegExp(`\\b${escapeRegExp(term)}\\b`, "gi");
+        sentence = sentence.replace(pattern, replacement);
+      });
+      sentence = sentence.replace(/\bfintech\b/gi, "FinTech");
+      return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    }
+
+    function escapeRegExp(value) {
+      return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function getPlacementScore(strength) {
+      if (strength === "high") return 8;
+      if (strength === "medium") return 5;
+      return 2;
+    }
+
+    function getBrandScore(tier) {
+      if (Number(tier) === 1) return 6;
+      if (Number(tier) === 2) return 4;
+      return 2;
+    }
+
+    function inferIndustries(program) {
+      const text = `${program.name} ${(program.specializations || []).join(" ")}`.toLowerCase();
+      const industries = [];
+      if (/mba|management|business|leadership|entrepreneur/.test(text)) industries.push("business");
+      if (/data|analytics|ai|machine|cloud|software|cyber|computer|mca|bca|tech/.test(text)) industries.push("technology");
+      if (/finance|commerce|accounting|bank|tax|fintech/.test(text)) industries.push("finance");
+      if (/marketing|media|journalism|content|communication|pr/.test(text)) industries.push("marketing_media");
+      if (/health|hospital|psychology|counsel/.test(text)) industries.push("healthcare");
+      if (/education|curriculum|teaching/.test(text)) industries.push("education");
+      if (/law|policy|public|governance|compliance/.test(text)) industries.push("law_policy");
+      if (/design|ux|creative|writing/.test(text)) industries.push("design_creative");
+      return industries.length ? industries : ["business"];
+    }
+
+    function inferQualificationRank(program) {
+      const name = program.name.toLowerCase();
+      if (/mba|ms |m\.s|ma |m\.a|master|graduate/.test(name)) {
+        return QUALIFICATION_RANK.bachelors;
+      }
+      if (/certificate|cert/.test(name)) {
+        return QUALIFICATION_RANK.some_college;
+      }
+      return QUALIFICATION_RANK.high_school;
+    }
+
+    function inferWeeklyHours(program) {
+      if (program.duration_years <= 1) return 10;
+      if (program.mode === "weekend") return 12;
+      if (program.mode === "hybrid") return 11;
+      return 8;
+    }
+
+    function uniqueReasons(reasons) {
+      return [...new Set(reasons)];
+    }
+
+    function locationMatches(locations, answer) {
+      if (locations.includes(answer)) return true;
+      if (answer === "online") return locations.includes("any") || locations.includes("online");
+      return false;
+    }
+
+    function isStudentStage(stage) {
+      return STUDENT_STAGES.includes(stage);
+    }
+
+    function degreeLevelMatches(program, degreeLevel) {
+      const pattern = DEGREE_LEVEL_PATTERNS[degreeLevel];
+      if (!pattern) return false;
+      return pattern.test(program.name);
+    }
+
+    function getProgramFee(program) {
+      return Number(program.fee_usd ?? program.fee_inr ?? 0);
+    }
+
+    function getProgramSalary(program) {
+      return Number(program.avg_salary_post_usd ?? program.avg_salary_post_inr ?? 0);
+    }
+
+    function getInitials(name) {
+      return name
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((part) => part[0])
+        .join("")
+        .toUpperCase();
+    }
+
+    function formatCurrency(value) {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0
+      }).format(Number(value || 0));
+    }
+
+    function formatDuration(value) {
+      const number = Number(value || 0);
+      return number === 1 ? "1 year" : `${number} years`;
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function normalizeEmail(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function validateEmail(email) {
+      const disposableDomains = new Set([
+        "10minutemail.com", "mailinator.com", "guerrillamail.com", "tempmail.com", "temp-mail.org",
+        "yopmail.com", "throwawaymail.com", "trashmail.com", "sharklasers.com", "getnada.com",
+        "fakeinbox.com", "dispostable.com", "maildrop.cc", "mintemail.com"
+      ]);
+      const rolePrefixes = new Set(["admin", "billing", "careers", "contact", "hello", "info", "mail", "marketing", "noreply", "no-reply", "sales", "support", "test"]);
+      const blockedDomains = new Set(["example.com", "example.org", "example.net", "test.com", "email.com", "domain.com", "localhost.com"]);
+      const typoDomains = {
+        "gmal.com": "gmail.com",
+        "gmial.com": "gmail.com",
+        "gmail.con": "gmail.com",
+        "gnail.com": "gmail.com",
+        "hotnail.com": "hotmail.com",
+        "hotmai.com": "hotmail.com",
+        "yaho.com": "yahoo.com",
+        "yahoo.con": "yahoo.com",
+        "outlok.com": "outlook.com"
+      };
+
+      if (!email) return "Enter your email to unlock your matches.";
+      if (email.length > 254 || email.includes("..")) return "Enter a real email address without repeated dots.";
+      if (!/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)+$/.test(email)) {
+        return "Enter a valid email address in the format name@example.com.";
+      }
+
+      const [localPart, domain] = email.split("@");
+      const tld = domain.split(".").pop();
+      if (!localPart || localPart.length > 64 || localPart.startsWith(".") || localPart.endsWith(".")) {
+        return "Enter a real email address with a valid mailbox name.";
+      }
+      if (!tld || tld.length < 2 || /^\d+$/.test(tld)) {
+        return "Enter an email address with a valid domain ending.";
+      }
+      if (blockedDomains.has(domain)) return "Use your personal, school, or work email, not a test domain.";
+      if (disposableDomains.has(domain)) return "Disposable email services are not accepted. Use a working email you can access.";
+      if (rolePrefixes.has(localPart)) return "Use an individual email address rather than a shared inbox.";
+      if (typoDomains[domain]) return `Did you mean ${localPart}@${typoDomains[domain]}? Please correct the domain.`;
+      if (/^(.)\1{5,}@/.test(email)) return "Enter a real email address, not repeated placeholder characters.";
+      return "";
+    }
+
+    function isValidName(name) {
+      return /^[A-Za-z][A-Za-z' -]{2,79}$/.test(name) && /\s/.test(name.trim());
+    }
+
+    function isValidUsPhone(phone) {
+      const digits = phone.replace(/\D/g, "");
+      const normalized = digits.length === 11 && digits.startsWith("1") ? digits.slice(1) : digits;
+      return normalized.length === 10 && !/^(\d)\1{9}$/.test(normalized) && !/^55501\d{2}$/.test(normalized.slice(3));
+    }
+  </script>
+</body>
+</html>

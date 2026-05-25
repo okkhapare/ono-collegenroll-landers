@@ -1,0 +1,1885 @@
+[
+  {
+    "id": "uni_001",
+    "name": "Southern New Hampshire University",
+    "logo": "https://www.google.com/s2/favicons?domain=snhu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Online MBA",
+        "specializations": [
+          "Marketing",
+          "Finance",
+          "People Operations"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 14000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "AACSB-aligned"
+        ],
+        "best_for_tags": [
+          "career_switcher",
+          "promotion_seeker",
+          "salary_growth",
+          "return_to_work"
+        ],
+        "avg_salary_post_inr": 86000,
+        "industries": [
+          "business",
+          "marketing",
+          "finance",
+          "human_resources"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 10,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 14000,
+        "avg_salary_post_usd": 86000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_002",
+    "name": "Arizona State University",
+    "logo": "https://www.google.com/s2/favicons?domain=asu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Online BBA in Business Analytics",
+        "specializations": [
+          "Business Analytics",
+          "Operations",
+          "Strategy"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 18000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "DEAC"
+        ],
+        "best_for_tags": [
+          "entry_level",
+          "career_switcher",
+          "salary_growth",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 68000,
+        "industries": [
+          "business",
+          "technology",
+          "operations",
+          "analytics"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "early_career"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 18000,
+        "avg_salary_post_usd": 68000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_003",
+    "name": "Northwestern University",
+    "logo": "https://www.google.com/s2/favicons?domain=northwestern.edu&sz=128",
+    "locations": [
+      "any",
+      "us_south",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "Executive MBA",
+        "specializations": [
+          "Leadership",
+          "Finance",
+          "Operations"
+        ],
+        "duration_years": 1.5,
+        "mode": "weekend",
+        "fee_inr": 42000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": true,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "AACSB"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "salary_growth",
+          "leadership_track"
+        ],
+        "avg_salary_post_inr": 128000,
+        "industries": [
+          "business",
+          "finance",
+          "operations"
+        ],
+        "career_stage_fit": [
+          "mid_career"
+        ],
+        "weekly_commitment_hours": 12,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 3,
+        "fee_usd": 42000,
+        "avg_salary_post_usd": 128000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_004",
+    "name": "Georgia Institute of Technology",
+    "logo": "https://www.google.com/s2/favicons?domain=gatech.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "Online MS in Computer Science",
+        "specializations": [
+          "Software Engineering",
+          "Cloud Computing",
+          "AI"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 24000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "ABET-aligned"
+        ],
+        "best_for_tags": [
+          "career_switcher",
+          "salary_growth",
+          "credential_builder",
+          "student_pathway",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 105000,
+        "industries": [
+          "technology"
+        ],
+        "career_stage_fit": [
+          "undergraduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 12,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 24000,
+        "avg_salary_post_usd": 105000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_005",
+    "name": "Northeastern University",
+    "logo": "https://www.google.com/s2/favicons?domain=northeastern.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "MS in Data Science and AI",
+        "specializations": [
+          "Machine Learning",
+          "Data Engineering",
+          "Applied AI"
+        ],
+        "duration_years": 2,
+        "mode": "hybrid",
+        "fee_inr": 36000,
+        "emi_available": true,
+        "min_eligibility_percent": 55,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "STEM-designated"
+        ],
+        "best_for_tags": [
+          "salary_growth",
+          "career_switcher",
+          "passion_builder",
+          "advanced_study",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 118000,
+        "industries": [
+          "technology",
+          "analytics"
+        ],
+        "career_stage_fit": [
+          "graduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 14,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 36000,
+        "avg_salary_post_usd": 118000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_006",
+    "name": "University of Illinois Urbana-Champaign",
+    "logo": "https://www.google.com/s2/favicons?domain=illinois.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "Online MS in Accounting",
+        "specializations": [
+          "Accounting",
+          "Taxation",
+          "Audit"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 22000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACBSP"
+        ],
+        "best_for_tags": [
+          "mandatory_credential",
+          "promotion_seeker",
+          "return_to_work",
+          "student_pathway",
+          "salary_growth"
+        ],
+        "avg_salary_post_inr": 78000,
+        "industries": [
+          "finance",
+          "commerce"
+        ],
+        "career_stage_fit": [
+          "undergraduate_student",
+          "early_career",
+          "mid_career",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 7,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 22000,
+        "avg_salary_post_usd": 78000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_007",
+    "name": "Western Governors University",
+    "logo": "https://www.google.com/s2/favicons?domain=wgu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Online BS in Cloud Computing",
+        "specializations": [
+          "Cloud",
+          "DevOps",
+          "Programming"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 26000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ABET-aligned"
+        ],
+        "best_for_tags": [
+          "entry_level",
+          "career_switcher",
+          "salary_growth",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 76000,
+        "industries": [
+          "technology"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 9,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 26000,
+        "avg_salary_post_usd": 76000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_008",
+    "name": "University of Florida",
+    "logo": "https://www.google.com/s2/favicons?domain=ufl.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_south"
+    ],
+    "programs": [
+      {
+        "name": "Online BA in Psychology",
+        "specializations": [
+          "Human Behavior",
+          "Research",
+          "Counseling Foundations"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 21000,
+        "emi_available": true,
+        "min_eligibility_percent": 40,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "return_to_work",
+          "entry_level",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 56000,
+        "industries": [
+          "healthcare",
+          "education",
+          "humanities"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 6,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 21000,
+        "avg_salary_post_usd": 56000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_009",
+    "name": "George Washington University",
+    "logo": "https://www.google.com/s2/favicons?domain=gwu.edu&sz=128",
+    "locations": [
+      "any",
+      "hybrid",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "MBA in Healthcare Management",
+        "specializations": [
+          "Health Administration",
+          "Operations",
+          "Quality"
+        ],
+        "duration_years": 2,
+        "mode": "hybrid",
+        "fee_inr": 34000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "CAHME-aligned"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "salary_growth",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 104000,
+        "industries": [
+          "healthcare",
+          "business",
+          "operations"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 12,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 34000,
+        "avg_salary_post_usd": 104000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_010",
+    "name": "Purdue University",
+    "logo": "https://www.google.com/s2/favicons?domain=purdue.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "MA in Education and Leadership",
+        "specializations": [
+          "Curriculum",
+          "EdTech",
+          "School Leadership"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 23000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "CAEP-aligned"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "mandatory_credential",
+          "passion_builder",
+          "advanced_study",
+          "return_to_work"
+        ],
+        "avg_salary_post_inr": 72000,
+        "industries": [
+          "education"
+        ],
+        "career_stage_fit": [
+          "graduate_student",
+          "mid_career",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 7,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 23000,
+        "avg_salary_post_usd": 72000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_011",
+    "name": "Georgetown University",
+    "logo": "https://www.google.com/s2/favicons?domain=georgetown.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "Certificate in Cyber Law and Privacy",
+        "specializations": [
+          "Digital Policy",
+          "Privacy",
+          "Compliance"
+        ],
+        "duration_years": 1,
+        "mode": "online",
+        "fee_inr": 9000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "IAPP-aligned"
+        ],
+        "best_for_tags": [
+          "career_switcher",
+          "mandatory_credential",
+          "salary_growth",
+          "student_pathway",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 82000,
+        "industries": [
+          "law_policy",
+          "technology"
+        ],
+        "career_stage_fit": [
+          "undergraduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 6,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "some_college",
+        "min_work_ex_years": 0,
+        "fee_usd": 9000,
+        "avg_salary_post_usd": 82000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_012",
+    "name": "University of Colorado Boulder",
+    "logo": "https://www.google.com/s2/favicons?domain=colorado.edu&sz=128",
+    "locations": [
+      "any",
+      "weekend",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Graduate Certificate in Cybersecurity",
+        "specializations": [
+          "Security Operations",
+          "Risk",
+          "Cloud Security"
+        ],
+        "duration_years": 1,
+        "mode": "weekend",
+        "fee_inr": 12000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "NSA CAE-aligned"
+        ],
+        "best_for_tags": [
+          "salary_growth",
+          "career_switcher",
+          "mandatory_credential",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 101000,
+        "industries": [
+          "technology"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 10,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 12000,
+        "avg_salary_post_usd": 101000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_013",
+    "name": "Rutgers University",
+    "logo": "https://www.google.com/s2/favicons?domain=rutgers.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_south"
+    ],
+    "programs": [
+      {
+        "name": "Online MBA in Human Resources",
+        "specializations": [
+          "Talent Management",
+          "People Analytics",
+          "Employment Law"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 18500,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "SHRM-aligned"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "return_to_work",
+          "career_switcher",
+          "salary_growth"
+        ],
+        "avg_salary_post_inr": 82000,
+        "industries": [
+          "human_resources",
+          "business"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "returning_learner",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 18500,
+        "avg_salary_post_usd": 82000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_014",
+    "name": "Florida International University",
+    "logo": "https://www.google.com/s2/favicons?domain=fiu.edu&sz=128",
+    "locations": [
+      "any",
+      "hybrid",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "MBA in International Business",
+        "specializations": [
+          "Global Trade",
+          "Strategy",
+          "Marketing"
+        ],
+        "duration_years": 2,
+        "mode": "hybrid",
+        "fee_inr": 39000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "AACSB"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "salary_growth",
+          "passion_builder",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 112000,
+        "industries": [
+          "business",
+          "marketing",
+          "operations"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 13,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 39000,
+        "avg_salary_post_usd": 112000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_015",
+    "name": "Savannah College of Art and Design",
+    "logo": "https://www.google.com/s2/favicons?domain=scad.edu&sz=128",
+    "locations": [
+      "any",
+      "hybrid",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Bachelor of Design in UX",
+        "specializations": [
+          "User Research",
+          "Product Design",
+          "Interaction"
+        ],
+        "duration_years": 3,
+        "mode": "hybrid",
+        "fee_inr": 32000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "NASAD-aligned"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "career_switcher",
+          "salary_growth",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 79000,
+        "industries": [
+          "design_creative",
+          "technology"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 12,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 32000,
+        "avg_salary_post_usd": 79000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_016",
+    "name": "Penn State World Campus",
+    "logo": "https://www.google.com/s2/favicons?domain=psu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "BA in Digital Media and Journalism",
+        "specializations": [
+          "Content Strategy",
+          "Video",
+          "Public Relations"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 24000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACEJMC-aligned"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "career_switcher",
+          "return_to_work",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 65000,
+        "industries": [
+          "marketing_media",
+          "design_creative"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 24000,
+        "avg_salary_post_usd": 65000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_017",
+    "name": "Indiana University",
+    "logo": "https://www.google.com/s2/favicons?domain=iu.edu&sz=128",
+    "locations": [
+      "any",
+      "weekend",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "MBA in Finance",
+        "specializations": [
+          "Investments",
+          "FinTech",
+          "Risk Management"
+        ],
+        "duration_years": 2,
+        "mode": "weekend",
+        "fee_inr": 33000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "CFA Institute Affiliation"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "salary_growth",
+          "mandatory_credential",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 108000,
+        "industries": [
+          "finance",
+          "business"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 11,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 33000,
+        "avg_salary_post_usd": 108000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_018",
+    "name": "Syracuse University",
+    "logo": "https://www.google.com/s2/favicons?domain=syracuse.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "BA in Public Administration",
+        "specializations": [
+          "Public Policy",
+          "Governance",
+          "Community Development"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 20000,
+        "emi_available": true,
+        "min_eligibility_percent": 40,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation"
+        ],
+        "best_for_tags": [
+          "mandatory_credential",
+          "passion_builder",
+          "return_to_work",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 61000,
+        "industries": [
+          "law_policy",
+          "education"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 6,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 20000,
+        "avg_salary_post_usd": 61000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_019",
+    "name": "University of Maryland Global Campus",
+    "logo": "https://www.google.com/s2/favicons?domain=umgc.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_south"
+    ],
+    "programs": [
+      {
+        "name": "Online BBA in General Management",
+        "specializations": [
+          "Sales",
+          "Operations",
+          "Entrepreneurship"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 17000,
+        "emi_available": true,
+        "min_eligibility_percent": 40,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACBSP"
+        ],
+        "best_for_tags": [
+          "entry_level",
+          "promotion_seeker",
+          "return_to_work",
+          "student_pathway",
+          "transfer_student",
+          "salary_growth"
+        ],
+        "avg_salary_post_inr": 64000,
+        "industries": [
+          "business",
+          "operations"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "early_career",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 7,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 17000,
+        "avg_salary_post_usd": 64000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_020",
+    "name": "Carnegie Mellon University",
+    "logo": "https://www.google.com/s2/favicons?domain=cmu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Graduate Certificate in Business Analytics",
+        "specializations": [
+          "BI Tools",
+          "Product Metrics",
+          "SQL"
+        ],
+        "duration_years": 1,
+        "mode": "online",
+        "fee_inr": 11500,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "STEM-designated"
+        ],
+        "best_for_tags": [
+          "salary_growth",
+          "career_switcher",
+          "promotion_seeker",
+          "student_pathway"
+        ],
+        "avg_salary_post_inr": 96000,
+        "industries": [
+          "technology",
+          "analytics",
+          "business"
+        ],
+        "career_stage_fit": [
+          "undergraduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 9,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "some_college",
+        "min_work_ex_years": 0,
+        "fee_usd": 11500,
+        "avg_salary_post_usd": 96000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_021",
+    "name": "Michigan State University",
+    "logo": "https://www.google.com/s2/favicons?domain=msu.edu&sz=128",
+    "locations": [
+      "any",
+      "hybrid",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "MBA in Supply Chain Management",
+        "specializations": [
+          "Logistics",
+          "Procurement",
+          "Operations"
+        ],
+        "duration_years": 2,
+        "mode": "hybrid",
+        "fee_inr": 27000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "ASCM-aligned"
+        ],
+        "best_for_tags": [
+          "promotion_seeker",
+          "salary_growth",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 94000,
+        "industries": [
+          "operations",
+          "business"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 10,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 27000,
+        "avg_salary_post_usd": 94000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_022",
+    "name": "Pepperdine University",
+    "logo": "https://www.google.com/s2/favicons?domain=pepperdine.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "MA in Psychology and Counseling",
+        "specializations": [
+          "Counseling",
+          "Organizational Psychology",
+          "Research"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 28000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "MPCAC-aligned"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "return_to_work",
+          "mandatory_credential",
+          "advanced_study",
+          "career_switcher",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 70000,
+        "industries": [
+          "healthcare",
+          "humanities",
+          "education"
+        ],
+        "career_stage_fit": [
+          "graduate_student",
+          "returning_learner",
+          "career_changer",
+          "mid_career"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 28000,
+        "avg_salary_post_usd": 70000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_023",
+    "name": "Stanford University",
+    "logo": "https://www.google.com/s2/favicons?domain=stanford.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Online MS in AI and Machine Learning",
+        "specializations": [
+          "Machine Learning",
+          "NLP",
+          "MLOps"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 30000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "STEM-designated"
+        ],
+        "best_for_tags": [
+          "salary_growth",
+          "career_switcher",
+          "passion_builder",
+          "student_pathway",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 122000,
+        "industries": [
+          "technology",
+          "analytics"
+        ],
+        "career_stage_fit": [
+          "undergraduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 13,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 30000,
+        "avg_salary_post_usd": 122000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_024",
+    "name": "Cornell University",
+    "logo": "https://www.google.com/s2/favicons?domain=cornell.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_south"
+    ],
+    "programs": [
+      {
+        "name": "BS in FinTech",
+        "specializations": [
+          "Digital Banking",
+          "Payments",
+          "Accounting"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 25000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACBSP"
+        ],
+        "best_for_tags": [
+          "entry_level",
+          "salary_growth",
+          "career_switcher",
+          "student_pathway",
+          "transfer_student"
+        ],
+        "avg_salary_post_inr": 76000,
+        "industries": [
+          "finance",
+          "technology",
+          "commerce"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 25000,
+        "avg_salary_post_usd": 76000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_025",
+    "name": "University of Southern California",
+    "logo": "https://www.google.com/s2/favicons?domain=usc.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_midwest"
+    ],
+    "programs": [
+      {
+        "name": "Master of Social Work",
+        "specializations": [
+          "Community Practice",
+          "Healthcare Outreach",
+          "Nonprofit Management"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 29000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "CSWE-aligned"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "mandatory_credential",
+          "return_to_work",
+          "advanced_study",
+          "career_switcher",
+          "promotion_seeker"
+        ],
+        "avg_salary_post_inr": 67000,
+        "industries": [
+          "healthcare",
+          "education",
+          "law_policy"
+        ],
+        "career_stage_fit": [
+          "graduate_student",
+          "returning_learner",
+          "career_changer",
+          "mid_career"
+        ],
+        "weekly_commitment_hours": 7,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 29000,
+        "avg_salary_post_usd": 67000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_026",
+    "name": "Babson College",
+    "logo": "https://www.google.com/s2/favicons?domain=babson.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "Online MBA in Entrepreneurship",
+        "specializations": [
+          "Venture Building",
+          "Product Strategy",
+          "Finance"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 25000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACBSP"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "promotion_seeker",
+          "salary_growth",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 94000,
+        "industries": [
+          "business",
+          "finance",
+          "marketing"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 10,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 25000,
+        "avg_salary_post_usd": 94000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_027",
+    "name": "University of Nevada, Las Vegas",
+    "logo": "https://www.google.com/s2/favicons?domain=unlv.edu&sz=128",
+    "locations": [
+      "any",
+      "hybrid",
+      "us_south"
+    ],
+    "programs": [
+      {
+        "name": "BA in Hospitality and Tourism Management",
+        "specializations": [
+          "Revenue",
+          "Guest Experience",
+          "Travel Operations"
+        ],
+        "duration_years": 2,
+        "mode": "hybrid",
+        "fee_inr": 22000,
+        "emi_available": true,
+        "min_eligibility_percent": 45,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "ACPHA-aligned"
+        ],
+        "best_for_tags": [
+          "career_switcher",
+          "promotion_seeker",
+          "passion_builder",
+          "student_pathway",
+          "transfer_student",
+          "salary_growth"
+        ],
+        "avg_salary_post_inr": 62000,
+        "industries": [
+          "business",
+          "operations",
+          "marketing_media"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "early_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 9,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 22000,
+        "avg_salary_post_usd": 62000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_028",
+    "name": "Johns Hopkins University",
+    "logo": "https://www.google.com/s2/favicons?domain=jhu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "Master of Public Health",
+        "specializations": [
+          "Epidemiology",
+          "Health Policy",
+          "Program Management"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 31000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 1,
+        "placement_strength": "high",
+        "accreditations": [
+          "Regional Accreditation",
+          "CEPH-accredited"
+        ],
+        "best_for_tags": [
+          "salary_growth",
+          "mandatory_credential",
+          "passion_builder",
+          "advanced_study",
+          "promotion_seeker",
+          "career_switcher"
+        ],
+        "avg_salary_post_inr": 88000,
+        "industries": [
+          "healthcare",
+          "law_policy"
+        ],
+        "career_stage_fit": [
+          "graduate_student",
+          "early_career",
+          "mid_career",
+          "career_changer"
+        ],
+        "weekly_commitment_hours": 10,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 31000,
+        "avg_salary_post_usd": 88000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_029",
+    "name": "Arizona State University",
+    "logo": "https://www.google.com/s2/favicons?domain=asu.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_west"
+    ],
+    "programs": [
+      {
+        "name": "MBA in Sustainability Management",
+        "specializations": [
+          "ESG",
+          "Responsible Finance",
+          "Climate Strategy"
+        ],
+        "duration_years": 2,
+        "mode": "online",
+        "fee_inr": 24000,
+        "emi_available": true,
+        "min_eligibility_percent": 50,
+        "work_ex_required": false,
+        "brand_tier": 2,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation",
+          "AASHE-member"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "promotion_seeker",
+          "career_switcher",
+          "salary_growth",
+          "return_to_work"
+        ],
+        "avg_salary_post_inr": 85000,
+        "industries": [
+          "business",
+          "law_policy",
+          "finance"
+        ],
+        "career_stage_fit": [
+          "early_career",
+          "mid_career",
+          "career_changer",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 8,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "bachelors",
+        "min_work_ex_years": 0,
+        "fee_usd": 24000,
+        "avg_salary_post_usd": 85000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  },
+  {
+    "id": "uni_030",
+    "name": "American University",
+    "logo": "https://www.google.com/s2/favicons?domain=american.edu&sz=128",
+    "locations": [
+      "any",
+      "online",
+      "us_northeast"
+    ],
+    "programs": [
+      {
+        "name": "BA in Digital Communication",
+        "specializations": [
+          "Brand Storytelling",
+          "Social Media",
+          "Creative Writing"
+        ],
+        "duration_years": 3,
+        "mode": "online",
+        "fee_inr": 19000,
+        "emi_available": true,
+        "min_eligibility_percent": 40,
+        "work_ex_required": false,
+        "brand_tier": 3,
+        "placement_strength": "medium",
+        "accreditations": [
+          "Regional Accreditation"
+        ],
+        "best_for_tags": [
+          "passion_builder",
+          "entry_level",
+          "career_switcher",
+          "student_pathway",
+          "transfer_student",
+          "return_to_work"
+        ],
+        "avg_salary_post_inr": 59000,
+        "industries": [
+          "marketing_media",
+          "design_creative"
+        ],
+        "career_stage_fit": [
+          "high_school_junior_senior",
+          "community_college",
+          "undergraduate_student",
+          "returning_learner"
+        ],
+        "weekly_commitment_hours": 6,
+        "start_timeline": [
+          "next_term",
+          "1_3_months",
+          "3_6_months"
+        ],
+        "min_qualification": "high_school",
+        "min_work_ex_years": 0,
+        "fee_usd": 19000,
+        "avg_salary_post_usd": 59000
+      }
+    ],
+    "country_focus": [
+      "United States"
+    ]
+  }
+]

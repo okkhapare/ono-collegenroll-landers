@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2320" viewBox="0 0 1600 2320" role="img" aria-labelledby="title desc">
+  <title id="title">Degree Match Quiz Visual Flowchart</title>
+  <desc id="desc">A visual flowchart showing the Degree Match quiz order, the filtering rules, and the work experience branch.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#1f2937"/>
+    </marker>
+    <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 800 48px Arial, sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .subtitle { font: 400 22px Arial, sans-serif; fill: #475569; letter-spacing: 0; }
+      .box { fill: #fff; stroke: #cbd5e1; stroke-width: 2; filter: url(#shadow); }
+      .filterBox { fill: #eff6ff; stroke: #93c5fd; stroke-width: 2; filter: url(#shadow); }
+      .terminal { fill: #ecfdf5; stroke: #86efac; stroke-width: 2; filter: url(#shadow); }
+      .work { fill: #fffbeb; stroke: #facc15; stroke-width: 2; filter: url(#shadow); }
+      .decision { fill: #fff7ed; stroke: #fb923c; stroke-width: 2; filter: url(#shadow); }
+      .card { fill: #fff; stroke: #e2e8f0; stroke-width: 2; filter: url(#shadow); }
+      .cardBlue { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 2; filter: url(#shadow); }
+      .label { font: 800 24px Arial, sans-serif; fill: #111827; letter-spacing: 0; }
+      .detail { font: 400 18px Arial, sans-serif; fill: #475569; letter-spacing: 0; }
+      .small { font: 400 16px Arial, sans-serif; fill: #64748b; letter-spacing: 0; }
+      .calloutTitle { font: 800 21px Arial, sans-serif; fill: #111827; letter-spacing: 0; }
+      .calloutText { font: 400 17px Arial, sans-serif; fill: #475569; letter-spacing: 0; }
+      .calloutStrong { font: 800 17px Arial, sans-serif; fill: #1d4ed8; letter-spacing: 0; }
+      .numCircle { fill: #111827; }
+      .numText { font: 800 17px Arial, sans-serif; fill: #fff; letter-spacing: 0; }
+      .arrow { stroke: #1f2937; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .branchArrow { stroke: #1f2937; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .filterArrow { stroke: #2563eb; stroke-width: 3.5; fill: none; stroke-dasharray: 10 10; marker-end: url(#blueArrow); }
+      .caption { font: 800 16px Arial, sans-serif; fill: #334155; letter-spacing: 0; }
+      .legendText { font: 400 16px Arial, sans-serif; fill: #475569; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="2320"/>
+
+  <text class="title" x="90" y="105">Degree Match Quiz Flowchart</text>
+  <text class="subtitle" x="90" y="144">Main path down the center. Blue side cards show the choices that change later screens.</text>
+
+  <g transform="translate(1130 62)">
+    <rect class="card" x="0" y="0" width="370" height="120" rx="18"/>
+    <line class="arrow" x1="30" y1="40" x2="130" y2="40"/>
+    <text class="legendText" x="155" y="46">screen order</text>
+    <line class="filterArrow" x1="30" y1="82" x2="130" y2="82"/>
+    <text class="legendText" x="155" y="88">choice affects later options</text>
+  </g>
+
+  <!-- Main center flow -->
+  <g id="flow">
+    <rect class="terminal" x="460" y="210" width="680" height="86" rx="18"/>
+    <text class="label" x="800" y="246" text-anchor="middle">Start Quiz</text>
+    <text class="detail" x="800" y="272" text-anchor="middle">User begins Degree Match</text>
+
+    <rect class="filterBox" x="460" y="350" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="402" r="24"/>
+    <text class="numText" x="508" y="409" text-anchor="middle">1</text>
+    <text class="label" x="552" y="394">Learner Stage</text>
+    <text class="detail" x="552" y="423">Student, working adult, career changer, returning learner</text>
+
+    <rect class="box" x="460" y="500" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="552" r="24"/>
+    <text class="numText" x="508" y="559" text-anchor="middle">2</text>
+    <text class="label" x="552" y="544">Field Of Interest</text>
+    <text class="detail" x="552" y="573">Scoring input only</text>
+
+    <rect class="filterBox" x="460" y="650" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="702" r="24"/>
+    <text class="numText" x="508" y="709" text-anchor="middle">3</text>
+    <text class="label" x="552" y="694">Highest Completed Qualification</text>
+    <text class="detail" x="552" y="723">Filtered by learner stage</text>
+
+    <rect class="filterBox" x="460" y="800" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="852" r="24"/>
+    <text class="numText" x="508" y="859" text-anchor="middle">4</text>
+    <text class="label" x="552" y="844">Main Goal</text>
+    <text class="detail" x="552" y="873">Filtered by learner stage</text>
+
+    <rect class="filterBox" x="460" y="950" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="1002" r="24"/>
+    <text class="numText" x="508" y="1009" text-anchor="middle">5</text>
+    <text class="label" x="552" y="994">Credential Level</text>
+    <text class="detail" x="552" y="1023">Filtered by qualification and transfer goal</text>
+
+    <rect class="box" x="460" y="1100" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="1152" r="24"/>
+    <text class="numText" x="508" y="1159" text-anchor="middle">6</text>
+    <text class="label" x="552" y="1144">Weekly Study Time</text>
+    <text class="detail" x="552" y="1173">Scoring input only</text>
+
+    <rect class="filterBox" x="460" y="1250" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="1302" r="24"/>
+    <text class="numText" x="508" y="1309" text-anchor="middle">7</text>
+    <text class="label" x="552" y="1294">Preferred Study Format</text>
+    <text class="detail" x="552" y="1323">Filtered by learner stage</text>
+
+    <rect class="box" x="460" y="1400" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="1452" r="24"/>
+    <text class="numText" x="508" y="1459" text-anchor="middle">8</text>
+    <text class="label" x="552" y="1444">Budget</text>
+    <text class="detail" x="552" y="1473">Scoring input only</text>
+
+    <rect class="filterBox" x="460" y="1550" width="680" height="104" rx="18"/>
+    <circle class="numCircle" cx="508" cy="1602" r="24"/>
+    <text class="numText" x="508" y="1609" text-anchor="middle">9</text>
+    <text class="label" x="552" y="1594">Location Preference</text>
+    <text class="detail" x="552" y="1623">Filtered by preferred study format</text>
+
+    <path class="decision" d="M800 1715 L1035 1815 L800 1915 L565 1815 Z"/>
+    <text class="label" x="800" y="1807" text-anchor="middle">Student learner stage?</text>
+    <text class="small" x="800" y="1837" text-anchor="middle">Controlled by Q1</text>
+
+    <rect class="terminal" x="460" y="1980" width="680" height="88" rx="18"/>
+    <text class="label" x="800" y="2018" text-anchor="middle">Lead Gate</text>
+    <text class="detail" x="800" y="2046" text-anchor="middle">Name, email, optional phone</text>
+
+    <rect class="terminal" x="460" y="2130" width="680" height="88" rx="18"/>
+    <text class="label" x="800" y="2168" text-anchor="middle">Top 3 Matches</text>
+    <text class="detail" x="800" y="2196" text-anchor="middle">Programs are scored and ranked</text>
+
+    <rect class="work" x="1168" y="1748" width="330" height="124" rx="18"/>
+    <circle class="numCircle" cx="1213" cy="1810" r="23"/>
+    <text class="numText" x="1213" y="1817" text-anchor="middle">10</text>
+    <text class="label" x="1250" y="1802">Work Experience</text>
+    <text class="detail" x="1250" y="1831">Only for non-students</text>
+  </g>
+
+  <!-- Main path arrows -->
+  <line class="arrow" x1="800" y1="296" x2="800" y2="350"/>
+  <line class="arrow" x1="800" y1="454" x2="800" y2="500"/>
+  <line class="arrow" x1="800" y1="604" x2="800" y2="650"/>
+  <line class="arrow" x1="800" y1="754" x2="800" y2="800"/>
+  <line class="arrow" x1="800" y1="904" x2="800" y2="950"/>
+  <line class="arrow" x1="800" y1="1054" x2="800" y2="1100"/>
+  <line class="arrow" x1="800" y1="1204" x2="800" y2="1250"/>
+  <line class="arrow" x1="800" y1="1354" x2="800" y2="1400"/>
+  <line class="arrow" x1="800" y1="1504" x2="800" y2="1550"/>
+  <line class="arrow" x1="800" y1="1654" x2="800" y2="1715"/>
+  <path class="branchArrow" d="M565 1815 C410 1840 410 1978 460 2024"/>
+  <path class="branchArrow" d="M1035 1815 C1088 1815 1124 1815 1168 1815"/>
+  <path class="branchArrow" d="M1333 1872 C1333 1998 1185 2024 1140 2024"/>
+  <line class="arrow" x1="800" y1="2068" x2="800" y2="2130"/>
+
+  <text class="caption" x="438" y="1796">YES</text>
+  <text class="caption" x="1082" y="1796">NO</text>
+
+  <!-- Callout cards -->
+  <g id="callouts">
+    <rect class="cardBlue" x="70" y="328" width="330" height="170" rx="18"/>
+    <text class="calloutTitle" x="98" y="367">Q1 filters later screens</text>
+    <text class="calloutText" x="98" y="404">• Qualification choices</text>
+    <text class="calloutText" x="98" y="434">• Main goal choices</text>
+    <text class="calloutText" x="98" y="464">• Study format choices</text>
+    <text class="calloutText" x="98" y="494">• Work experience visibility</text>
+    <path class="filterArrow" d="M400 413 C426 413 430 402 460 402"/>
+
+    <rect class="cardBlue" x="1190" y="642" width="330" height="120" rx="18"/>
+    <text class="calloutTitle" x="1218" y="681">Q3 filters Q5</text>
+    <text class="calloutText" x="1218" y="718">Higher qualification unlocks</text>
+    <text class="calloutText" x="1218" y="746">higher credential choices.</text>
+    <path class="filterArrow" d="M1190 702 C1164 702 1162 702 1140 702"/>
+
+    <rect class="cardBlue" x="70" y="786" width="330" height="126" rx="18"/>
+    <text class="calloutTitle" x="98" y="825">Q4 transfer rule</text>
+    <text class="calloutText" x="98" y="862">If Main goal is Transfer,</text>
+    <text class="calloutText" x="98" y="890">Q5 becomes Associate,</text>
+    <text class="calloutText" x="98" y="918">Bachelor's, or Not sure.</text>
+    <path class="filterArrow" d="M400 849 C426 849 430 852 460 852"/>
+
+    <rect class="cardBlue" x="1190" y="1232" width="330" height="150" rx="18"/>
+    <text class="calloutTitle" x="1218" y="1271">Q7 filters Q9</text>
+    <text class="calloutStrong" x="1218" y="1308">Online</text>
+    <text class="calloutText" x="1280" y="1308">→ online / no pref</text>
+    <text class="calloutStrong" x="1218" y="1340">Hybrid / weekend</text>
+    <text class="calloutText" x="1370" y="1340">→ regions</text>
+    <path class="filterArrow" d="M1190 1302 C1164 1302 1162 1302 1140 1302"/>
+
+    <rect class="card" x="70" y="1086" width="330" height="118" rx="18"/>
+    <text class="calloutTitle" x="98" y="1125">Scoring-only answers</text>
+    <text class="calloutText" x="98" y="1162">Field, time, and budget do</text>
+    <text class="calloutText" x="98" y="1190">not change the screen path.</text>
+
+    <rect class="card" x="1190" y="1536" width="330" height="118" rx="18"/>
+    <text class="calloutTitle" x="1218" y="1575">Answer reset behavior</text>
+    <text class="calloutText" x="1218" y="1612">Changing an earlier answer</text>
+    <text class="calloutText" x="1218" y="1640">clears all later answers.</text>
+  </g>
+
+  <!-- Scoring note -->
+  <g transform="translate(90 2240)">
+    <rect class="card" x="0" y="0" width="1420" height="60" rx="18"/>
+    <text class="calloutTitle" x="28" y="38">Final scoring:</text>
+    <text class="calloutText" x="165" y="38">industry, goal, stage, credential, qualification, budget, mode, time, location, experience, placement, brand, accreditation.</text>
+  </g>
+</svg>
