@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Degree match quiz | CollegEnroll</title>
-  <meta name="description" content="Find the degree that fits your career goals in 60 seconds with CollegEnroll's degree match quiz.">
+  <meta name="description" content="Find the online degree that fits your career goals in 30 seconds with CollegEnroll's degree match quiz.">
   <link rel="stylesheet" href="../assets/collegenroll-theme.css">
   <style>
     .degree-page {
@@ -232,6 +232,10 @@
       max-width: 640px;
     }
 
+    .degree-hero-copy .ce-heading-hero {
+      line-height: 7.6rem;
+    }
+
     .degree-hero.is-results-mode {
       min-height: 500px;
       padding-block: 120px 88px;
@@ -266,15 +270,66 @@
     }
 
     .quiz-card {
+      --quiz-card-border-angle: 0deg;
+      position: relative;
+      isolation: isolate;
       display: grid;
       height: 780px;
       min-height: 780px;
       overflow: hidden;
-      border: 1px solid var(--ce-color-light-surface);
+      border: 1px solid rgba(255, 134, 0, 0.34);
       border-radius: var(--ce-radius-panel);
       background: var(--ce-color-white);
-      box-shadow: var(--ce-shadow-raised);
+      box-shadow: var(--ce-shadow-raised), 0 0 46px rgba(255, 134, 0, 0.2);
       padding: var(--ce-space-30);
+    }
+
+    .quiz-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border: 2.5px solid transparent;
+      border-radius: inherit;
+      background:
+        linear-gradient(var(--ce-color-white), var(--ce-color-white)) padding-box,
+        conic-gradient(
+          from var(--quiz-card-border-angle),
+          rgba(255, 134, 0, 0) 0deg,
+          rgba(255, 134, 0, 0) 226deg,
+          rgba(255, 174, 84, 0.26) 252deg,
+          rgba(255, 134, 0, 0.9) 286deg,
+          #ff8600 310deg,
+          #ffd08a 326deg,
+          rgba(255, 134, 0, 0.86) 340deg,
+          rgba(255, 134, 0, 0) 360deg
+        ) border-box;
+      filter: drop-shadow(0 0 9px rgba(255, 134, 0, 0.5));
+      pointer-events: none;
+      animation: quiz-card-border-highlight 3.6s linear infinite;
+    }
+
+    .quiz-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    @property --quiz-card-border-angle {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    @keyframes quiz-card-border-highlight {
+      to {
+        --quiz-card-border-angle: 360deg;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .quiz-card::before {
+        animation: none;
+      }
     }
 
     #quizView,
@@ -293,7 +348,10 @@
       flex: 1 1 auto;
       min-height: 0;
       overflow-x: hidden;
-      overflow-y: visible;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 4px;
+      scrollbar-gutter: stable;
     }
 
     .quiz-question {
@@ -307,7 +365,12 @@
     }
 
     .quiz-question-copy {
+      position: sticky;
+      top: 0;
+      z-index: 3;
       max-width: 760px;
+      background: var(--ce-color-white);
+      padding-bottom: var(--ce-space-12);
     }
 
     .quiz-question-copy .ce-heading-category {
@@ -448,23 +511,23 @@
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      background: #ffad4d;
+      background: var(--ce-color-brand-navy);
       box-shadow: var(--ce-shadow-xs);
     }
 
     .quiz-progress-button::before {
       content: "";
       position: absolute;
-      inset: 0 auto 0 0;
+      inset: -1px auto -1px -1px;
       z-index: 0;
-      width: var(--quiz-button-progress);
+      width: calc(var(--quiz-button-progress) + 1px);
       background: var(--ce-color-orange);
       transition: width 0.42s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
     .quiz-progress-button:hover,
     .quiz-progress-button:focus-visible {
-      background: #ffad4d;
+      background: var(--ce-color-brand-navy);
     }
 
     .quiz-progress-button-label,
@@ -922,6 +985,10 @@
         padding-block: 64px 54px;
       }
 
+      .degree-hero-copy .ce-heading-hero {
+        line-height: 4rem;
+      }
+
       .quiz-section {
         padding-block: var(--ce-space-40);
       }
@@ -943,6 +1010,12 @@
 
       .quiz-deck {
         overflow: visible;
+        padding-right: 0;
+        scrollbar-gutter: auto;
+      }
+
+      .quiz-question-copy {
+        top: 76px;
       }
 
       .option-grid {
@@ -1070,7 +1143,7 @@
         <div class="ce-hero-media" aria-hidden="true"></div>
         <div class="ce-container-wide degree-hero-grid">
           <div class="degree-hero-copy ce-stack">
-            <h1 class="ce-heading-hero">Find the degree that fits your <span>career goals</span> in 60&nbsp;seconds</h1>
+            <h1 class="ce-heading-hero">Find the online degree that fits your <span>career goals</span> in 30&nbsp;seconds</h1>
             <p class="ce-copy ce-copy-hero">Find online programs that fit what you want to study, what you can spend, and where you want to go next.</p>
           </div>
 
@@ -1219,7 +1292,7 @@
         options: [
           { label: "Grade 11 or 12", value: "high_school_in_progress", detail: "Currently in high school, junior year or later" },
           { label: "High school diploma/GED", value: "high_school", detail: "Completed high school or equivalent" },
-          { label: "Some college", value: "some_college", detail: "College credits without a completed degree" },
+          { label: "Some college, no degree", value: "some_college", detail: "College credits without a completed degree" },
           { label: "Associate degree", value: "associate", detail: "Completed a 2-year credential" },
           { label: "Bachelor's degree", value: "bachelors", detail: "Completed a 4-year undergraduate degree" },
           { label: "Master's or higher", value: "masters", detail: "Completed graduate-level study" }
@@ -1408,6 +1481,7 @@
       degreeHero: document.getElementById("degreeHero"),
       degreeQuiz: document.getElementById("degree-quiz"),
       resultsView: document.getElementById("resultsView"),
+      quizDeck: document.getElementById("quizDeck"),
       questionCard: document.getElementById("questionCard"),
       questionTitle: document.getElementById("questionTitle"),
       questionHelp: document.getElementById("questionHelp"),
@@ -1431,8 +1505,8 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       loadUniversities();
-      renderQuestion();
       bindEvents();
+      renderQuestion();
     });
 
     function bindEvents() {
@@ -1672,6 +1746,7 @@
       } else {
         renderOptions(question);
       }
+      els.quizDeck.scrollTop = 0;
       if (animate) {
         animateDeckIn(direction);
       }
