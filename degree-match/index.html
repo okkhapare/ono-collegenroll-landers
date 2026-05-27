@@ -207,8 +207,10 @@
     }
 
     .degree-hero {
+      display: block;
       min-height: 880px;
-      padding-block: 96px 96px;
+      padding-block: 70px 78px;
+      overflow: hidden;
     }
 
     .degree-hero .ce-hero-media {
@@ -216,40 +218,385 @@
     }
 
     .degree-hero .ce-hero-media::before {
-      background: linear-gradient(90deg, rgba(27, 52, 89, 0.97) 0%, rgba(27, 52, 89, 0.86) 44%, rgba(27, 52, 89, 0.18) 100%);
+      background: linear-gradient(90deg, rgba(27, 52, 89, 0.97) 0%, rgba(27, 52, 89, 0.9) 52%, rgba(27, 52, 89, 0.72) 100%);
+    }
+
+    .degree-hero .ce-container-wide {
+      width: min(100% - 40px, 1320px);
     }
 
     .degree-hero-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(500px, 620px);
-      gap: var(--ce-space-50);
+      grid-template-columns: minmax(380px, 430px) minmax(0, 1fr);
+      gap: clamp(14px, 1.4vw, 24px);
       align-items: center;
+      justify-items: stretch;
+      overflow: visible;
+      text-align: left;
+    }
+
+    .degree-hero-left {
+      position: relative;
+      grid-column: 1;
+      grid-row: 1;
+      display: grid;
+      min-height: 760px;
+      grid-template-rows: auto 430px;
+      gap: 20px;
+      align-content: start;
+      overflow: hidden;
+    }
+
+    .degree-student-figure {
+      position: relative;
+      grid-row: 2;
+      z-index: 1;
+      width: 100%;
+      height: 430px;
+      margin: 14px 0 0;
+      overflow: hidden;
+      opacity: 1;
+      transform: none;
+      transform-origin: center 58%;
+    }
+
+    .degree-student-figure img {
+      display: block;
+      width: 185%;
+      max-width: none;
+      height: auto;
+      filter: drop-shadow(0 22px 30px rgba(1, 17, 43, 0.3));
+      transform: translate(-25%, -8%);
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, 0.8) 73%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, 0.8) 73%, transparent 100%);
     }
 
     .degree-hero-copy {
-      max-width: 640px;
+      position: relative;
+      grid-row: 1;
+      z-index: 2;
+      width: min(100%, 500px);
+      max-width: 500px;
+      margin: 0;
+      justify-self: start;
+      opacity: 1;
+      transform: none;
+      transform-origin: center;
     }
 
     .degree-hero-copy .ce-heading-hero {
-      line-height: 1.15;
+      font-size: 5.15rem;
+      line-height: 5.75rem;
+    }
+
+    .degree-device {
+      position: relative;
+      grid-column: 2;
+      grid-row: 1;
+      z-index: 3;
+      width: min(158%, 1420px);
+      margin: 0 -19vw 0 0;
+      justify-self: end;
+      transform: none;
+      transform-origin: top center;
+    }
+
+    .degree-device::after {
+      content: "";
+      position: absolute;
+      right: 8%;
+      bottom: -2%;
+      left: 8%;
+      z-index: -1;
+      height: 9%;
+      border-radius: 50%;
+      background: rgba(1, 17, 43, 0.28);
+      filter: blur(18px);
+    }
+
+    .degree-device-stage {
+      position: relative;
+      aspect-ratio: 4340 / 2860;
+      filter: drop-shadow(0 34px 42px rgba(1, 17, 43, 0.34));
+    }
+
+    .degree-device-screen {
+      position: absolute;
+      left: 10.21%;
+      top: 10.98%;
+      z-index: 1;
+      width: 79.59%;
+      height: 78.04%;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #eef4ff;
+    }
+
+    .degree-mac-desktop {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      background: var(--ce-color-white);
+      color: #1c2f52;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", var(--ce-font-body);
+    }
+
+    .degree-mac-statusbar {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ce-space-12);
+      min-width: 0;
+      border-bottom: 1px solid rgba(27, 52, 89, 0.08);
+      background: rgba(255, 255, 255, 0.58);
+      box-shadow: 0 1px 12px rgba(27, 52, 89, 0.06);
+      padding: 0 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1;
+      backdrop-filter: blur(14px);
+    }
+
+    .degree-mac-menu,
+    .degree-mac-system {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 9px;
+      white-space: nowrap;
+    }
+
+    .degree-mac-system {
+      justify-content: flex-end;
+      color: rgba(28, 47, 82, 0.78);
+    }
+
+    .degree-mac-wifi {
+      position: relative;
+      width: 15px;
+      height: 11px;
+      color: currentColor;
+    }
+
+    .degree-mac-wifi::before,
+    .degree-mac-wifi::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: auto;
+      border: 1.5px solid currentColor;
+      border-bottom: 0;
+      border-radius: 999px 999px 0 0;
+    }
+
+    .degree-mac-wifi::before {
+      bottom: 2px;
+      width: 15px;
+      height: 8px;
+    }
+
+    .degree-mac-wifi::after {
+      bottom: 2px;
+      width: 8px;
+      height: 4px;
+    }
+
+    .degree-mac-window {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 0;
+      border-radius: 0;
+      background: var(--ce-color-white);
+      box-shadow: none;
+      margin: 0;
+    }
+
+    .degree-mac-titlebar {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr) 48px;
+      flex: 0 0 22px;
+      align-items: center;
+      border-bottom: 1px solid rgba(27, 52, 89, 0.1);
+      background: linear-gradient(180deg, #fbfcff 0%, #eef2f8 100%);
+      padding: 0 8px;
+    }
+
+    .degree-mac-controls {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .degree-mac-controls span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px rgba(8, 27, 55, 0.12);
+    }
+
+    .degree-mac-controls span:nth-child(1) {
+      background: #ff5f57;
+    }
+
+    .degree-mac-controls span:nth-child(2) {
+      background: #febc2e;
+    }
+
+    .degree-mac-controls span:nth-child(3) {
+      background: #28c840;
+    }
+
+    .degree-mac-window-title {
+      overflow: hidden;
+      color: rgba(28, 47, 82, 0.8);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .degree-mac-window-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 4px;
+    }
+
+    .degree-mac-window-actions span {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(28, 47, 82, 0.38);
+    }
+
+    .degree-mac-window-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      height: 100%;
+      overflow: hidden;
+      background: var(--ce-color-white);
+    }
+
+    .degree-device-frame {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .degree-device-frame-iphone {
+      display: none;
+    }
+
+    .ce-heading-hero .degree-hero-cursive {
+      display: block;
+      color: #8ee6ff;
+      font-family: "Segoe Script", "Brush Script MT", cursive;
+      font-size: 0.72em;
+      font-style: normal;
+      line-height: 1.05;
+      margin-top: var(--ce-space-12);
+    }
+
+    .ce-heading-hero .degree-hero-clock {
+      position: relative;
+      display: inline-block;
+      width: 0.58em;
+      height: 0.58em;
+      border: 0.06em solid currentColor;
+      border-radius: 50%;
+      color: inherit;
+      vertical-align: -0.04em;
+    }
+
+    .ce-heading-hero .degree-hero-clock::before,
+    .ce-heading-hero .degree-hero-clock::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      width: 0.06em;
+      border-radius: 999px;
+      background: currentColor;
+      transform-origin: bottom center;
+    }
+
+    .ce-heading-hero .degree-hero-clock::before {
+      height: 0.22em;
+      transform: translateX(-50%) rotate(0deg);
+    }
+
+    .ce-heading-hero .degree-hero-clock::after {
+      height: 0.18em;
+      transform: translateX(-50%) rotate(122deg);
     }
 
     .degree-hero.is-results-mode {
-      min-height: 500px;
-      padding-block: 120px 88px;
+      min-height: auto;
+      height: auto;
+      padding-block: 56px 36px;
     }
 
     .degree-hero.is-results-mode .degree-hero-grid {
-      grid-template-columns: minmax(0, 860px);
+      position: relative;
+      top: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 760px);
+      gap: var(--ce-space-24);
+      align-items: start;
       justify-content: center;
+      height: auto;
+      min-height: 0;
+      overflow: visible;
       text-align: center;
     }
 
+    .degree-hero.is-results-mode .degree-hero-left {
+      grid-column: 1;
+      width: 100%;
+      min-height: auto;
+      grid-template-rows: auto;
+      justify-items: center;
+      overflow: visible;
+    }
+
     .degree-hero.is-results-mode .degree-hero-copy {
+      position: relative;
+      top: auto;
+      left: auto;
+      grid-row: 1;
+      width: min(100%, 860px);
       max-width: 860px;
       margin: 0 auto;
+      justify-self: center;
+      opacity: 1;
+      text-align: center;
+      transform: none;
+    }
+
+    .degree-hero.is-results-mode .degree-student-figure {
+      display: none;
+    }
+
+    .degree-hero.is-results-mode .degree-device {
+      display: block;
+      grid-column: 1;
+      grid-row: 2;
+      width: min(100%, 560px);
+      margin: 0 auto;
+      justify-self: center;
     }
 
     .degree-hero.is-results-mode .ce-copy-hero {
@@ -282,6 +629,113 @@
       background: var(--ce-color-white);
       box-shadow: var(--ce-shadow-raised), 0 0 46px rgba(255, 134, 0, 0.2);
       padding: var(--ce-space-30);
+    }
+
+    .degree-device .quiz-card {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 28px 34px 24px;
+    }
+
+    .degree-device .quiz-card::after {
+      border-radius: 0;
+    }
+
+    .degree-device .quiz-question-copy .ce-heading-category {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+    }
+
+    .degree-device .quiz-help {
+      font-size: 1.55rem;
+      line-height: 2.1rem;
+    }
+
+    .degree-device .answer-option {
+      min-height: 74px;
+      gap: var(--ce-space-12);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .degree-device .option-grid {
+      gap: var(--ce-space-16);
+    }
+
+    .degree-device .answer-title {
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }
+
+    .degree-device .answer-detail {
+      font-size: 1.34rem;
+      line-height: 1.9rem;
+    }
+
+    .degree-device .answer-check {
+      width: 26px;
+      height: 26px;
+      margin-top: 1px;
+    }
+
+    .degree-device .answer-check::before {
+      width: 8px;
+      height: 13px;
+    }
+
+    .degree-device .quiz-actions {
+      gap: var(--ce-space-16);
+      margin-top: 16px;
+      padding-top: 16px;
+    }
+
+    .degree-device .ce-btn {
+      min-height: 48px;
+      font-size: 1.65rem;
+    }
+
+    .degree-device .ce-btn-primary {
+      padding: 16px 28px;
+    }
+
+    .degree-device .ce-btn-outline {
+      padding: 15px 26px;
+    }
+
+    .degree-device .quiz-error {
+      min-height: 24px;
+      font-size: 1.35rem;
+      line-height: 2.2rem;
+    }
+
+    .degree-device .lead-gate-view {
+      gap: var(--ce-space-16);
+    }
+
+    .degree-device .lead-gate-form {
+      gap: var(--ce-space-16);
+    }
+
+    .degree-device .ce-floating-label {
+      font-size: 1.4rem;
+      padding: 8px 7px;
+    }
+
+    .degree-device .ce-input,
+    .degree-device .ce-select {
+      border-radius: 8px;
+      font-size: 1.55rem;
+      line-height: 2.6rem;
+      padding: 15px 40px 8px 18px;
+    }
+
+    .degree-device .lead-consent {
+      font-size: 1.25rem;
+      line-height: 1.85rem;
     }
 
     .quiz-card > * {
@@ -450,8 +904,13 @@
       opacity: 1;
     }
 
-    .number-answer {
+    .number-answer,
+    .select-answer {
       max-width: 360px;
+    }
+
+    .select-answer {
+      max-width: 220px;
     }
 
     .quiz-error {
@@ -560,6 +1019,58 @@
       margin: 0;
     }
 
+    .results-hero-message {
+      display: grid;
+      height: 100%;
+      min-height: 100%;
+      align-content: center;
+      justify-items: start;
+      gap: var(--ce-space-8);
+      background:
+        radial-gradient(circle at 16% 12%, rgba(255, 134, 0, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f5f8ff 100%);
+      color: var(--ce-color-brand-navy);
+      padding: clamp(18px, 2.6vw, 28px);
+      text-align: left;
+    }
+
+    .results-hero-kicker {
+      color: var(--ce-color-orange);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.3;
+    }
+
+    .results-hero-message h2 {
+      max-width: 300px;
+      margin: 0;
+      color: var(--ce-color-brand-navy);
+      font-size: clamp(1.8rem, 2vw, 2.2rem);
+      line-height: 1.18;
+    }
+
+    .results-hero-message p {
+      max-width: 320px;
+      margin: 0;
+      color: var(--ce-color-body-blue);
+      font-size: 1.12rem;
+      line-height: 1.65rem;
+    }
+
+    .results-hero-message-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--ce-space-8);
+      margin-top: var(--ce-space-4);
+    }
+
+    .results-hero-message .ce-btn {
+      min-height: 34px;
+      padding: 8px 16px;
+      font-size: 1.12rem;
+    }
+
     .results-view {
       display: grid;
       gap: var(--ce-space-50);
@@ -597,9 +1108,10 @@
     }
 
     .result-card:first-child {
-      border-color: rgba(27, 52, 89, 0.22);
+      border-color: var(--ce-color-blue-hover);
+      border-width: 1.5px;
       background: var(--ce-color-white);
-      box-shadow: var(--ce-shadow-card), 0 20px 46px rgba(27, 52, 89, 0.14);
+      box-shadow: var(--ce-shadow-card), 0 24px 60px rgba(27, 52, 89, 0.2), 0 16px 42px rgba(11, 117, 215, 0.14);
       transform: translateY(-8px);
     }
 
@@ -972,6 +1484,48 @@
     @media (max-width: 1120px) {
       .degree-hero-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .degree-hero-left {
+        grid-column: auto;
+        grid-row: auto;
+        width: min(100%, 760px);
+        min-height: auto;
+        justify-items: center;
+        overflow: visible;
+      }
+
+      .degree-student-figure {
+        width: min(100%, 520px);
+        height: auto;
+        margin: 18px auto 0;
+        overflow: visible;
+      }
+
+      .degree-student-figure img {
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+      }
+
+      .degree-hero-copy {
+        width: min(100%, 760px);
+        max-width: 760px;
+        justify-self: center;
+      }
+
+      .degree-hero-copy .ce-heading-hero {
+        font-size: 5rem;
+        line-height: 5.6rem;
+      }
+
+      .degree-device {
+        grid-column: auto;
+        grid-row: auto;
+        width: min(100%, 900px);
+        justify-self: center;
       }
 
       .quiz-layout {
@@ -1024,11 +1578,107 @@
 
       .degree-hero {
         min-height: auto;
+        height: auto;
         padding-block: 64px 54px;
+        overflow: hidden;
+      }
+
+      .degree-hero-grid {
+        position: relative;
+        top: auto;
+        display: grid;
+        height: auto;
+        min-height: 0;
+        gap: var(--ce-space-20);
+        overflow: visible;
+        perspective: none;
+      }
+
+      .degree-hero-left {
+        grid-template-rows: auto;
+        gap: 0;
+      }
+
+      .degree-student-figure {
+        display: none;
+      }
+
+      .degree-hero-copy {
+        position: relative;
+        top: auto;
+        left: auto;
+        max-width: 100%;
+        opacity: 1;
+        transform: none;
       }
 
       .degree-hero-copy .ce-heading-hero {
-        line-height: 1.15;
+        font-size: 4rem;
+        line-height: 4.4rem;
+      }
+
+      .degree-device {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: min(100%, 372px);
+        margin: 0 auto;
+        justify-self: center;
+        transform: none;
+      }
+
+      .degree-device::after {
+        right: 18%;
+        bottom: -1%;
+        left: 18%;
+        height: 6%;
+      }
+
+      .degree-device-stage {
+        aspect-ratio: 490 / 1000;
+        filter: drop-shadow(0 22px 28px rgba(1, 17, 43, 0.3));
+      }
+
+      .degree-device-screen {
+        left: 5.1%;
+        top: 2.2%;
+        width: 89.8%;
+        height: 95.6%;
+        border-radius: 42px;
+      }
+
+      .degree-mac-desktop {
+        display: block;
+        height: 100%;
+        background: var(--ce-color-white);
+      }
+
+      .degree-mac-statusbar,
+      .degree-mac-titlebar {
+        display: none;
+      }
+
+      .degree-mac-window {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .degree-mac-window-body {
+        height: 100%;
+        background: transparent;
+      }
+
+      .degree-device-frame-macbook {
+        display: none;
+      }
+
+      .degree-device-frame-iphone {
+        display: block;
       }
 
       .quiz-section {
@@ -1045,6 +1695,45 @@
         overflow: visible;
       }
 
+      .degree-device .quiz-card {
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 38px;
+        padding: 76px 20px 34px;
+      }
+
+      .degree-device #quizView,
+      .degree-device .lead-gate-view,
+      .degree-device .results-hero-message {
+        height: 100%;
+      }
+
+      .degree-device .results-hero-message {
+        justify-items: center;
+        padding: 76px 20px 34px;
+        text-align: center;
+      }
+
+      .degree-device .results-hero-message h2 {
+        font-size: 2rem;
+        line-height: 2.35rem;
+      }
+
+      .degree-device .results-hero-message p {
+        font-size: 1.12rem;
+        line-height: 1.7rem;
+      }
+
+      .degree-device .results-hero-message-actions,
+      .degree-device .results-hero-message-actions .ce-btn {
+        width: 100%;
+      }
+
+      .degree-device .results-hero-message-actions {
+        flex-direction: column;
+      }
+
       #quizView,
       .lead-gate-view {
         height: auto;
@@ -1058,6 +1747,17 @@
 
       .quiz-question-copy {
         top: 76px;
+      }
+
+      .degree-device .quiz-deck {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 4px;
+        scrollbar-gutter: stable;
+      }
+
+      .degree-device .quiz-question-copy {
+        top: 0;
       }
 
       .option-grid {
@@ -1184,60 +1884,109 @@
       <section class="ce-hero degree-hero" id="degreeHero">
         <div class="ce-hero-media" aria-hidden="true"></div>
         <div class="ce-container-wide degree-hero-grid">
-          <div class="degree-hero-copy ce-stack">
-            <h1 class="ce-heading-hero">Find the online degree that fits your <span>career goals</span> in 30&nbsp;seconds</h1>
-            <p class="ce-copy ce-copy-hero">Find online programs that fit what you want to study, what you can spend, and where you want to go next.</p>
+          <div class="degree-hero-left">
+            <div class="degree-hero-copy ce-stack">
+              <h1 class="ce-heading-hero">Find <span>online degrees</span><br>for your career goals. <span class="degree-hero-cursive">In under a minute&nbsp;<span class="degree-hero-clock" aria-hidden="true"></span></span></h1>
+            </div>
+
+            <figure class="degree-student-figure" aria-hidden="true">
+              <img src="../assets/degree-hero-student.png" alt="" loading="eager" decoding="async" fetchpriority="high">
+            </figure>
           </div>
 
-          <section class="quiz-card" id="degree-quiz" aria-live="polite">
-            <div id="quizView">
-              <div class="quiz-deck" id="quizDeck">
-                <div class="quiz-question" id="questionCard">
-                  <div class="quiz-question-copy">
-                    <h2 class="ce-heading-category" id="questionTitle"></h2>
-                    <p class="quiz-help question-help" id="questionHelp"></p>
+          <div class="degree-device">
+            <div class="degree-device-stage">
+              <div class="degree-device-screen">
+                <div class="degree-mac-desktop">
+                  <div class="degree-mac-statusbar" aria-hidden="true">
+                    <div class="degree-mac-menu">
+                      <span>File</span>
+                      <span>Edit</span>
+                      <span>View</span>
+                      <span>Help</span>
+                    </div>
+                    <div class="degree-mac-system">
+                      <span class="degree-mac-wifi"></span>
+                      <span>100%</span>
+                      <span id="degreeMacClock">Tue May 26 9:41 AM</span>
+                    </div>
                   </div>
-                  <div id="answerArea"></div>
-                  <div class="quiz-error" id="quizError" role="alert"></div>
-                </div>
-              </div>
+                  <div class="degree-mac-window">
+                    <div class="degree-mac-titlebar" aria-hidden="true">
+                      <div class="degree-mac-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="degree-mac-window-title"></div>
+                      <div class="degree-mac-window-actions"></div>
+                    </div>
+                    <div class="degree-mac-window-body">
+                      <section class="quiz-card" id="degree-quiz" aria-live="polite">
+                        <div id="quizView">
+                          <div class="quiz-deck" id="quizDeck">
+                            <div class="quiz-question" id="questionCard">
+                              <div class="quiz-question-copy">
+                                <h2 class="ce-heading-category" id="questionTitle"></h2>
+                                <p class="quiz-help question-help" id="questionHelp"></p>
+                              </div>
+                              <div id="answerArea"></div>
+                              <div class="quiz-error" id="quizError" role="alert"></div>
+                            </div>
+                          </div>
 
-              <div class="quiz-actions">
-                <button class="ce-btn ce-btn-outline" type="button" id="backButton">Back</button>
-                <div class="quiz-actions-right">
-                  <button class="ce-btn ce-btn-primary ce-btn-arrow quiz-progress-button" type="button" id="nextButton">
-                    <span class="quiz-progress-button-label" id="nextButtonLabel">Next</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+                          <div class="quiz-actions">
+                            <button class="ce-btn ce-btn-outline" type="button" id="backButton">Back</button>
+                            <div class="quiz-actions-right">
+                              <button class="ce-btn ce-btn-primary ce-btn-arrow quiz-progress-button" type="button" id="nextButton">
+                                <span class="quiz-progress-button-label" id="nextButtonLabel">Next</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
 
-            <div class="lead-gate-view is-hidden" id="leadGateView">
-              <div>
-                <h2 class="ce-heading-category">We can help you better</h2>
+                        <div class="lead-gate-view is-hidden" id="leadGateView">
+                          <div>
+                            <h2 class="ce-heading-category">We can help you better</h2>
+                          </div>
+                          <form class="lead-gate-form" id="leadGateForm" novalidate>
+                            <div class="ce-field">
+                              <label class="ce-floating-label" for="leadName">Name</label>
+                              <input class="ce-input" id="leadName" name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
+                            </div>
+                            <div class="ce-field">
+                              <label class="ce-floating-label" for="leadEmail">Email</label>
+                              <input class="ce-input" id="leadEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                            </div>
+                            <div class="ce-field">
+                              <label class="ce-floating-label" for="leadPhone">Phone</label>
+                              <input class="ce-input" id="leadPhone" name="phone" type="tel" placeholder="Optional U.S. number" autocomplete="tel">
+                            </div>
+                            <label class="lead-consent" for="leadMarketingConsent">
+                              <input id="leadMarketingConsent" name="marketingConsent" type="checkbox" checked required>
+                              <span>I understand my email may be used to send marketing or promotional content.</span>
+                            </label>
+                            <div class="lead-message" id="leadMessage" role="alert"></div>
+                            <button class="ce-btn ce-btn-primary ce-btn-arrow" type="submit" id="leadSubmitButton">Unlock my matches</button>
+                          </form>
+                        </div>
+                      </section>
+                      <div class="results-hero-message is-hidden" id="resultsHeroMessage" aria-live="polite">
+                        <h2>Your matches are ready</h2>
+                        <p>Refine your answers, or continue with the matches built from your profile.</p>
+                        <div class="results-hero-message-actions">
+                          <button class="ce-btn ce-btn-primary ce-btn-arrow" type="button" data-results-hero-action="view">View programs</button>
+                          <button class="ce-btn ce-btn-outline" type="button" data-results-hero-action="refine">Refine answers</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <form class="lead-gate-form" id="leadGateForm" novalidate>
-                <div class="ce-field">
-                  <label class="ce-floating-label" for="leadName">Name</label>
-                  <input class="ce-input" id="leadName" name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
-                </div>
-                <div class="ce-field">
-                  <label class="ce-floating-label" for="leadEmail">Email</label>
-                  <input class="ce-input" id="leadEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-                </div>
-                <div class="ce-field">
-                  <label class="ce-floating-label" for="leadPhone">Phone</label>
-                  <input class="ce-input" id="leadPhone" name="phone" type="tel" placeholder="Optional U.S. number" autocomplete="tel">
-                </div>
-                <label class="lead-consent" for="leadMarketingConsent">
-                  <input id="leadMarketingConsent" name="marketingConsent" type="checkbox" checked required>
-                  <span>I understand my email may be used to send marketing or promotional content.</span>
-                </label>
-                <div class="lead-message" id="leadMessage" role="alert"></div>
-                <button class="ce-btn ce-btn-primary ce-btn-arrow" type="submit" id="leadSubmitButton">Unlock my matches</button>
-              </form>
+              <img class="degree-device-frame degree-device-frame-macbook" src="../assets/macbook-pro-16-silver.png" alt="" aria-hidden="true">
+              <img class="degree-device-frame degree-device-frame-iphone" src="../assets/iphone-17-pro-max-cosmic-orange.png" alt="" aria-hidden="true">
             </div>
-          </section>
+          </div>
         </div>
       </section>
 
@@ -1247,7 +1996,6 @@
             <div>
               <h2 class="ce-heading-section">Top 3 programs for your profile</h2>
             </div>
-            <button class="ce-btn ce-btn-outline" type="button" id="restartButton">Refine answers</button>
           </div>
           <div class="result-grid" id="resultGrid"></div>
           <p class="result-feedback" id="resultFeedback" role="status"></p>
@@ -1394,11 +2142,12 @@
       {
         id: "experienceYears",
         title: "How many years of relevant work experience do you have?",
-        help: "Enter 0 if you are a student or have not worked in the field yet.",
-        validation: "Please enter a number from 0 to 40.",
-        type: "number",
+        help: "Choose 0 if you are a student or have not worked in the field yet.",
+        validation: "Please choose a number from 0 to 40.",
+        type: "select",
         min: 0,
-        max: 40
+        max: 40,
+        options: buildYearOptions(0, 40)
       }
     ];
 
@@ -1533,12 +2282,12 @@
       nextButton: document.getElementById("nextButton"),
       nextButtonLabel: document.getElementById("nextButtonLabel"),
       leadGateView: document.getElementById("leadGateView"),
+      resultsHeroMessage: document.getElementById("resultsHeroMessage"),
       leadGateForm: document.getElementById("leadGateForm"),
       leadName: document.getElementById("leadName"),
       leadPhone: document.getElementById("leadPhone"),
       leadMarketingConsent: document.getElementById("leadMarketingConsent"),
       leadSubmitButton: document.getElementById("leadSubmitButton"),
-      restartButton: document.getElementById("restartButton"),
       resultGrid: document.getElementById("resultGrid"),
       resultFeedback: document.getElementById("resultFeedback"),
       leadEmail: document.getElementById("leadEmail"),
@@ -1546,10 +2295,28 @@
     };
 
     document.addEventListener("DOMContentLoaded", () => {
+      updateMacClock();
+      window.setInterval(updateMacClock, 30000);
       loadUniversities();
       bindEvents();
       renderQuestion();
     });
+
+    function updateMacClock() {
+      const clock = document.getElementById("degreeMacClock");
+      if (!clock) return;
+
+      const now = new Date();
+      const easternTimeZone = "America/New_York";
+      const weekday = new Intl.DateTimeFormat(undefined, { weekday: "short", timeZone: easternTimeZone }).format(now);
+      const date = new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", timeZone: easternTimeZone }).format(now);
+      const time = new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: easternTimeZone
+      }).format(now);
+      clock.textContent = `${weekday} ${date} ${time}`;
+    }
 
     function bindEvents() {
       const mobileMenu = document.getElementById("mobileMenu");
@@ -1595,6 +2362,15 @@
         els.quizError.textContent = "";
       });
 
+      els.answerArea.addEventListener("change", (event) => {
+        const select = event.target.closest("[data-select-answer]");
+        if (!select) return;
+        const currentQuestion = getCurrentQuestion();
+        setAnswer(currentQuestion.id, select.value);
+        els.quizError.textContent = "";
+        updateQuizChrome();
+      });
+
       els.backButton.addEventListener("click", () => {
         if (state.index === 0 || state.isTransitioning) return;
         goToQuestion(state.index - 1, -1);
@@ -1611,18 +2387,14 @@
         goToQuestion(state.index + 1, 1);
       });
 
-      els.restartButton.addEventListener("click", () => {
-        els.resultsView.classList.add("is-hidden");
-        els.leadGateView.classList.add("is-hidden");
-        els.degreeHero.classList.remove("is-results-mode");
-        els.degreeQuiz.classList.remove("is-hidden");
-        els.quizView.classList.remove("is-hidden");
-        state.index = 0;
-        state.lead = null;
-        state.matches = [];
-        els.resultFeedback.textContent = "";
-        renderQuestion({ direction: -1 });
-        document.getElementById("degree-quiz").scrollIntoView({ behavior: "smooth", block: "center" });
+      els.degreeHero.addEventListener("click", (event) => {
+        const action = event.target.closest("[data-results-hero-action]");
+        if (!action) return;
+        if (action.dataset.resultsHeroAction === "refine") {
+          restartQuiz();
+          return;
+        }
+        els.resultsView.scrollIntoView({ behavior: "smooth", block: "start" });
       });
 
       els.resultGrid.addEventListener("click", (event) => {
@@ -1666,6 +2438,21 @@
         calculateAndRenderResults();
       });
       syncLeadSubmitState();
+    }
+
+    function restartQuiz() {
+      els.resultsView.classList.add("is-hidden");
+      els.leadGateView.classList.add("is-hidden");
+      els.resultsHeroMessage.classList.add("is-hidden");
+      els.degreeHero.classList.remove("is-results-mode");
+      els.degreeQuiz.classList.remove("is-hidden");
+      els.quizView.classList.remove("is-hidden");
+      state.index = 0;
+      state.lead = null;
+      state.matches = [];
+      els.resultFeedback.textContent = "";
+      renderQuestion({ direction: -1 });
+      document.getElementById("degree-quiz").scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     async function loadUniversities() {
@@ -1794,7 +2581,9 @@
       els.questionHelp.textContent = "";
       els.quizError.textContent = "";
 
-      if (question.type === "number") {
+      if (question.type === "select") {
+        renderSelectQuestion(question);
+      } else if (question.type === "number") {
         renderNumberQuestion(question);
       } else {
         renderOptions(question);
@@ -1833,6 +2622,23 @@
       `;
       const input = els.answerArea.querySelector("input");
       input.focus();
+    }
+
+    function renderSelectQuestion(question) {
+      const value = state.answers[question.id] ?? "";
+      els.answerArea.innerHTML = `
+        <div class="select-answer ce-field">
+          <label class="ce-floating-label" for="${escapeHtml(question.id)}">Years</label>
+          <select class="ce-select" id="${escapeHtml(question.id)}" data-select-answer>
+            <option value="" ${value === "" ? "selected" : ""}>Select years</option>
+            ${question.options.map((option) => `
+              <option value="${escapeHtml(option.value)}" ${value === option.value ? "selected" : ""}>${escapeHtml(option.label)}</option>
+            `).join("")}
+          </select>
+        </div>
+      `;
+      const select = els.answerArea.querySelector("select");
+      select.focus();
     }
 
     function updateSelectedOption(selectedValue) {
@@ -1896,6 +2702,8 @@
       if (question.type === "number") {
         const numericValue = Number(value);
         isValid = value !== "" && Number.isFinite(numericValue) && numericValue >= question.min && numericValue <= question.max;
+      } else if (question.type === "select") {
+        isValid = question.options.some((option) => option.value === value);
       }
 
       if (!isValid && showError) {
@@ -1943,7 +2751,9 @@
       els.leadGateView.classList.add("is-hidden");
       els.degreeHero.classList.add("is-results-mode");
       els.degreeQuiz.classList.add("is-hidden");
+      els.resultsHeroMessage.classList.remove("is-hidden");
       els.resultsView.classList.remove("is-hidden");
+      animatePanelIn(els.resultsHeroMessage);
       animatePanelIn(els.resultsView);
       els.resultsView.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -2294,7 +3104,7 @@
         ease: "outQuad"
       });
 
-      const answerItems = els.answerArea.querySelectorAll(".answer-option, .number-answer");
+      const answerItems = els.answerArea.querySelectorAll(".answer-option, .number-answer, .select-answer");
       motion.animate(answerItems, {
         opacity: { from: 0, to: 1 },
         x: { from: direction > 0 ? 24 : -24, to: 0 },
@@ -2559,6 +3369,16 @@
     function formatDuration(value) {
       const number = Number(value || 0);
       return number === 1 ? "1 year" : `${number} years`;
+    }
+
+    function buildYearOptions(min, max) {
+      return Array.from({ length: max - min + 1 }, (_, index) => {
+        const years = min + index;
+        return {
+          label: formatDuration(years),
+          value: String(years)
+        };
+      });
     }
 
     function escapeHtml(value) {
