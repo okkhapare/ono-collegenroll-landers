@@ -4,10 +4,10 @@ Static CollegEnroll landing pages prepared for GitHub and Cloudflare Pages.
 
 ## Pages
 
-- `/degree-match/` - Degree match quiz
+- `/degree-match/` - Degree match tool
 
 The root `index.html` redirects visitors to `/degree-match/` so the Pages apex does not return a 404.
-Navigation and footer links on the quiz point to the official `https://collegenroll.com/` site.
+Navigation and footer links on the match tool point to the official `https://collegenroll.com/` site.
 
 ## Local Preview
 
