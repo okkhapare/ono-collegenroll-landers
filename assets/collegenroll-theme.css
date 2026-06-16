@@ -1476,7 +1476,7 @@ footer .container {
 
 .degree-hero-left {
   position: relative;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
   grid-row: 1;
   display: grid;
   width: 100%;
@@ -1507,8 +1507,8 @@ footer .container {
   position: relative;
   grid-row: 1;
   z-index: 2;
-  width: min(100%, 620px);
-  max-width: 620px;
+  width: min(100%, 760px);
+  max-width: 760px;
   margin: 0;
   justify-self: start;
   opacity: 1;
@@ -1556,7 +1556,7 @@ footer .container {
 .degree-hero-copy .ce-heading-hero {
   color: var(--ce-color-white);
   font-family: var(--ce-font-heading), Arial, Helvetica, sans-serif;
-  font-size: clamp(4.8rem, 3.65vw, 6.7rem);
+  font-size: clamp(4.4rem, 3.15vw, 6rem);
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -1565,7 +1565,7 @@ footer .container {
 }
 
 .degree-hero-description {
-  max-width: 520px;
+  max-width: 600px;
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: 1.8rem;
@@ -1577,7 +1577,7 @@ footer .container {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(20px, 3vw, 34px);
   margin-top: var(--ce-space-24);
-  max-width: 520px;
+  max-width: 600px;
   justify-items: start;
 }
 
@@ -1612,10 +1612,11 @@ footer .container {
 
 .degree-device {
   position: relative;
-  grid-column: 7 / -1;
+  grid-column: 8 / -1;
   grid-row: 1;
   z-index: 3;
-  width: min(100%, 680px);
+  width: 100%;
+  max-width: 640px;
   margin: 0;
   justify-self: end;
   transform: none;
@@ -1907,8 +1908,8 @@ footer .container {
 
 .degree-device .match-card {
   width: 100%;
-  height: auto;
-  min-height: clamp(560px, 62svh, 720px);
+  height: clamp(500px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)), 640px);
+  min-height: 0;
   overflow: hidden;
   border: 1px solid var(--degree-pearl-border);
   border-radius: var(--ce-radius-panel);
@@ -2064,6 +2065,11 @@ footer .container {
 #matchView {
   display: flex;
   flex-direction: column;
+}
+
+.degree-device #matchView,
+.degree-device .lead-gate-view {
+  height: 100%;
 }
 
 .match-deck {
@@ -2792,6 +2798,69 @@ footer li a:focus-visible::before {
 
 .is-hidden {
   display: none !important;
+}
+
+@media (max-width: 1360px) {
+  .degree-hero {
+    --degree-hero-top-clearance: clamp(112px, 12vh, 136px);
+    --degree-hero-bottom-clearance: clamp(44px, 7vh, 64px);
+  }
+
+  .degree-hero-grid {
+    column-gap: clamp(24px, 3vw, 40px);
+  }
+
+  .degree-hero-left {
+    grid-column: 1 / span 6;
+  }
+
+  .degree-hero-copy {
+    max-width: 680px;
+  }
+
+  .degree-hero-copy .ce-heading-hero {
+    font-size: clamp(4.2rem, 3.55vw, 5.2rem);
+    line-height: 1.1;
+  }
+
+  .degree-device {
+    grid-column: 7 / -1;
+    max-width: 620px;
+  }
+
+  .degree-device .match-card {
+    height: clamp(500px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)), 590px);
+    padding: 24px 28px 22px;
+  }
+
+  .degree-device .match-question-copy .ce-heading-category {
+    font-size: 2.35rem;
+    line-height: 2.85rem;
+  }
+
+  .degree-device .answer-option {
+    min-height: 66px;
+    padding: 12px 14px;
+  }
+
+  .degree-device .option-grid {
+    gap: var(--ce-space-12);
+  }
+}
+
+@media (max-height: 820px) and (min-width: 768px) {
+  .degree-hero-benefits {
+    display: none;
+  }
+
+  .degree-hero-copy .ce-heading-hero {
+    margin-bottom: 18px;
+  }
+
+  .degree-hero-description {
+    font-size: 1.65rem;
+    line-height: 2.45rem;
+  }
 }
 
 @media (max-width: 1120px) {
