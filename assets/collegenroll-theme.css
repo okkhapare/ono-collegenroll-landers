@@ -83,7 +83,7 @@
   --ce-container: 1054px;
   --ce-container-wide: 1320px;
   --ce-grid-max: 1513px;
-  --ce-page-gutter: clamp(32px, 5vw, 64px);
+  --ce-page-gutter: clamp(20px, 4vw, 64px);
   --ce-grid-gap: clamp(16px, 2vw, 32px);
   --ce-section-y: clamp(48px, 7vw, 96px);
 }
@@ -2802,8 +2802,8 @@ footer li a:focus-visible::before {
 
 @media (max-width: 1360px) {
   .degree-hero {
-    --degree-hero-top-clearance: clamp(112px, 12vh, 136px);
-    --degree-hero-bottom-clearance: clamp(44px, 7vh, 64px);
+    --degree-hero-top-clearance: clamp(104px, 11vh, 128px);
+    --degree-hero-bottom-clearance: clamp(36px, 6vh, 56px);
   }
 
   .degree-hero-grid {
@@ -2825,12 +2825,13 @@ footer li a:focus-visible::before {
 
   .degree-device {
     grid-column: 7 / -1;
-    max-width: 620px;
+    max-width: 580px;
   }
 
   .degree-device .match-card {
-    height: clamp(500px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)), 590px);
-    padding: 24px 28px 22px;
+    height: min(590px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)));
+    min-height: 430px;
+    padding: 22px 24px 20px;
   }
 
   .degree-device .match-question-copy .ce-heading-category {
@@ -2845,6 +2846,116 @@ footer li a:focus-visible::before {
 
   .degree-device .option-grid {
     gap: var(--ce-space-12);
+  }
+}
+
+@media (max-width: 1280px) {
+  .degree-hero {
+    min-height: auto;
+    padding-block: clamp(104px, 12vh, 128px) clamp(44px, 7vh, 64px);
+    align-items: start;
+    overflow: visible;
+  }
+
+  .degree-hero-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    row-gap: clamp(28px, 4vw, 44px);
+  }
+
+  .degree-hero-left {
+    grid-column: 2 / span 5;
+    align-self: center;
+  }
+
+  .degree-hero-copy {
+    max-width: 560px;
+  }
+
+  .degree-hero-copy .ce-heading-hero {
+    font-size: clamp(3.8rem, 4.1vw, 4.8rem);
+    line-height: 1.08;
+  }
+
+  .degree-hero-description {
+    max-width: 500px;
+    font-size: 1.65rem;
+    line-height: 2.45rem;
+  }
+
+  .degree-hero-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--ce-space-16);
+    max-width: 520px;
+  }
+
+  .degree-hero-benefit {
+    font-size: 1.4rem;
+  }
+
+  .degree-device {
+    grid-column: 7 / -2;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .degree-device .match-card {
+    height: min(560px, calc(100svh - 188px));
+    min-height: 0;
+    padding: 22px 20px 20px;
+  }
+
+  .degree-device #matchView,
+  .degree-device .lead-gate-view {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .degree-device .option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .degree-device .match-question-copy .ce-heading-category {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+  }
+
+  .degree-device .answer-option {
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .degree-hero-grid {
+    row-gap: clamp(28px, 5vw, 48px);
+  }
+
+  .degree-hero-left {
+    grid-column: 2 / -2;
+    width: 100%;
+  }
+
+  .degree-hero-copy {
+    max-width: 760px;
+  }
+
+  .degree-device {
+    grid-column: 2 / -2;
+    max-width: 760px;
+    justify-self: center;
+  }
+
+  .degree-device .match-card {
+    height: auto;
+    max-height: none;
+  }
+
+  .degree-device #matchView,
+  .degree-device .lead-gate-view {
+    height: auto;
+  }
+
+  .degree-device .option-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
