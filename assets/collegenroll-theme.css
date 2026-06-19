@@ -1414,10 +1414,10 @@ footer .container {
 }
 
 .degree-hero {
-  --degree-hero-top-clearance: clamp(136px, 13vh, 164px);
-  --degree-hero-bottom-clearance: clamp(56px, 8vh, 84px);
+  --degree-hero-top-clearance: clamp(124px, 12vh, 156px);
+  --degree-hero-bottom-clearance: clamp(56px, 7vh, 80px);
   display: grid;
-  min-height: 100svh;
+  min-height: min(920px, 100svh);
   padding-block: var(--degree-hero-top-clearance) var(--degree-hero-bottom-clearance);
   align-items: center;
   overflow: hidden;
@@ -1466,8 +1466,8 @@ footer .container {
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--ce-grid-gap);
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.82fr);
+  gap: clamp(32px, 5vw, 84px);
   align-items: center;
   justify-items: stretch;
   overflow: visible;
@@ -1476,7 +1476,7 @@ footer .container {
 
 .degree-hero-left {
   position: relative;
-  grid-column: 1 / span 6;
+  grid-column: 1;
   grid-row: 1;
   display: grid;
   width: 100%;
@@ -1507,8 +1507,8 @@ footer .container {
   position: relative;
   grid-row: 1;
   z-index: 2;
-  width: min(100%, 760px);
-  max-width: 760px;
+  width: min(100%, 700px);
+  max-width: 700px;
   margin: 0;
   justify-self: start;
   opacity: 1;
@@ -1556,7 +1556,7 @@ footer .container {
 .degree-hero-copy .ce-heading-hero {
   color: var(--ce-color-white);
   font-family: var(--ce-font-heading), Arial, Helvetica, sans-serif;
-  font-size: clamp(4.4rem, 3.15vw, 6rem);
+  font-size: clamp(4.4rem, 4.1vw, 6.4rem);
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -1612,7 +1612,7 @@ footer .container {
 
 .degree-device {
   position: relative;
-  grid-column: 8 / -1;
+  grid-column: 2;
   grid-row: 1;
   z-index: 3;
   width: 100%;
@@ -1908,8 +1908,9 @@ footer .container {
 
 .degree-device .match-card {
   width: 100%;
-  height: clamp(500px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)), 640px);
-  min-height: 0;
+  height: auto;
+  min-height: 520px;
+  max-height: min(640px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)));
   overflow: hidden;
   border: 1px solid var(--degree-pearl-border);
   border-radius: var(--ce-radius-panel);
@@ -2069,6 +2070,7 @@ footer .container {
 
 .degree-device #matchView,
 .degree-device .lead-gate-view {
+  min-height: 0;
   height: 100%;
 }
 
@@ -2802,35 +2804,37 @@ footer li a:focus-visible::before {
 
 @media (max-width: 1360px) {
   .degree-hero {
-    --degree-hero-top-clearance: clamp(104px, 11vh, 128px);
-    --degree-hero-bottom-clearance: clamp(36px, 6vh, 56px);
+    --degree-hero-top-clearance: clamp(108px, 11vh, 132px);
+    --degree-hero-bottom-clearance: clamp(44px, 6vh, 64px);
   }
 
   .degree-hero-grid {
-    column-gap: clamp(24px, 3vw, 40px);
-  }
-
-  .degree-hero-left {
-    grid-column: 1 / span 6;
+    grid-template-columns: minmax(0, 0.95fr) minmax(380px, 0.82fr);
+    gap: clamp(28px, 4vw, 56px);
   }
 
   .degree-hero-copy {
-    max-width: 680px;
+    max-width: 620px;
   }
 
   .degree-hero-copy .ce-heading-hero {
-    font-size: clamp(4.2rem, 3.55vw, 5.2rem);
-    line-height: 1.1;
+    font-size: clamp(4rem, 3.8vw, 5.4rem);
+  }
+
+  .degree-hero-benefits {
+    gap: var(--ce-space-16);
+  }
+
+  .degree-hero-benefit {
+    font-size: 1.4rem;
   }
 
   .degree-device {
-    grid-column: 7 / -1;
-    max-width: 580px;
+    max-width: 560px;
   }
 
   .degree-device .match-card {
-    height: min(590px, calc(100svh - var(--degree-hero-top-clearance) - var(--degree-hero-bottom-clearance)));
-    min-height: 430px;
+    min-height: 480px;
     padding: 22px 24px 20px;
   }
 
@@ -2849,103 +2853,45 @@ footer li a:focus-visible::before {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1180px) {
   .degree-hero {
     min-height: auto;
-    padding-block: clamp(104px, 12vh, 128px) clamp(44px, 7vh, 64px);
+    padding-block: clamp(112px, 12vh, 136px) clamp(48px, 7vh, 72px);
     align-items: start;
-    overflow: visible;
   }
 
   .degree-hero-grid {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    row-gap: clamp(28px, 4vw, 44px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(30px, 5vw, 52px);
+  }
+
+  .degree-hero-left,
+  .degree-device {
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
   }
 
   .degree-hero-left {
-    grid-column: 2 / span 5;
-    align-self: center;
+    justify-items: start;
   }
 
   .degree-hero-copy {
-    max-width: 560px;
+    width: min(100%, 780px);
+    max-width: 780px;
   }
 
   .degree-hero-copy .ce-heading-hero {
-    font-size: clamp(3.8rem, 4.1vw, 4.8rem);
-    line-height: 1.08;
-  }
-
-  .degree-hero-description {
-    max-width: 500px;
-    font-size: 1.65rem;
-    line-height: 2.45rem;
-  }
-
-  .degree-hero-benefits {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--ce-space-16);
-    max-width: 520px;
-  }
-
-  .degree-hero-benefit {
-    font-size: 1.4rem;
+    font-size: clamp(4.2rem, 5vw, 5.6rem);
   }
 
   .degree-device {
-    grid-column: 7 / -2;
-    width: 100%;
-    max-width: 520px;
+    max-width: 780px;
+    justify-self: start;
   }
 
   .degree-device .match-card {
-    height: min(560px, calc(100svh - 188px));
     min-height: 0;
-    padding: 22px 20px 20px;
-  }
-
-  .degree-device #matchView,
-  .degree-device .lead-gate-view {
-    height: 100%;
-    min-height: 0;
-  }
-
-  .degree-device .option-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .degree-device .match-question-copy .ce-heading-category {
-    font-size: 2.2rem;
-    line-height: 2.7rem;
-  }
-
-  .degree-device .answer-option {
-    min-height: 60px;
-  }
-}
-
-@media (max-width: 1180px) {
-  .degree-hero-grid {
-    row-gap: clamp(28px, 5vw, 48px);
-  }
-
-  .degree-hero-left {
-    grid-column: 2 / -2;
-    width: 100%;
-  }
-
-  .degree-hero-copy {
-    max-width: 760px;
-  }
-
-  .degree-device {
-    grid-column: 2 / -2;
-    max-width: 760px;
-    justify-self: center;
-  }
-
-  .degree-device .match-card {
-    height: auto;
     max-height: none;
   }
 
@@ -2957,9 +2903,13 @@ footer li a:focus-visible::before {
   .degree-device .option-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .result-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
 }
 
-@media (max-height: 820px) and (min-width: 768px) {
+@media (max-height: 820px) and (min-width: 1181px) {
   .degree-hero-benefits {
     display: none;
   }
@@ -2974,70 +2924,11 @@ footer li a:focus-visible::before {
   }
 }
 
-@media (max-width: 1120px) {
-  .degree-hero {
-    min-height: auto;
-    align-items: start;
-  }
-
-  .degree-hero-grid {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    row-gap: clamp(28px, 5vw, 44px);
-    justify-items: center;
-    text-align: left;
-  }
-
-  .degree-hero-left {
-    grid-column: 2 / -2;
-    grid-row: auto;
-    width: 100%;
-    min-height: auto;
-    justify-items: start;
-    overflow: visible;
-  }
-
-  .degree-student-figure {
-    width: min(100%, 520px);
-    height: auto;
-    margin: 18px auto 0;
-    overflow: visible;
-  }
-
-  .degree-student-figure img {
-    width: 100%;
-    max-width: 100%;
-    transform: none;
-  }
-
-  .degree-hero-copy {
-    width: min(100%, 760px);
-    max-width: 760px;
-    justify-self: start;
-    text-align: left;
-  }
-
-  .degree-hero-copy .ce-heading-hero {
-    font-size: 4.8rem;
-    line-height: 1.08;
-  }
-
-  .degree-device {
-    grid-column: 2 / -2;
-    grid-row: auto;
-    width: min(100%, 760px);
-    justify-self: center;
-  }
-
-  .match-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .result-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 767px) {
+  :root {
+    --ce-page-gutter: clamp(16px, 5vw, 24px);
+  }
+
   .header {
     position: relative;
     background: var(--ce-color-mobile-navy);
@@ -3103,7 +2994,7 @@ footer li a:focus-visible::before {
   .degree-hero {
     min-height: auto;
     height: auto;
-    padding-block: 34px 42px;
+    padding-block: 32px 40px;
     overflow: hidden;
     background: var(--ce-color-brand-navy);
   }
@@ -3119,7 +3010,7 @@ footer li a:focus-visible::before {
     grid-template-columns: 1fr;
     height: auto;
     min-height: 0;
-    gap: var(--ce-space-18, 18px);
+    gap: 24px;
     overflow: visible;
     perspective: none;
   }
@@ -3146,8 +3037,20 @@ footer li a:focus-visible::before {
   }
 
   .degree-hero-copy .ce-heading-hero {
-    font-size: 3.2rem;
+    font-size: clamp(3.2rem, 10vw, 4rem);
     line-height: 1.16;
+    margin-bottom: 16px;
+  }
+
+  .degree-hero-status {
+    margin-bottom: 14px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .degree-hero-description {
+    font-size: 1.55rem;
+    line-height: 2.35rem;
   }
 
   .ce-heading-hero .degree-hero-line {
@@ -3164,7 +3067,7 @@ footer li a:focus-visible::before {
     top: auto;
     left: auto;
     width: 100%;
-    max-width: 480px;
+    max-width: 540px;
     margin: 0 auto;
     justify-self: center;
     transform: none;
@@ -3218,6 +3121,7 @@ footer li a:focus-visible::before {
   .degree-device .match-card {
     height: auto;
     min-height: 0;
+    max-height: none;
     overflow: visible;
     border-radius: var(--ce-radius-panel);
     padding: 22px 18px;
@@ -3226,6 +3130,7 @@ footer li a:focus-visible::before {
   .degree-device #matchView,
   .degree-device .lead-gate-view {
     height: auto;
+    min-height: 0;
   }
 
   .results-hero-message .ce-heading-hero {
@@ -3257,6 +3162,18 @@ footer li a:focus-visible::before {
     position: static;
     top: auto;
     background: transparent;
+    padding-bottom: 0;
+  }
+
+  .match-question-copy .ce-heading-category,
+  .degree-device .match-question-copy .ce-heading-category {
+    font-size: 2.45rem;
+    line-height: 2.9rem;
+  }
+
+  .degree-device .match-help {
+    font-size: 1.45rem;
+    line-height: 2.15rem;
   }
 
   .degree-device .match-deck {
@@ -3271,6 +3188,18 @@ footer li a:focus-visible::before {
 
   .option-grid {
     grid-template-columns: 1fr;
+    gap: var(--ce-space-12);
+  }
+
+  .degree-device .answer-option,
+  .answer-option {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .number-answer,
+  .select-answer {
+    max-width: none;
   }
 
   .match-actions,
@@ -3281,10 +3210,16 @@ footer li a:focus-visible::before {
 
   .match-actions {
     flex-direction: column-reverse;
+    gap: var(--ce-space-12);
   }
 
   .results-header {
     grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--ce-space-35);
   }
 
   .results-header .ce-heading-section {
